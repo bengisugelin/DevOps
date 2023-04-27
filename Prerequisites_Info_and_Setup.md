@@ -71,5 +71,10 @@ Initially, you wont see any bills as you havent used it yet. But sometimes if yo
 1. Go to the billing preferences on tle left menu, edit invoice delivery preferences, check 'PDF invoices delevered by email', update it.
 2. Edit alert preferences. Check 'receive AWS Free Tier Alerts', put you email adress there., check 'Receive CloudWatch billing alerts' as well. Update it.
 3. Search for CloundWatch in the search bar. CloudWatch is a monitoring service. Select North Virgina ( US EAST), go to the alarms, click on all alarms, click create alarm. Select metric as billing, click total estimated charge, select usd and click Select metric. Set you conditions, click next. Create new topic and enter your email, then click next, give name to your alarm, click next, the create the alarm.
-## Certificate Setup (we will be using it for setting up https secure connection)
+## Certificate Setup 
+(we will be using it for setting up https secure connection)
+We need to create a public certificate for our domain. We will use a certificate to validate the certificate with the domain.
+1. Search for the service called acm (Certificate Manager), click request certificate, >> public certificate > enter your domain name as  
+ >*.domainname 
+ and click request
 

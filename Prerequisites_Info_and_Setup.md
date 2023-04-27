@@ -50,8 +50,11 @@
 # Accounts needed
 ## Github ( Obviously 😃)
 ## Domain ( eg. GoDaddy)
+We will need this domain to do some real time or production use cases and in order to perform those steps, which we use in real time, we will need a domain.
 ## DockerHub
+[https://hub.docker.com/] sign up , choose a free plan. We are going to store our docker images on this in the Docker projects
 ## SonarCloud
+You can sign up with your github account. Create a project for yourself with a unique name.
 # AWS
 - Free Tier Account
 - IAM with MFA

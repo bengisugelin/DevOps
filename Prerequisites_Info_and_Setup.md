@@ -58,7 +58,8 @@ You can sign up with your github account. Create a project for yourself with a u
 # AWS
 ## Free Tier Account
 Create a free tier account. Then, when you tried to sign in, you will see two options, root user and IAM user. Account we created is a root user. 
-1. Check if your account is active or not: we can do a small test here. You can search for service EC2 ( virtual machine service). Ehwn you cliked it, if you see its details such as Instances, deedicated hosts, Elastic IPs etc, it means that your account is active.
+1. **Check if your account is active or not:** we can do a small test here. You can search for service EC2 ( virtual machine service). Ehwn you cliked it, if you see its details such as Instances, deedicated hosts, Elastic IPs etc, it means that your account is active. Otherwise, we eill get some error in that section such as verify your phone etc.
+2. **Create a user :** The user we have created is a root user, and it is not recommended to usig root user for services. Therefore, we will create another user which is called IAM user. In the search bar, write iam user and find IAM, click on it. First thing is addin an MFA, which is a multi-factor authentication. Here, you need to install a software on your phone, which is google authenticator and it is going to show six digit code when we tried to log in to the account, you need to enter that MFA along with you password.
 - IAM with MFA
 - Billing Alarm
 - Certificate Setup (we will be using it for setting up https secure connection)

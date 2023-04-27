@@ -56,7 +56,9 @@ We will need this domain to do some real time or production use cases and in ord
 ## SonarCloud
 You can sign up with your github account. Create a project for yourself with a unique name.
 # AWS
-- Free Tier Account
+## Free Tier Account
+Create a free tier account. Then, when you tried to sign in, you will see two options, root user and IAM user. Account we created is a root user. 
+1. Check if your account is active or not: we can do a small test here. You can search for service EC2 ( virtual machine service). Ehwn you cliked it, if you see its details such as Instances, deedicated hosts, Elastic IPs etc, it means that your account is active.
 - IAM with MFA
 - Billing Alarm
 - Certificate Setup (we will be using it for setting up https secure connection)

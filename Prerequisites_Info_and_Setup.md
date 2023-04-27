@@ -65,6 +65,7 @@ Create a free tier account. Then, when you tried to sign in, you will see two op
 2. We will create another user, so go to the users, here, we have two different account, one of them is root account, and the other is IAM. root account has complete access to your account, but for IAM user, you can control access. 
 - Click on add users >> enter a user name ( eg. itadmin), check "provide user access to the AWS Management Console", click on "I want to create an IAM user" and then click next. By thefault, user will not have any permission. You can assign permission to this user by attaching policies. To do it, 'select Attach policies directly' option, then you can choose th e policies you wanted to add. eg. I will add AdministaratorAccess policy. go next and create user.In the last step, password will be retrieved for you, you can download a csv file, or copy it somewhere else, but save it. 
 3. We can also set an MFA for IAM user like we did in the root user. click the itadmin ( IAM user name), go to the security credientials, click assign MFA device and do the same process you have done in the root account.
-- Billing Alarm
-- Certificate Setup (we will be using it for setting up https secure connection)
+## Billing Alarm
+
+## Certificate Setup (we will be using it for setting up https secure connection)
 

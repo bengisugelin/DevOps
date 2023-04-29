@@ -83,6 +83,34 @@ anacron               getsebool                  mountstats                  ses
 
 ....continues
 ```
+
+lets create some directories
+```
+[vagrant@centos ~]$ mkdir dev
+[vagrant@centos ~]$ mkdir ops backupdir
+[vagrant@centos ~]$ ls
+backupdir  dev  firstfile.txt  ops
+[vagrant@centos ~]$ pwd
+/home/vagrant
+```
+and some files:
+```
+[vagrant@centos ~]$ touch  testfile1.txt
+[vagrant@centos ~]$ ls
+backupdir  dev  firstfile.txt  ops  testfile1.txt
+[vagrant@centos ~]$ touch devopsfile{1..10}.txt
+[vagrant@centos ~]$ ls
+backupdir         devopsfile1.txt  devopsfile4.txt  devopsfile7.txt  firstfile.txt
+dev               devopsfile2.txt  devopsfile5.txt  devopsfile8.txt  ops
+devopsfile10.txt  devopsfile3.txt  devopsfile6.txt  devopsfile9.txt  testfile1.txt
+```
+copying file(s)
+```
+cp devopsfile1.txt dev/
+[vagrant@centos ~]$ ls dev
+devopsfile1.txt
+```
+
 # Files
 understanding, editing, filtering & security
 

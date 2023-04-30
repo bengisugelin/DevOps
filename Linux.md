@@ -180,6 +180,16 @@ These are the options of cp command.
 
 # Files
 understanding, editing, filtering & security
+## VIM editor
+First we need to instal vim editor:
+```
+[vagrant@centos ~]$ sudo yum install vim -y
+```
+to run the command vim and a file name:
+```
+vim firstfile.txt
+```
+There are 3 modes: Command mode, Insert mode (edit mode), and extended command mode
 
 # Softwares
 

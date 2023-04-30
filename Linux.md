@@ -190,6 +190,7 @@ to run the command vim and a file name:
 vim firstfile.txt
 ```
 There are 3 modes: Command mode, Insert mode (edit mode), and extended command mode
+when you press "i" , you will change to the insert mode, now you can edit the file.
 
 # Softwares
 

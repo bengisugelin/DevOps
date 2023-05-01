@@ -198,14 +198,22 @@ for line numbering in vim:
 ```
 :se nu
 ```
-if you want to go to the first line: use gg
-if you want to go to the end of the file: shift + g
+to go to the first line: use gg
+
+to go to the end of the file: shift + g
+
 to copy a line: yy
+
 to copy more than one line: go to the first line, then write how many lines vill e copied and then yy: for 4 lines: 4yy
+
 to past it: p
+
 to delete/cut : dd
+
 to delete/cut more than one line: number dd : 4dd
+
 undo: u
+
 seraching /search word. if you are looking for a word network, then: /network
 
 

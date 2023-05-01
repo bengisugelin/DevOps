@@ -531,7 +531,7 @@ drwxr-xr-x.  2 root root       44 Jan  5 03:57 bash_completion.d
 ```
 
 **find command**
-If we want to find files starting with host in the home directory :
+If we want to find files starting with host in the home directory (real-time search) :
 
 ```
 [root@centos ~]# find /etc -name host*
@@ -542,6 +542,20 @@ If we want to find files starting with host in the home directory :
 /etc/hosts.deny
 /etc/selinux/targeted/active/modules/100/hostname
 /etc/hostname
+```
+
+One easy way of searching is also through locate command, but it will not be installed by default. so, first you ned to install it. It is not a real-time search, so yu neeed to update the db before searching. 
+```
+[root@centos ~]# yum install mlocate
+
+[root@centos ~]# updatedb
+[root@centos ~]# locate host
+/dev/vhost-net
+/etc/host
+/etc/host.conf
+/etc/hostname
+/etc/hosts
+..continues..
 ```
 
 # Softwares

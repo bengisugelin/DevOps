@@ -583,6 +583,22 @@ root:x:0:0:root:/root:/bin/bash
 root    :        x       :   0  :   0   : root  : /root :/bin/bash
 username:linktoshadowfile:userid:groupid:comment:homedir:shell
 ```
+Let's search for vagrant user:
+```
+[root@centos ~]# grep vagrant /etc/passwd
+vagrant:x:1000:1000:vagrant:/home/vagrant:/bin/bash
+
+vagrant :  x  : 1000 :  1000 :vagrant:/home/vagrant:/bin/bash
+username: link:userid:gropuid:comment:   homedir   :shell
+```
+And system users:
+
+```
+[root@centos ~]# cat /etc/passwd
+bin:x:1:1:bin:/bin:/sbin/nologin
+daemon:x:2:2:daemon:/sbin:/sbin/nologin
+
+```
 
 # Softwares
 

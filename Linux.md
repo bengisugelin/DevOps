@@ -226,6 +226,7 @@ seraching /search word. if you are looking for a word network, then: /network
 -  **Pipe (p):** A special file that allows processes to communicate with each other without using network socket semantics
 
 to find the type of a file, use file command:
+
 ```
 [root@centos ~]# file anaconda-ks.cfg
 anaconda-ks.cfg: ASCII text
@@ -238,7 +239,6 @@ yum: Python script, ASCII text executable
 
 [root@centos ~]# file devopsdir/
 devopsdir/: directory
-
 ```
 
 When we have a file we regularyly need to acces, but it is so many levels in, then we can create a link for that file. 
@@ -251,40 +251,43 @@ Let's say we have a command.txt file inside /opt/dev/ops/devops/test path. then,
 total 2840
 -rw-------. 1 root root    2331 Jan  8 23:46 anaconda-ks.cfg
 lrwxrwxrwx. 1 root root      36 Jan  8 22:09 cmds -> /opt/dev/ops/devops/test/command.txt
-
 ```
+
 In order to delete the link, we can use rm command or unlink command
+
 ``` 
 unlinck cmds
 ```
 
 if you want to order the files (latest first oldest last) , you can use t option:
+
 ```
 ls -lt
 ```
 
 if you want to see oldest first and atest last, then add the r option to reverse it.
+
 ``` 
 ls -ltr
 ```
+
 ## Filtering & IO direction command
 Grep command is used to find text from any text input
 
 ```
 [root@centos ~]# grep firewall anaconda-ks.cfg
-
 [root@centos ~]# grep -i firewall anaconda-ks.cfg ( -i disables case sensitivity and shows all od them)
-
 ```
 
-
 what is we are looking for multiple files? So, I am looking for a content in the current directory
+
 ``
 grep -i firewall *
 ```
+
 If you dont know the content your looking for is tin the current directory or one of its subdirectories, then you can use -R option, wihic will search through every single subdirectory to find a match
 
-```
+
 [root@centos ~]# grep -R SELINUX /etc/*
 grep: /etc/alternatives/mta-mailqman: No such file or directory
 grep: /etc/alternatives/mta-newaliasesman: No such file or directory
@@ -300,8 +303,6 @@ grep: /etc/alternatives/mta-aliasesman: No such file or directory
 /etc/sysconfig/selinux:# SELINUXTYPE= can take one of three values:
 /etc/sysconfig/selinux:SELINUXTYPE=targeted
 
-
-```
 
 
 # Softwares

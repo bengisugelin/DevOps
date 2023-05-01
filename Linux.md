@@ -558,6 +558,18 @@ One easy way of searching is also through locate command, but it will not be ins
 ..continues..
 ```
 
+## Users & Groups
+
+### Users
+- Users and groups are used to control access to files and resources
+- Users login to system by supplying their username ad password
+- Every file on the system is owned by a user and associated with a group
+- Every process has an owner and group affiliation, and can only access the resources its owner or group can access
+- Every user of the system is assigned a unique user ID number (the UID)
+- User's name and UID are stored in /etc/passwd
+- User's password is stored in /etc/shadow in encrpted form
+- Users are assigned a home directory and a program that is run when they log in (Usually a shell)
+- Users cannot read, write or execute each other's files without permission.
 # Softwares
 
 # Servers

@@ -570,6 +570,12 @@ One easy way of searching is also through locate command, but it will not be ins
 - User's password is stored in /etc/shadow in encrpted form
 - Users are assigned a home directory and a program that is run when they log in (Usually a shell)
 - Users cannot read, write or execute each other's files without permission.
+
+**Types of user**
+1. Root -> user id: 0, group id: 0, home dir: /root, shell: /bin/bash
+2. Regular -> user id: 1000 to 60000, group id: 1000 to 60000, Home dir: /home/username, shell: /bin/bash
+3. Service (ftp, ssh, apache etc) -> user id: 1 to 999, Group id: 1 to 999, home dir: /var/ftp etc, shell: /sbin/nologin 
+
 # Softwares
 
 # Servers

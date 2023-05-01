@@ -576,6 +576,14 @@ One easy way of searching is also through locate command, but it will not be ins
 2. Regular -> user id: 1000 to 60000, group id: 1000 to 60000, Home dir: /home/username, shell: /bin/bash
 3. Service (ftp, ssh, apache etc) -> user id: 1 to 999, Group id: 1 to 999, home dir: /var/ftp etc, shell: /sbin/nologin 
 
+```
+[root@centos ~]# head -1 /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+
+root    :        x       :   0  :   0   : root  : /root :/bin/bash
+username:linktoshadowfile:userid:groupid:comment:homedir:shell
+```
+
 # Softwares
 
 # Servers

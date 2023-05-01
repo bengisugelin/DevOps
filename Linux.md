@@ -216,7 +216,14 @@ undo: u
 
 seraching /search word. if you are looking for a word network, then: /network
 
+## Type of Files
 
+- ** Regular file: ** Normal files such as text, data, or executable files
+- **Directory (d) :** Files that are lists of other files
+-** Link (l) :** A shortcut that for input to the location of the actual file
+-  **Special file (c):** Mechanism used for input and output, such as files in /dev
+-  **Socket (s):** A special file that provides inter-process networking protected by the file systems's access control
+-  **Pipe (p):** A special file that allows processes to communicate with each other without using network socket semantics
 
 
 

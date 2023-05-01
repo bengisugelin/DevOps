@@ -487,7 +487,7 @@ You can also use this dev/null to clear the content of another file ( this trick
 
 ```
 
-**Piping**
+## Piping
 
 ```
 [root@centos ~]# cd /etc/

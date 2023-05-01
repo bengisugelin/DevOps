@@ -271,7 +271,7 @@ if you want to see oldest first and atest last, then add the r option to reverse
 ls -ltr
 ```
 
-## Filtering & IO direction command
+## Filtering 
  - **Grep ** command is used to find text from any text input
 
 ```
@@ -387,7 +387,41 @@ But when you do it with sed command, it will just print it on the screen, it wil
 [root@centos ~]# sed -i 's/coronavirus/covid19/g' *  
 
 ```
+## IO direction
+Redirection is a process where we can copy the output of any command(s), file(s) into a new file. There are two ways of redirecting the output into a file.
 
+using **>** or **>>filename** 
+
+```
+[root@centos ~]# uptime > /tmp/sysinfo.txt
+[root@centos ~]# cat /tmp/sysinfo.txt
+ 18:43:57 up  1:41,  2 users,  load average: 0.00, 0.01, 0.01
+ 
+[root@centos ~]# ls > /tmp/sysinfo.txt
+[root@centos ~]# cat /tmp/sysinfo.txt
+anaconda-ks.cfg
+cmds
+devopsdir
+httpd-2.4.6-95.el7.centos.x86_64.rpm
+original-ks.cfg
+samplefile.txt
+tree-1.6.0-10.el7.x86_64.rpm
+
+```
+so if you use >, it will overrite. If you want to append it, then use >>. 
+
+```
+[root@centos ~]# uptime >> /tmp/sysinfo.txt
+[root@centos ~]# cat /tmp/sysinfo.txt
+anaconda-ks.cfg
+cmds
+devopsdir
+httpd-2.4.6-95.el7.centos.x86_64.rpm
+original-ks.cfg
+samplefile.txt
+tree-1.6.0-10.el7.x86_64.rpm
+ 18:45:57 up  1:43,  2 users,  load average: 0.00, 0.01, 0.01
+```
 # Softwares
 
 # Servers

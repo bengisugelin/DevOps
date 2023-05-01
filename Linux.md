@@ -422,6 +422,60 @@ samplefile.txt
 tree-1.6.0-10.el7.x86_64.rpm
  18:45:57 up  1:43,  2 users,  load average: 0.00, 0.01, 0.01
 ```
+To see the memory utilization use free -m
+
+```
+[root@centos ~]# free -m
+              total        used        free      shared  buff/cache   available
+Mem:            486          91         289           4         105         378
+Swap:          1023           0        1023
+
+```
+Mem means RAM, Swap is the virtual memory
+
+To see the hard disk partition utilization, use df -h
+
+```
+[root@centos ~]# df -h
+Filesystem               Size  Used Avail Use% Mounted on
+devtmpfs                 232M     0  232M   0% /dev
+tmpfs                    244M     0  244M   0% /dev/shm
+tmpfs                    244M  4.6M  239M   2% /run
+tmpfs                    244M     0  244M   0% /sys/fs/cgroup
+/dev/mapper/centos-root   50G  2.0G   49G   4% /
+/dev/sda1               1014M  168M  847M  17% /boot
+/dev/mapper/centos-home   28G   33M   28G   1% /home
+vagrant                  454G  308G  146G  68% /vagrant
+tmpfs                     49M     0   49M   0% /run/user/1000
+```
+
+```
+[root@centos ~]# date > /tmp/sysinfo.txt
+[root@centos ~]# echo "#########################################" >> /tmp/sysinfo.txt
+[root@centos ~]# uptime >> /tmp/sysinfo.txt
+[root@centos ~]# echo "#########################################" >> /tmp/sysinfo.txt
+[root@centos ~]# free -m >> /tmp/sysinfo.txt
+[root@centos ~]# echo "#########################################" >> /tmp/sysinfo.txt
+[root@centos ~]# df -h >> /tmp/sysinfo.txt                                      [root@centos ~]# cat /tmp/sysinfo.txt
+Mon May  1 18:58:09 UTC 2023
+#########################################
+ 18:58:22 up  1:55,  2 users,  load average: 0.00, 0.01, 0.01
+#########################################
+              total        used        free      shared  buff/cache   available
+Mem:            486          91         289           4         105         377
+Swap:          1023           0        1023
+#########################################
+Filesystem               Size  Used Avail Use% Mounted on
+devtmpfs                 232M     0  232M   0% /dev
+tmpfs                    244M     0  244M   0% /dev/shm
+tmpfs                    244M  4.6M  239M   2% /run
+tmpfs                    244M     0  244M   0% /sys/fs/cgroup
+/dev/mapper/centos-root   50G  2.0G   49G   4% /
+/dev/sda1               1014M  168M  847M  17% /boot
+/dev/mapper/centos-home   28G   33M   28G   1% /home
+vagrant                  454G  308G  146G  68% /vagrant
+tmpfs                     49M     0   49M   0% /run/user/1000
+```
 # Softwares
 
 # Servers

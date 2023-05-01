@@ -253,6 +253,20 @@ total 2840
 lrwxrwxrwx. 1 root root      36 Jan  8 22:09 cmds -> /opt/dev/ops/devops/test/command.txt
 
 ```
+In order to delete the link, we can use rm command or unlink command
+``` 
+unlinck cmds
+```
+
+if you want to order the files (latest first oldest last) , you can use t option:
+```
+ls -lt
+```
+
+if you want to see oldest first and atest last, then add the r option to reverse it.
+``` 
+ls -ltr
+```
 
 # Softwares
 

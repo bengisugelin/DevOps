@@ -304,6 +304,13 @@ grep: /etc/alternatives/mta-aliasesman: No such file or directory
 /etc/sysconfig/selinux:SELINUXTYPE=targeted
 ```
 
+So if you dont know one setting, you can search for that setting using grep command to see it.
+
+Another option with grep is -v which allows us to search content without a specific word. For instance, if we dont want to see anything contains firewall, then,
+
+```
+grep -vi firewall anaconda-ks.cfg 
+```
 
 # Softwares
 

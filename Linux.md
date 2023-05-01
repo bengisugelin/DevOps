@@ -338,7 +338,7 @@ head  anaconda-ks.cfg
 ```
 
 passwd file inside the etc contains user information ( all the users in our systems). But htere are a lot of info and I only want to have usernames for instance. Whatever we want, we can get from this file, because this file is properly segregated into rows and columns ( using :). First column is user name. as we have a delimiter :, we can use cut command.
-'''
+```
 [root@centos ~]# cat /etc/passwd
 [root@centos ~]# cut -d: -f1 /etc/passwd
 root
@@ -355,7 +355,7 @@ games
 ftp
 nobody
 
-'''
+```
 If we dont have a proper delimiter, then there is an amazing filter tool, awk. awk has a lot of options.
 ```
 [root@centos ~]# awk -F':' '{print $1}' /etc/passwd

@@ -225,7 +225,34 @@ seraching /search word. if you are looking for a word network, then: /network
 -  **Socket (s):** A special file that provides inter-process networking protected by the file systems's access control
 -  **Pipe (p):** A special file that allows processes to communicate with each other without using network socket semantics
 
+to find the type of a file, use file command:
+```
+[root@centos ~]# file anaconda-ks.cfg
+anaconda-ks.cfg: ASCII text
 
+[root@centos bin]# file yum
+yum: Python script, ASCII text executable
+
+[root@centos bin]# file /bin/pwd
+/bin/pwd: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked (uses shared libs), for GNU/Linux 2.6.32, BuildID[sha1]=8f1d0ff9fee13b5d44a1189122856912af0486bc, stripped
+
+[root@centos ~]# file devopsdir/
+devopsdir/: directory
+
+```
+
+When we have a file we regularyly need to acces, but it is so many levels in, then we can create a link for that file. 
+
+Let's say we have a command.txt file inside /opt/dev/ops/devops/test path. then,
+
+```
+[root@centos ~]# ln -s /opt/dev/ops/devops/test/commands.txt cmds
+[root@centos ~]# ls -l
+total 2840
+-rw-------. 1 root root    2331 Jan  8 23:46 anaconda-ks.cfg
+lrwxrwxrwx. 1 root root      36 Jan  8 22:09 cmds -> /opt/dev/ops/devops/test/command.txt
+
+```
 
 # Softwares
 

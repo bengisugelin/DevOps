@@ -487,6 +487,62 @@ You can also use this dev/null to clear the content of another file ( this trick
 
 ```
 
+**Piping**
+
+```
+[root@centos ~]# cd /etc/
+[root@centos etc]# ls | wc -l
+198
+[root@centos etc]# ls | grep host
+host
+host.conf
+hostname
+hosts
+hosts.allow
+hosts.deny
+[root@centos etc]# tail /var/log/messages | grep -i vagrant
+May  1 17:04:16 centos systemd: Started Session 3 of user vagrant.
+May  1 17:04:16 centos systemd-logind: New session 3 of user vagrant.
+[root@centos etc]# free -m | grep Mem
+Mem:            486    
+\[root@centos etc]# ls -l | tail
+-rw-r--r--.  1 root root     1982 Dec 15  2020 vimrc
+-rw-r--r--.  1 root root     1982 Dec 15  2020 virc
+-rw-r--r--.  1 root root     4479 May 15  2019 wgetrc
+drwxr-xr-x.  2 root root       33 Jan  5 03:32 wpa_supplicant
+drwxr-xr-x.  5 root root       57 Jan  5 03:27 X11
+drwxr-xr-x.  4 root root       38 Jan  5 03:27 xdg
+drwxr-xr-x.  2 root root        6 Apr 11  2018 xinetd.d
+drwxr-xr-x.  6 root root      100 Jan  5 03:27 yum
+-rw-r--r--.  1 root root      970 Oct  1  2020 yum.conf
+drwxr-xr-x.  2 root root     4096 Jan 10 07:31 yum.repos.d
+[root@centos etc]# ls -l | head
+total 1172
+-rw-r--r--.  1 root root       18 Jan  5 03:29 adjtime
+-rw-r--r--.  1 root root     1529 Apr  1  2020 aliases
+-rw-r--r--.  1 root root    12288 Jan  4 22:35 aliases.db
+drwxr-xr-x.  2 root root     4096 Jan 10 07:30 alternatives
+-rw-------.  1 root root      541 Jan 13  2022 anacrontab
+-rw-r--r--.  1 root root       55 Aug  8  2019 asound.conf
+drwxr-x---.  3 root root       43 Jan  5 03:27 audisp
+drwxr-x---.  3 root root       83 Jan  4 22:35 audit
+drwxr-xr-x.  2 root root       44 Jan  5 03:57 bash_completion.d
+[root@centos etc]#
+```
+
+**find command**
+If we want to find files starting with host in the home directory :
+
+```
+[root@centos ~]# find /etc -name host*
+/etc/host
+/etc/host.conf
+/etc/hosts
+/etc/hosts.allow
+/etc/hosts.deny
+/etc/selinux/targeted/active/modules/100/hostname
+/etc/hostname
+```
 
 # Softwares
 

@@ -190,7 +190,27 @@ to run the command vim and a file name:
 vim firstfile.txt
 ```
 There are 3 modes: Command mode, Insert mode (edit mode), and extended command mode
-when you press "i" , you will change to the insert mode, now you can edit the file.
+when you press "i" , you will change to the insert mode, now you can edit the file. 
+
+You can use cat command to read the file.
+
+for line numbering in vim: 
+```
+:se nu
+```
+if you want to go to the first line: use gg
+if you want to go to the end of the file: shift + g
+to copy a line: yy
+to copy more than one line: go to the first line, then write how many lines vill e copied and then yy: for 4 lines: 4yy
+to past it: p
+to delete/cut : dd
+to delete/cut more than one line: number dd : 4dd
+undo: u
+seraching /search word. if you are looking for a word network, then: /network
+
+
+
+
 
 # Softwares
 

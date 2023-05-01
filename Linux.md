@@ -256,7 +256,7 @@ lrwxrwxrwx. 1 root root      36 Jan  8 22:09 cmds -> /opt/dev/ops/devops/test/co
 In order to delete the link, we can use rm command or unlink command
 
 ``` 
-unlinck cmds
+unlink cmds
 ```
 
 if you want to order the files (latest first oldest last) , you can use t option:
@@ -362,7 +362,31 @@ If we dont have a proper delimiter, then there is an amazing filter tool, awk. a
 [root@centos ~]# awk -F':' '{print $1}' /etc/passwd
 
 ```
+to change something inside a file, we have a few options. let's say this is our file and we want to change coronavirus to covid19
 
+```
+[root@centos ~]# cat samplefile.txt
+Moderna has create vaccine for coronavirus.
+for corona virus pfizer has also created vaccine.
+coronavirus spreads through water droplets in the air, coronavirus is a pandemic.
+```
+1. we can use vim editor. After opening the file, 
+
+```
+:%scoronavirus/covid19  (search for coronavirus and relace it with covid19)
+:%s/covid19//g  (search for covid19 and replace it with nothing)
+```
+2. you can do it with sed command. using sed command, you can do it out of vim editor and with multiple files.
+
+```
+[root@centos ~]# sed 's/coronavirus/covid19/g' *  (find all files contains coronavirus in the current directory and replace them with covid19)
+
+```
+But when you do it with sed command, it will just print it on the screen, it will not actually change the file. if you want to change it, you should use the option -i
+```
+[root@centos ~]# sed -i 's/coronavirus/covid19/g' *  
+
+```
 
 # Softwares
 

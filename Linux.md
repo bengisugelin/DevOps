@@ -586,7 +586,7 @@ username:linktoshadowfile:userid:groupid:comment:homedir:shell
 Let's search for vagrant user:
 ```
 [root@centos ~]# grep vagrant /etc/passwd
-vagrant:x:1000:1000:vagrant:/home/vagrant:/bin/bash
+vagrant:x:1000:1000:vagrant:/home/vagrant:/bin/bash  -> **user information**
 
 vagrant :  x  : 1000 :  1000 :vagrant:/home/vagrant:/bin/bash
 username: link:userid:gropuid:comment:   homedir   :shell
@@ -599,7 +599,26 @@ bin:x:1:1:bin:/bin:/sbin/nologin
 daemon:x:2:2:daemon:/sbin:/sbin/nologin
 
 ```
+Let's check the group file:
+```
+[root@centos ~]# cat /etc/group
+root:x:0:
+bin:x:1:
+daemon:x:2:
+sys:x:3:
+adm:x:4:
+tty:x:5:
+disk:x:6:
+lp:x:7:
 
+
+[root@centos ~]# grep vagrant /etc/group
+vagrant:x:1000:vagrant
+
+ vagrant :  x :  1000 :vagrant **-> group information**
+groupname:link:groupid:username
+
+```
 # Softwares
 
 # Servers

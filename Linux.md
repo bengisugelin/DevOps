@@ -281,13 +281,13 @@ Grep command is used to find text from any text input
 
 what is we are looking for multiple files? So, I am looking for a content in the current directory
 
-``
+```
 grep -i firewall *
 ```
 
 If you dont know the content your looking for is tin the current directory or one of its subdirectories, then you can use -R option, wihic will search through every single subdirectory to find a match
 
-
+```
 [root@centos ~]# grep -R SELINUX /etc/*
 grep: /etc/alternatives/mta-mailqman: No such file or directory
 grep: /etc/alternatives/mta-newaliasesman: No such file or directory
@@ -302,7 +302,7 @@ grep: /etc/alternatives/mta-aliasesman: No such file or directory
 /etc/sysconfig/selinux:SELINUX=disabled
 /etc/sysconfig/selinux:# SELINUXTYPE= can take one of three values:
 /etc/sysconfig/selinux:SELINUXTYPE=targeted
-
+```
 
 
 # Softwares

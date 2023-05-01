@@ -272,7 +272,7 @@ ls -ltr
 ```
 
 ## Filtering & IO direction command
-Grep command is used to find text from any text input
+ - **Grep ** command is used to find text from any text input
 
 ```
 [root@centos ~]# grep firewall anaconda-ks.cfg
@@ -311,7 +311,31 @@ Another option with grep is -v which allows us to search content without a speci
 ```
 grep -vi firewall anaconda-ks.cfg 
 ```
+- **Less**  less is a reader, so you can use up arrow down arrow, you can read the content
+```
+less  anaconda-ks.cfg 
+```
+- **more** is similar to less, but you cannot use ip and down arrows, you have to use enter and return keys
+ ```
+more  anaconda-ks.cfg 
+```
 
+sometimes you only need to see very first lines of the file, in these cases, you can use head command. it will show you first 10 lines of the file
+ ```
+head  anaconda-ks.cfg 
+```
+
+but if you want to see the first 20 lines, you can change it to 20 :
+
+ ```
+head -20  anaconda-ks.cfg 
+```
+
+The opposite of head is tail. It will show you the last 10 lines of the file, and you can also change the line number you want to see as well.
+
+ ```
+head  anaconda-ks.cfg 
+```
 # Softwares
 
 # Servers

@@ -476,6 +476,18 @@ tmpfs                    244M     0  244M   0% /sys/fs/cgroup
 vagrant                  454G  308G  146G  68% /vagrant
 tmpfs                     49M     0   49M   0% /run/user/1000
 ```
+
+If you dont want to redirect or see anywhere, then you can send this file to /dev/null
+
+You can also use this dev/null to clear the content of another file ( this trick will be very handy in bash scripting)
+```
+[root@centos ~]# cat /dev/null > /tmp/sysinfo.txt
+[root@centos ~]# cat /tmp/sysinfo.txt
+[root@centos ~]#
+
+```
+
+
 # Softwares
 
 # Servers

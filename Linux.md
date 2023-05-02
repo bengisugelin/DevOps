@@ -652,7 +652,24 @@ Now, I will add 3 user i have created to the devops group
 [root@centos ~]# id ansible
 uid=1001(ansible) gid=1002(ansible) groups=1002(ansible),1001(devops)
 
+[root@centos ~]# grep devops /etc/group
+devops:x:1001:aws,ansible,jenkins
+
 ```
+Also, you can add a new user through vim editor. just open the file and write the name of the user accordingly.
+
+Let's set a password for aws. 
+```
+[root@centos ~]# passwd aws
+```
+
+If you are a root user, you dont really need to know the paswword. You can reach the user using su command:
+```
+[root@centos ~]# su - ansible
+Last login: Mon Jan  9 05:54:45 UTC 2023 on pts/3
+[ansible@centos ~]$
+```
+I switched to ansible user without entering a password as i am a root user.
 # Softwares
 
 # Servers

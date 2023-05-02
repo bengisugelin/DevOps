@@ -754,7 +754,7 @@ awsfiles
     - chmod [-option]...mode[,mode] file|directry
 - mode includes:
     - u, g or o for user, group and other
-    - + - or = for grant, deny or set
+    - '+', '-' or '=' for grant, deny or set
     - r, w, or x for read, write and execute
 - Options include:
     - -R Recursive

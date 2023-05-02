@@ -741,8 +741,12 @@ ls: cannot open directory /opt/devopsdir/: Permission denied
 ```
 As you can see, since other users do not have the permission of read, write or execute, miles had a permission denied error.
 
-But if I switch to aws user:
+But if I switch to aws user, I can read, write and execute as aws user has the permission for all of them:
 ```
+[aws@centos ~]$ ls /opt/devopsdir/
+awsfiles
+[aws@centos ~]$ cd /opt/devopsdir/
+[aws@centos devopsdir]$
 
 ```
 # Softwares

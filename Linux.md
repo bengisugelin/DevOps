@@ -619,6 +619,40 @@ vagrant :  x :  1000 :vagrant  -> group information
 groupname:link:groupid:username
 
 ```
+
+id command:
+```
+[root@centos ~]# id vagrant
+uid=1000(vagrant) gid=1000(vagrant) groups=1000(vagrant),10(wheel)
+
+```
+here, vagrant user belongs two different ggroups: vagrant and wheel.
+
+Let's add our own user:
+```
+[root@centos ~]# useradd ansible
+[root@centos ~]# useradd jenkins
+[root@centos ~]# useradd aws
+
+ansible:x:1001:1002::/home/ansible:/bin/bash
+jenkins:x:1002:1003::/home/jenkins:/bin/bash
+aws:x:1003:1004::/home/aws:/bin/bash
+
+```
+
+and add a group:
+      
+```
+[root@centos ~]# groupadd devops
+```
+Now, I will add 3 user i have created to the devops group
+
+```
+[root@centos ~]# usermod -aG devops ansible (G means it is a secondary group, if it was g, then primary group)
+[root@centos ~]# id ansible
+uid=1001(ansible) gid=1002(ansible) groups=1002(ansible),1001(devops)
+
+```
 # Softwares
 
 # Servers

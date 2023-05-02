@@ -712,6 +712,25 @@ rw- => User
 
 --- => others
 
+
+Let's change the ownership:
+```
+[root@centos ~]# chown -R  ansible:devops /opt/devopsdir
+
+[root@centos ~]# ls -ld /opt/devopsdir/
+drwxr-xr-x. 2 ansible devops 22 Jan  9 05:40 /opt/devopsdir/
+
+````
+-R means recursve option. be careful while using it. If you have hundreds of files and directories inside that, every file will have this user and this group ownership then. It will not be easy to roll back. So right now, devopsdir directory os owned by ansible and the group is devops and they have drwxr-xr-x permissions. full permission for ansible, read and execute permissions for group and others.  Let's remove the permission of others and add write permission to the group.
+```
+[root@centos ~]# chmod o-x /opt/devopsdir/
+[root@centos ~]# chmod o-r /opt/devopsdir/
+[root@centos ~]# chmod g+w /opt/devopsdir/
+[root@centos ~]# ls -ld /opt/devopsdir/
+drwxrwx---. 2 ansible devops 22 Jan  9 05:40 /opt/devopsdir/
+
+```
+
 # Softwares
 
 # Servers

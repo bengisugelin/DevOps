@@ -730,7 +730,21 @@ drwxr-xr-x. 2 ansible devops 22 Jan  9 05:40 /opt/devopsdir/
 drwxrwx---. 2 ansible devops 22 Jan  9 05:40 /opt/devopsdir/
 
 ```
+Now, let's login to the user miles, which is an other user.
+```
+[root@centos ~]# su - miles
+Last login: Mon Jan  9 05:38:10 UTC 2023 on pts/3
+[miles@centos ~]$ ls /opt/devopsdir/
+ls: cannot open directory /opt/devopsdir/: Permission denied
+[miles@centos ~]$ cd /opt/devopsdir/
+-bash: cd: /opt/devopsdir/: Permission denied
+```
+As you can see, since other users do not have the permission of read, write or execute, miles had a permission denied error.
 
+But if I switch to aws user:
+```
+
+```
 # Softwares
 
 # Servers

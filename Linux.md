@@ -703,9 +703,13 @@ Four symbols are used when displaying permissions
 
 -rw-------. 1 root root    2331 Jan  8 23:46 anaconda-ks.cfg
 here:
+
 \- => file type
+
 rw- => User
+
 --- => group
+
 --- => others
 
 # Softwares

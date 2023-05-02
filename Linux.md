@@ -586,7 +586,7 @@ username:linktoshadowfile:userid:groupid:comment:homedir:shell
 Let's search for vagrant user:
 ```
 [root@centos ~]# grep vagrant /etc/passwd
-vagrant:x:1000:1000:vagrant:/home/vagrant:/bin/bash  
+vagrant:x:1000:1000:vagrant:/home/vagrant:/bin/bash  -> user information
 
 vagrant :  x  : 1000 :  1000 :vagrant:/home/vagrant:/bin/bash
 username: link:userid:gropuid:comment:   homedir   :shell
@@ -615,7 +615,7 @@ lp:x:7:
 [root@centos ~]# grep vagrant /etc/group
 vagrant:x:1000:vagrant
 
- vagrant :  x :  1000 :vagrant 
+vagrant :  x :  1000 :vagrant  -> group information
 groupname:link:groupid:username
 
 ```

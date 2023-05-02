@@ -670,6 +670,36 @@ Last login: Mon Jan  9 05:54:45 UTC 2023 on pts/3
 [ansible@centos ~]$
 ```
 I switched to ansible user without entering a password as i am a root user.
+
+To delete the user $ group
+```
+[root@centos ~]# userdel aws
+[root@centos ~]# userdel -r jenkins
+[root@centos ~]# groupdel devops
+```
+## File Permissions
+
+**Viewving Permissions from the command line**
+
+File permissions can be viewed usin ls -l
+```
+[root@centos ~]# ls -l
+total 2840
+-rw-------. 1 root root    2331 Jan  8 23:46 anaconda-ks.cfg
+lrwxrwxrwx. 1 root root      36 Jan  8 22:09 cmds -> /opt/dev/ops/devops/test/command.txt
+drwxr-xr-x. 2 root root      31 Jan  8 23:49 devopsdir
+-rw-r--r--  1 root root 2846172 Jan 10 07:16 httpd-2.4.6-95.el7.centos.x86_64.rpm
+-rw-------. 1 root root    1557 Jan  5 03:35 original-ks.cfg
+-rw-r--r--. 1 root root     164 Jan  9 02:56 samplefile.txt
+-rw-r--r--  1 root root   47508 Jan 10 07:13 tree-1.6.0-10.el7.x86_64.rpm
+
+```
+
+Four symbols are used when displaying permissions
+1. **r:** permission to read a file or list a directory's content
+2. **w:** permission to write to a file or create and remove files from a directory
+3.**x:** permission to execute a program or change into a directory and do a long listing of directory
+4. **-:** no permission ( in place of the r,w, or x)
 # Softwares
 
 # Servers

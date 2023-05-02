@@ -747,8 +747,22 @@ But if I switch to aws user, I can read, write and execute as aws user has the p
 awsfiles
 [aws@centos ~]$ cd /opt/devopsdir/
 [aws@centos devopsdir]$
-
 ```
+
+**Changing permissions - Symbolic method**
+- To change access modess:
+    - chmod [-option]...mode[,mode] file|directry
+- mode includes:
+    - u, g or o for user, group and other
+    - + - or = for grant, deny or set
+    - r, w, or x for read, write and execute
+- Options include:
+    - -R Recursive
+    - -v verbose
+    - --reference Reference another file for its mode
+- Examples:
+    - chmod ugo+r file: grant read access to all for file
+    - chmod o-wx dir: deny write and execute to others for dir
 # Softwares
 
 # Servers

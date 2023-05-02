@@ -782,7 +782,27 @@ you can set the line number (:se nu) to easier visualization
     102 ansible ALL=(ALL)       NOPASSWD: ALL
 ```
 
-Now, as an ansible user, you can use sudo command.NOPASSWD: means do not ask for a password when we ara an ansible user and trying to use sudo.
+Now, as an ansible user, you can use sudo command.NOPASSWD: means do not ask for a password when we ara an ansible user and trying to use sudo. But if we make a typo or other mistake while editing the sudoers file, you may not be able to correct it if you dont have a root password which most of the servers will not have the root password set for security purpose. We will have normal user login like we have vagrant user. We can switch to root user by using sudo. So if we want to fix sudoers file, it will be a problem because sudo will not work and we dont have the root password.
+
+So, the better solution is , instead of editing that sudoers file, you can go to /etc/sudoers.d directory and you can create you own file.
+```
+[root@centos ~]# cd /etc/sudoers.d/
+[root@centos sudoers.d]# ls
+vagrant
+[root@centos sudoers.d]# cat vagrant
+vagrant        ALL=(ALL)       NOPASSWD: ALL
+```
+here, we can create a file named devops by copying vagrant file as devops file:
+```
+[root@centos sudoers.d]# cp vagrant devops
+[root@centos sudoers.d]# vim devops ( change it as %devops)
+
+[root@centos sudoers.d]# cat *
+%devops        ALL=(ALL)       NOPASSWD: ALL
+vagrant        ALL=(ALL)       NOPASSWD: ALL
+
+```
+It is better and a safer way of letting users using the sudo command, in our case we gave the privilege to a group, that is, all the users inside that group.
 # Softwares
 
 # Servers

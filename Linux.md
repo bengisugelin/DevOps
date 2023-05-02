@@ -782,8 +782,7 @@ you can set the line number (:se nu) to easier visualization
     102 ansible ALL=(ALL)       NOPASSWD: ALL
 ```
 
-Now, as an ansible user, you can use sudo command.
-Now ansible is allowed to use sudo command. NOPASSWD: means do not ask for a password when we ara an ansible user and trying to use sudo.
+Now, as an ansible user, you can use sudo command.NOPASSWD: means do not ask for a password when we ara an ansible user and trying to use sudo.
 # Softwares
 
 # Servers

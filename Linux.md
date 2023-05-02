@@ -763,6 +763,27 @@ awsfiles
 - Examples:
     - chmod ugo+r file: grant read access to all for file
     - chmod o-wx dir: deny write and execute to others for dir
+# Sudo
+Sudo gives power to a normal user to execute commands which is owned by root user.
+
+we have vagrant user, which has a privilege to execute sudo, however other users we have created such as aws or ansible cannot do use sudo command. If we want ansible to use sudo command, we need to manipulate sudoers file.
+
+```
+visudo
+```
+then search for /root
+
+you can set the line number (:se nu) to easier visualization
+
+```
+## Allow root to run any commands anywhere
+    100 root    ALL=(ALL)       ALL
+    101
+    102 ansible ALL=(ALL)       NOPASSWD: ALL
+```
+
+Now, as an ansible user, you can use sudo command.
+Now ansible is allowed to use sudo command. NOPASSWD: means do not ask for a password when we ara an ansible user and trying to use sudo.
 # Softwares
 
 # Servers

@@ -698,7 +698,7 @@ drwxr-xr-x. 2 root root      31 Jan  8 23:49 devopsdir
 Four symbols are used when displaying permissions
 1. **r :** permission to read a file or list a directory's content
 2. **w :** permission to write to a file or create and remove files from a directory
-3.**x :** permission to execute a program or change into a directory and do a long listing of directory
+3. **x :** permission to execute a program or change into a directory and do a long listing of directory
 4. **- :** no permission ( in place of the r,w, or x)
 
 -rw-------. 1 root root    2331 Jan  8 23:46 anaconda-ks.cfg

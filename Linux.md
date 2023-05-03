@@ -1166,4 +1166,80 @@ web-assets-httpd.noarch : Web Assets aliases for the Apache HTTP daemon
 
   Name and summary matches only, use "search all" for everything.
 ```
+
+So if we want to install that, we basically say:
+
+```
+[root@centos yum.repos.d]# yum install httpd
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+epel/x86_64/metalink                                     |  29 kB     00:00
+ * base: lesnet.mm.fcix.net
+ * epel: ftp-osl.osuosl.org
+ * extras: lesnet.mm.fcix.net
+ * updates: lesnet.mm.fcix.net
+base                                                     | 3.6 kB     00:00
+epel                                                     | 4.7 kB     00:00
+extras                                                   | 2.9 kB     00:00
+jenkins                                                  | 2.9 kB     00:00
+updates                                                  | 2.9 kB     00:00
+(1/2): epel/x86_64/primary_db                              | 7.0 MB   00:00
+(2/2): epel/x86_64/updateinfo                              | 1.0 MB   00:01
+Resolving Dependencies
+--> Running transaction check
+---> Package httpd.x86_64 0:2.4.6-97.el7.centos.5 will be updated
+---> Package httpd.x86_64 0:2.4.6-98.el7.centos.7 will be an update
+--> Processing Dependency: httpd-tools = 2.4.6-98.el7.centos.7 for package: httpd-2.4.6-98.el7.centos.7.x86_64
+--> Running transaction check
+---> Package httpd-tools.x86_64 0:2.4.6-97.el7.centos.5 will be updated
+---> Package httpd-tools.x86_64 0:2.4.6-98.el7.centos.7 will be an update
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+================================================================================
+ Package           Arch         Version                     Repository     Size
+================================================================================
+Updating:
+ httpd             x86_64       2.4.6-98.el7.centos.7       updates       2.7 M
+Updating for dependencies:
+ httpd-tools       x86_64       2.4.6-98.el7.centos.7       updates        94 k
+
+Transaction Summary
+================================================================================
+Upgrade  1 Package (+1 Dependent package)
+
+Total download size: 2.8 M
+Is this ok [y/d/N]: y
+Downloading packages:
+Delta RPMs disabled because /usr/bin/applydeltarpm not installed.
+(1/2): httpd-tools-2.4.6-98.el7.centos.7.x86_64.rpm        |  94 kB   00:00
+(2/2): httpd-2.4.6-98.el7.centos.7.x86_64.rpm              | 2.7 MB   00:00
+--------------------------------------------------------------------------------
+Total                                              4.5 MB/s | 2.8 MB  00:00
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+Warning: RPMDB altered outside of yum.
+  Updating   : httpd-tools-2.4.6-98.el7.centos.7.x86_64                     1/4
+  Updating   : httpd-2.4.6-98.el7.centos.7.x86_64                           2/4
+  Cleanup    : httpd-2.4.6-97.el7.centos.5.x86_64                           3/4
+  Cleanup    : httpd-tools-2.4.6-97.el7.centos.5.x86_64                     4/4
+  Verifying  : httpd-tools-2.4.6-98.el7.centos.7.x86_64                     1/4
+  Verifying  : httpd-2.4.6-98.el7.centos.7.x86_64                           2/4
+  Verifying  : httpd-tools-2.4.6-97.el7.centos.5.x86_64                     3/4
+  Verifying  : httpd-2.4.6-97.el7.centos.5.x86_64                           4/4
+
+Updated:
+  httpd.x86_64 0:2.4.6-98.el7.centos.7
+
+Dependency Updated:
+  httpd-tools.x86_64 0:2.4.6-98.el7.centos.7
+
+Complete!
+
+```
+
+it will download and install with its dependencies. So, no need to worry about dependencies.
 # Servers

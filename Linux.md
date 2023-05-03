@@ -1262,4 +1262,47 @@ sudo systemctl daemon-reload
 
 using yum command, you can install, reinstall, remove, update the package etc.
 
+# Services
+
+So we have a package httpd installed, httpd is a web service
+```
+[root@centos ~]# systemctl status httpd
+```
+Righ now, this service is inactive. To activate it:
+```
+[root@centos ~]# systemctl start httpd
+```
+Let's check its status now:
+```
+[root@centos ~]# systemctl status httpd
+● httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; enabled; vendor preset: disabled)
+   Active: active (running) since Wed 2023-05-03 19:59:49 UTC; 2min 11s ago
+     Docs: man:httpd(8)
+           man:apachectl(8)
+ Main PID: 1027 (httpd)
+   Status: "Total requests: 0; Current requests/sec: 0; Current traffic:   0 B/sec"
+   CGroup: /system.slice/httpd.service
+           ├─1027 /usr/sbin/httpd -DFOREGROUND
+           ├─1279 /usr/sbin/httpd -DFOREGROUND
+           ├─1281 /usr/sbin/httpd -DFOREGROUND
+           ├─1282 /usr/sbin/httpd -DFOREGROUND
+           ├─1283 /usr/sbin/httpd -DFOREGROUND
+           └─1284 /usr/sbin/httpd -DFOREGROUND
+
+May 03 19:59:49 centos.devops.in systemd[1]: Starting The Apache HTTP Server...
+May 03 19:59:49 centos.devops.in systemd[1]: Started The Apache HTTP Server.
+Hint: Some lines were ellipsized, use -l to show in full.
+
+```
+When you want to start, stop or restart the process, you can use systemctl command to do it. Like start and stop, you also have an option of restart, if you make some cganges, configuration change to your service, you can restart the service, so it will update it.
+
+Before rebootng, the service status is active, But when I reboot the vm, status will be inactive. If we want to continue as active, then we should use following command:
+
+```
+[root@centos ~]# systemctl enable httpd
+```
+
+Now, the service will come up at the boot time.
+
 # Servers

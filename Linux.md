@@ -804,5 +804,93 @@ vagrant        ALL=(ALL)       NOPASSWD: ALL
 ```
 It is better and a safer way of letting users using the sudo command, in our case we gave the privilege to a group, that is, all the users inside that group.
 # Softwares
+We call softwares as packages in Linux.
 
+Let's say we want to use tree command.
+```
+[root@centos ~]# tree /var/log
+-bash: tree: command not found
+
+```
+As we can see, we dont have this package right now, so wee need to download and install the tree command. Very manual way of setting up a package is opening our browser, search for the tree package on the internet, downloand and install it [https://rpmfind.net/linux/rpm2html/search.php?query=tree&submit=Search+...&system=&arch=]. just search for tree rpm, and choose the suitable one for you OS. or copy the link address and come to the terminal:
+```
+[root@centos ~]# curl https://rpmfind.net/linux/centos/7.9.2009/os/x86_64/Packages/tree-1.6.0-10.el7.x86_64.rpm -o
+
+[root@centos ~]# rpm -ivh tree-1.6.0-10.el7.x86_64.rpm
+Preparing...                          ################################# [100%]
+Updating / installing...
+   1:tree-1.6.0-10.el7                ################################# [100%]
+
+```
+After installation, you can use tree command:
+```
+[root@centos ~]# tree /var/log/
+/var/log/
+├── anaconda
+│   ├── anaconda.log
+│   ├── ifcfg.log
+│   ├── journal.log
+│   ├── ks-script-0yibYt.log
+│   ├── ks-script-QiOFak.log
+│   ├── ks-script-T0lvTM.log
+│   ├── packaging.log
+│   ├── program.log
+│   ├── storage.log
+│   └── syslog
+├── audit
+│   └── audit.log
+├── boot.log
+├── boot.log-20230109
+├── boot.log-20230110
+├── boot.log-20230429
+├── boot.log-20230430
+├── boot.log-20230501
+├── boot.log-20230502
+├── boot.log-20230503
+├── btmp
+├── btmp-20230501
+├── chrony
+├── cron
+├── cron-20230429
+├── cron-20230430
+├── dmesg
+├── dmesg.old
+├── grubby
+├── grubby_prune_debug
+├── httpd
+│   ├── access_log
+│   ├── error_log
+│   └── error_log-20230430
+├── jenkins
+├── lastlog
+├── maillog
+├── maillog-20230429
+├── maillog-20230430
+├── messages
+├── messages-20230429
+├── messages-20230430
+├── rhsm
+├── samba
+│   └── old
+├── secure
+├── secure-20230429
+├── secure-20230430
+├── spooler
+├── spooler-20230429
+├── spooler-20230430
+├── tallylog
+├── tuned
+│   └── tuned.log
+├── vboxadd-install.log
+├── vboxadd-setup.log
+├── vboxadd-setup.log.1
+├── vboxadd-setup.log.2
+├── vboxadd-setup.log.3
+├── vboxadd-setup.log.4
+├── wtmp
+└── yum.log
+
+9 directories, 54 files
+
+```
 # Servers

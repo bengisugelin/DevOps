@@ -1407,5 +1407,25 @@ Nowadays, systems are smart and these orphan processes will be cleared automatic
 [root@centos ~]# ps -ef | grep httpd | grep -v 'grep'|awk '{print $2}' | xargs kill -9
 ```
  
+# Archiving
 
-# Servers
+**Archive**
+Let's say I am int he /var/log/ directory and inside it I have jenkins directory that i wannt to archive. To do it:
+```
+[root@centos log]# tar -czvf jenkins_03052023.tar.gz jenkins
+
+```
+-czvf -> c: create, z : compress, v: verbose, f: file 
+
+**Unarchive**
+
+```
+[root@centos tmp]# tar -xzvf jenkins_03052023.tar.gz
+```
+-xzvf -> x: extract, z : compress, v: verbose, f: file
+
+If you want to extract another location, then use -C command.
+
+```
+[root@centos tmp]# tar -xzvf jenkins_03052023.tar.gz -C /opt/
+```

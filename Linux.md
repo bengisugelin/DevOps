@@ -1066,4 +1066,104 @@ So if you want to search if a particular rpm is install or not, you can do it by
 tree-1.6.0-10.el7.x86_64
 
 ```
+
+So we can do a lot of configurations with rpm that can come handy while doing some troubleshooting with package management. But the better option for managing your package is **yum**.
+
+So, instead of going on the the internet, search for rpm, download and install it, we can use yum
+
+go to the cd /etc/yum.repos.d/ directory.
+```
+root@centos ~]# cd /etc/yum.repos.d/
+[root@centos yum.repos.d]# ls
+CentOS-Base.repo       CentOS-Media.repo          epel.repo
+CentOS-CR.repo         CentOS-Sources.repo        epel-testing.repo
+CentOS-Debuginfo.repo  CentOS-Vault.repo          jenkins.repo
+CentOS-fasttrack.repo  CentOS-x86_64-kernel.repo
+[root@centos yum.repos.d]#
+```
+
+ in this directory we should see some files points to some repositories on the internet, like for example,
+ ```
+ [root@centos yum.repos.d]# cat CentOS-x86_64-kernel.repo
+[centos-kernel]
+name=CentOS LTS Kernels for $basearch
+mirrorlist=http://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=kernel&infra=$infra
+#baseurl=http://mirror.centos.org/altarch/7/kernel/$basearch/
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
+
+[centos-kernel-experimental]
+name=CentOS Experimental Kernels for $basearch
+mirrorlist=http://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=experimental&infra=$infra
+#baseurl=http://mirror.centos.org/altarch/7/experimental/$basearch/
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
+
+ ```
+It will have the information of the repositories.
+
+so here when  we say yum search httpd, we are searching for a package named httpd in all those repositories.
+
+```
+[root@centos yum.repos.d]# yum search httpd
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+ * base: lesnet.mm.fcix.net
+ * epel: ftp-osl.osuosl.org
+ * extras: lesnet.mm.fcix.net
+ * updates: lesnet.mm.fcix.net
+============================== N/S matched: httpd ==============================
+dmlite-apache-httpd.x86_64 : Apache HTTPD frontend for dmlite
+iipsrv-httpd-fcgi.noarch : Apache HTTPD files for iipsrv
+keycloak-httpd-client-install.noarch : Tools to configure Apache HTTPD as
+                                     : Keycloak client
+libmicrohttpd-devel.i686 : Development files for libmicrohttpd
+libmicrohttpd-devel.x86_64 : Development files for libmicrohttpd
+libmicrohttpd-doc.noarch : Documentation for libmicrohttpd
+lighttpd-fastcgi.x86_64 : FastCGI module and spawning helper for lighttpd and
+                        : PHP configuration
+lighttpd-mod_authn_gssapi.x86_64 : Authentication module for lighttpd that uses
+                                 : GSSAPI
+lighttpd-mod_authn_mysql.x86_64 : Authentication module for lighttpd that uses a
+                                : MySQL database
+lighttpd-mod_authn_pam.x86_64 : Authentication module for lighttpd that uses PAM
+lighttpd-mod_geoip.x86_64 : GeoIP module for lighttpd to use for location
+                          : lookups
+lighttpd-mod_mysql_vhost.x86_64 : Virtual host module for lighttpd that uses a
+                                : MySQL database
+pagure-web-apache-httpd.noarch : Apache HTTPD configuration for Pagure
+python2-keycloak-httpd-client-install.noarch : Tools to configure Apache HTTPD
+                                             : as Keycloak client
+radicale-httpd.noarch : httpd config for Radicale
+sympa-lighttpd.x86_64 : Sympa with lighttpd
+darkhttpd.x86_64 : A secure, lightweight, fast, single-threaded HTTP/1.1 server
+httpd.x86_64 : Apache HTTP Server
+httpd-devel.x86_64 : Development interfaces for the Apache HTTP server
+httpd-itk.x86_64 : MPM Itk for Apache HTTP Server
+httpd-manual.noarch : Documentation for the Apache HTTP server
+httpd-tools.x86_64 : Tools for use with the Apache HTTP Server
+libmicrohttpd.i686 : Lightweight library for embedding a webserver in
+                   : applications
+libmicrohttpd.x86_64 : Lightweight library for embedding a webserver in
+                     : applications
+lighttpd.x86_64 : Lightning fast webserver with light system requirements
+mirmon-httpd.noarch : Apache configuration for mirmon
+mod_auth_mellon.x86_64 : A SAML 2.0 authentication module for the Apache Httpd
+                       : Server
+mod_dav_svn.x86_64 : Apache httpd module for Subversion server
+opensips-httpd.x86_64 : HTTP transport layer implementation
+perl-Test-Fake-HTTPD.noarch : Fake HTTP server module for testing
+python2-sphinxcontrib-httpdomain.noarch : Sphinx domain for documenting HTTP
+                                        : APIs
+sympa-httpd.x86_64 : Sympa with Apache HTTP Server
+sysusage-httpd.noarch : Apache configuration for sysusage
+thttpd.x86_64 : A tiny, turbo, throttleable lightweight HTTP server
+viewvc-httpd-fcgi.noarch : ViewVC configuration for Apache/mod_fcgid
+viewvc-httpd-wsgi.noarch : ViewVC configuration for Apache/mod_wsgi
+web-assets-httpd.noarch : Web Assets aliases for the Apache HTTP daemon
+
+  Name and summary matches only, use "search all" for everything.
+```
 # Servers

@@ -1243,5 +1243,22 @@ Complete!
 
 it will download and install with its dependencies. So, no need to worry about dependencies.
 
+If yum cannot file the package ans says  Error: nothing to do, because this package is not available in any of the repositories that are available in yum.repos.d 
+
+Let's say we are trying to install jenkins, but we cannot do it using yum, as we encounter nothing to do error. If it is not there, we can always search for the internet, we should fin the vendor documentation. There, they will mention the steps to install a particular package. So let's take jenkings as an example. Go to your browser and search for "install jenkins". Always try to find the official documentation. in this case, [https://www.jenkins.io/doc/book/installing/]
+
+Find the suitable command to your os
+
+```
+sudo wget -O /etc/yum.repos.d/jenkins.repo \
+    https://pkg.jenkins.io/redhat-stable/jenkins.repo
+sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
+sudo yum upgrade
+# Add required dependencies for the jenkins package
+sudo yum install java-11-openjdk
+sudo yum install jenkins
+sudo systemctl daemon-reload
+```
+
 
 # Servers

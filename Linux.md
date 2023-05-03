@@ -1260,5 +1260,6 @@ sudo yum install jenkins
 sudo systemctl daemon-reload
 ```
 
+using yum command, you can install, reinstall, remove, update the package etc.
 
 # Servers

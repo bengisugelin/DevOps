@@ -1437,3 +1437,55 @@ You can also use zip command
 
 [root@centos log]# unzip jenkins_03052023
 ```
+
+# Ubuntu Commands
+
+First, let's power up hthe ubuntu vm:
+```
+$ cd /c/vagrant-vms/ubuntu18/
+$ vagrant up
+$ vagrant ssh
+```
+Let's switch to the root user:
+
+```
+vagrant@ubuntu-bionic:~$ sudo -i
+root@ubuntu-bionic:~# whoami
+root
+root@ubuntu-bionic:~# pwd
+/root
+root@ubuntu-bionic:~# ls
+root@ubuntu-bionic:~# cat /etc/os-release
+NAME="Ubuntu"
+VERSION="18.04.6 LTS (Bionic Beaver)"
+ID=ubuntu
+ID_LIKE=debian
+PRETTY_NAME="Ubuntu 18.04.6 LTS"
+VERSION_ID="18.04"
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+VERSION_CODENAME=bionic
+UBUNTU_CODENAME=bionic
+```
+
+We can create a user:
+```
+useradd devops
+```
+
+When we create a user, it will nor create the home directory, mail spool and so many other things
+
+in ubuntu, we also have adduser command. 
+```
+adduser devops
+```
+other command is visudo. in centos, default editor is vi, but in ubuntu , default editor is nano. LEt's change it to vim
+
+``
+root@ubuntu-bionic:~# export EDITOR=vim
+```
+we changed it temporarily. if we power off and on th vm, the default will be no=ano again
+
+

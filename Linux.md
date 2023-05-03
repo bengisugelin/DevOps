@@ -23,7 +23,7 @@ Syntax, help & lots of commands
 1. Open the Git Bash and bring up our VM. go to the location that your centos placed
 ```
 $ cd /c/vagrant-vms/centos7/
-$ vagrant up
+$ vagrant up  ( when power off-> vagrant halt)
 $ vagrant ssh
 ```
 Now, very basic commands: 

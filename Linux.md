@@ -1429,3 +1429,11 @@ If you want to extract another location, then use -C command.
 ```
 [root@centos tmp]# tar -xzvf jenkins_03052023.tar.gz -C /opt/
 ```
+
+
+You can also use zip command
+```
+[root@centos log]# zip -r jenkins_03052023 jenkins
+
+[root@centos log]# unzip jenkins_03052023
+```

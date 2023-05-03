@@ -1316,5 +1316,63 @@ We also have is enabled, which will tell you if the services enabled for the boo
 [vagrant@centos ~]$ systemctl is-enabled httpd
 enabled
 ```
+# Processes
+There are so many processes we will see running in the linux system, running or sleeping. There is a command, top, which will show you all the dynamic processes based on their consuption of CPU and RAM:
+```
+[vagrant@centos ~]$ top
+top - 20:35:01 up 28 min,  1 user,  load average: 0.00, 0.01, 0.01
+Tasks: 117 total,   1 running, 116 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.0 us,  0.0 sy,  0.0 ni,100.0 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+KiB Mem :   498308 total,   312176 free,    83168 used,   102964 buff/cache
+KiB Swap:  1048572 total,  1048572 free,        0 used.   397376 avail Mem
+
+  PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND
+ 1029 root      20   0  437360   1848   1356 S   0.3  0.4   0:00.11 VBoxService
+    1 root      20   0  125500   3972   2616 S   0.0  0.8   0:00.50 systemd
+    2 root      20   0       0      0      0 S   0.0  0.0   0:00.00 kthreadd
+    4 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 kworker/0:+
+    5 root      20   0       0      0      0 S   0.0  0.0   0:00.00 kworker/u4+
+    6 root      20   0       0      0      0 S   0.0  0.0   0:00.04 ksoftirqd/0
+    7 root      rt   0       0      0      0 S   0.0  0.0   0:00.00 migration/0
+    8 root      20   0       0      0      0 S   0.0  0.0   0:00.00 rcu_bh
+    9 root      20   0       0      0      0 S   0.0  0.0   0:00.04 rcu_sched
+   10 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 lru-add-dr+
+   11 root      rt   0       0      0      0 S   0.0  0.0   0:00.00 watchdog/0
+   12 root      rt   0       0      0      0 S   0.0  0.0   0:00.00 watchdog/1
+   13 root      rt   0       0      0      0 S   0.0  0.0   0:00.00 migration/1
+   14 root      20   0       0      0      0 S   0.0  0.0   0:00.03 ksoftirqd/1
+   16 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 kworker/1:+
+   18 root      20   0       0      0      0 S   0.0  0.0   0:00.00 kdevtmpfs
+   19 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 netns
+   20 root      20   0       0      0      0 S   0.0  0.0   0:00.00 khungtaskd
+   21 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 writeback
+   22 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 kintegrityd
+   23 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 bioset
+```
+
+to quit, press q. 
+
+There is another command, ps aux , it is similar to top but it displays information on the screen and it just quits.
+we also have ps -ef, whic is going to show all the process again, but it will show parent process id (PPID), not the utilization.
+
+How can we stop a process? There is a command called 'kill'. If you want to stop a process you need to say kill and give the parent process id.
+
+```
+[vagrant@centos ~]$ ps -ef | grep httpd | grep -v 'grep'
+root      1011     1  0 20:06 ?        00:00:00 /usr/sbin/httpd -DFOREGROUND
+apache    1272  1011  0 20:06 ?        00:00:00 /usr/sbin/httpd -DFOREGROUND
+apache    1273  1011  0 20:06 ?        00:00:00 /usr/sbin/httpd -DFOREGROUND
+apache    1275  1011  0 20:06 ?        00:00:00 /usr/sbin/httpd -DFOREGROUND
+apache    1276  1011  0 20:06 ?        00:00:00 /usr/sbin/httpd -DFOREGROUND
+apache    1277  1011  0 20:06 ?        00:00:00 /usr/sbin/httpd -DFOREGROUND
+```
+So to kill the httpd, we shoul say, kill 1011(parent process id)
+```
+[root@centos ~]# kill 1011
+[root@centos ~]# ps -ef | grep httpd | grep -v 'grep'
+[root@centos ~]#
+```
+command kill is like asking to stop the porcess. Butt sometimes, processes do not listen and you have to forcefully kill them 😕
+
 
 # Servers

@@ -1529,3 +1529,8 @@ to remove package
 ```
 apt remove apache2
 ```
+but if you want te remove package cleanly, then:
+```
+apt purge apache2
+```
+it will remove the package with all its configuration and all its data

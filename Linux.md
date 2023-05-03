@@ -1483,9 +1483,49 @@ adduser devops
 ```
 other command is visudo. in centos, default editor is vi, but in ubuntu , default editor is nano. LEt's change it to vim
 
-``
+```
 root@ubuntu-bionic:~# export EDITOR=vim
 ```
-we changed it temporarily. if we power off and on th vm, the default will be no=ano again
+we changed it temporarily. if we power off and on th vm, the default will be nano again ( we can do it permanent as well, we'll see it later)
 
+One of the main differences is packages. we have yum in redhat vm, but here we have apt.
+```
+root@ubuntu-bionic:~# cd /etc/apt
+root@ubuntu-bionic:/etc/apt# ls
+apt.conf.d  auth.conf.d  preferences.d  sources.list  sources.list.d  trusted.gpg.d
+```
 
+to install packages:
+```
+apt install tree
+apt install apache2
+```
+
+in ubuntu, if you install a service, it will utomatically be activated & enabled.
+```
+root@ubuntu-bionic:~# systemctl status apache2
+● apache2.service - The Apache HTTP Server
+   Loaded: loaded (/lib/systemd/system/apache2.service; enabled; vendor preset: enabled)
+  Drop-In: /lib/systemd/system/apache2.service.d
+           └─apache2-systemd.conf
+   Active: active (running) since Wed 2023-05-03 22:35:25 UTC; 16s ago
+ Main PID: 21582 (apache2)
+    Tasks: 55 (limit: 1150)
+   CGroup: /system.slice/apache2.service
+           ├─21582 /usr/sbin/apache2 -k start
+           ├─21584 /usr/sbin/apache2 -k start
+           └─21585 /usr/sbin/apache2 -k start
+
+May 03 22:35:25 ubuntu-bionic systemd[1]: Starting The Apache HTTP Server...
+May 03 22:35:25 ubuntu-bionic apachectl[21556]: AH00558: apache2: Could not reliably determin
+May 03 22:35:25 ubuntu-bionic systemd[1]: Started The Apache HTTP Server.
+```
+if you want to upgrade all the packages in ubuntu:
+```
+apt upgrade
+```
+
+to remove package
+```
+apt remove apache2
+```

@@ -816,7 +816,7 @@ As we can see, we dont have this package right now, so wee need to download and 
 ```
 [root@centos ~]# curl https://rpmfind.net/linux/centos/7.9.2009/os/x86_64/Packages/tree-1.6.0-10.el7.x86_64.rpm -o
 
-[root@centos ~]# rpm -ivh tree-1.6.0-10.el7.x86_64.rpm
+[root@centos ~]# rpm -ivh tree-1.6.0-10.el7.x86_64.rpm ->(i for install, v for verbose, h is human readable)
 Preparing...                          ################################# [100%]
 Updating / installing...
    1:tree-1.6.0-10.el7                ################################# [100%]

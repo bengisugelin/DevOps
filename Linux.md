@@ -1305,4 +1305,16 @@ Before rebootng, the service status is active, But when I reboot the vm, status 
 
 Now, the service will come up at the boot time.
 
+Few other commands you want to check whether a service is running or not, you can just type this command:
+
+```
+[vagrant@centos ~]$ systemctl is-active httpd
+active
+```
+We also have is enabled, which will tell you if the services enabled for the boot time or not.
+```
+[vagrant@centos ~]$ systemctl is-enabled httpd
+enabled
+```
+
 # Servers

@@ -1374,5 +1374,25 @@ So to kill the httpd, we shoul say, kill 1011(parent process id)
 ```
 command kill is like asking to stop the porcess. Butt sometimes, processes do not listen and you have to forcefully kill them 😕
 
+If we use -9, it becamose forceful. But when it has been done, it will only kill the parent process. and child processes will be still there and become orphan.
+
+```
+[root@centos ~]# systemctl start httpd
+[root@centos ~]# ps -ef | grep httpd | grep -v 'grep'
+root      1355     1  0 20:54 ?        00:00:00 /usr/sbin/httpd -DFOREGROUND
+apache    1356  1355  0 20:54 ?        00:00:00 /usr/sbin/httpd -DFOREGROUND
+apache    1357  1355  0 20:54 ?        00:00:00 /usr/sbin/httpd -DFOREGROUND
+apache    1358  1355  0 20:54 ?        00:00:00 /usr/sbin/httpd -DFOREGROUND
+apache    1359  1355  0 20:54 ?        00:00:00 /usr/sbin/httpd -DFOREGROUND
+apache    1360  1355  0 20:54 ?        00:00:00 /usr/sbin/httpd -DFOREGROUND
+[root@centos ~]# kill -9 1355
+[root@centos ~]# ps -ef | grep httpd | grep -v 'grep'
+apache    1356     1  0 20:54 ?        00:00:00 /usr/sbin/httpd -DFOREGROUND
+apache    1357     1  0 20:54 ?        00:00:00 /usr/sbin/httpd -DFOREGROUND
+apache    1358     1  0 20:54 ?        00:00:00 /usr/sbin/httpd -DFOREGROUND
+apache    1359     1  0 20:54 ?        00:00:00 /usr/sbin/httpd -DFOREGROUND
+apache    1360     1  0 20:54 ?        00:00:00 /usr/sbin/httpd -DFOREGROUND
+```
+
 
 # Servers

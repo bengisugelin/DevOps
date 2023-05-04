@@ -34,7 +34,7 @@ $ ls -a
 ```
 If you want to make any change to the VM, you can open the Vagrantfile above. 
 
-**config.vm.network "private_network", ip: "192.168.25.12" ** -> If i uncomment this line , then i can have a static IP address. In double quotes, you can give an IP address you'd like to assign, Make sure it does not overlap with your network IP address
+**config.vm.network "private_network", ip: "192.168.25.12"** -> If i uncomment this line , then i can have a static IP address. In double quotes, you can give an IP address you'd like to assign, Make sure it does not overlap with your network IP address
 
 **config.vm.network "public_network"** -> this command line is going to fetch an IP address from a wireless router
 

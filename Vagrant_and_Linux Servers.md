@@ -50,10 +50,24 @@ config.vm.provider "virtualbox" do |vb| -> **uncommented**
   #
   #   # Customize the amount of memory on the VM:
      vb.memory = "1600" -> **uncommented**
-     vb.cpus = 2 -> **uncommented**
+     vb.cpus = 2 
   end -> **uncommented**
 ```
+If you are good with all the settings, save it. You can go back to the git bash and verify the changes using cat command.
 
+```
+bytes 4682 (4.6 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 12  bytes 1258 (1.2 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 12  bytes 1258 (1.2 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+```
 # Create VM Automatically
 # Vagrant Commands
 # Vagrant Networking

@@ -99,6 +99,42 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
 
 ```
+
+Let's see what files we have in ubuntu directory:
+```
+/c/vagrant-vms/ubuntu18
+$ ls
+Vagrantfile  ubuntu-bionic-18.04-cloudimg-console.log
+```
+
+Let's create another file:
+```
+bengi@LAPTOP MINGW64 /c/vagrant-vms/ubuntu18
+$ touch testfile123.txt
+
+bengi@LAPTOP MINGW64 /c/vagrant-vms/ubuntu18
+$ ls
+Vagrantfile  testfile123.txt  ubuntu-bionic-18.04-cloudimg-console.log
+```
+
+And a directory:
+```
+bengi@LAPTOP MINGW64 /c/vagrant-vms/ubuntu18
+$ mkdir devopsdir
+
+bengi@LAPTOP MINGW64 /c/vagrant-vms/ubuntu18
+$ ls
+Vagrantfile  devopsdir/  testfile123.txt  ubuntu-bionic-18.04-cloudimg-console.log
+```
+When you create VM with vagrant, it will sync the vagrant directory where you have the vagrantfile, in this case, /c/vagrant-vms/ubuntu18 directory. and this directory corresponds /vagrant directory in the vm. So, When we logged in to the VM, if we go to cd /vagrant, we will see the same files&directories we have created in /c/vagrant-vms/ubuntu18 directory.
+
+```
+vagrant@ubuntu-bionic:~$ cd /vagrant/
+vagrant@ubuntu-bionic:/vagrant$ ls
+Vagrantfile  devopsdir  testfile123.txt  ubuntu-bionic-18.04-cloudimg-console.log
+```
+
+
 # Create VM Automatically
 # Vagrant Commands
 # Vagrant Networking

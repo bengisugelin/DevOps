@@ -172,9 +172,27 @@ Completed succesfully.
 vagrant@ubuntu-bionic:/vagrant$
 ```
 
-**Note** : if you are using graphical editor from Windows such as notepad and executing it in linux, you may get an error. In this case, you should change the format of the file from Windows to unix ( usually located in the righet down corner of the IDE.
+**Note** : if you are using graphical editor from Windows such as notepad and executing it in linux, you may get an error. In this case, you should change the format of the file from Windows to unix (usually located in the righet down corner of the IDE).
 
-![image](https://user-images.githubusercontent.com/113550043/236297854-d346fc11-a2c1-4b36-8442-51e234ddd95b.png)
+![image](https://user-images.githubusercontent.com/113550043/236298089-46a77a2c-28b3-43c7-b949-33d5dbe93795.png)
+
+That was about using a default sync, dir, /vagrant BUT if you want to create your own sync directory, you can do that as well. For that purpose, we need to edit the vagrant file.
+
+![image](https://user-images.githubusercontent.com/113550043/236299043-c13a2ad0-8ad4-4c86-8907-462df87f05f5.png)
+We need to uncomment line 46, here, "../data" is the host machine dir path, your computer. and "/vagrant_data" is the VM directory path. VM directory will be created automatically, but the host machine, we have to create it. 
+
+LEt's say you have some data in your host machine, or if you want to preserve the data from hte VM in the host machine, in your laptop, create a directory (vagrant_myshellscripts)
+
+![image](https://user-images.githubusercontent.com/113550043/236300219-17462e2f-6c41-4b5f-91c8-535b6d91a0b3.png)
+
+and copy the files inside the devopsdir directory we have created. ( or whatever data you want to put)
+
+![image](https://user-images.githubusercontent.com/113550043/236300432-c45fb6c7-1cb9-4e43-b867-ee3c153f2cf4.png)
+
+Now, we need to change the path in our Vagrantfile:
+
+![image](https://user-images.githubusercontent.com/113550043/236301023-5e7219b2-ac6d-4c49-8ede-286be9517fbc.png)
+
 
 # Create VM Automatically
 # Vagrant Commands

@@ -34,11 +34,25 @@ $ ls -a
 ```
 If you want to make any change to the VM, you can open the Vagrantfile above. 
 
+In the Vagrant file:
+
+
 **config.vm.network "private_network", ip: "192.168.25.12"** -> If i uncomment this line , then i can have a static IP address. In double quotes, you can give an IP address you'd like to assign, Make sure it does not overlap with your network IP address
 
-**config.vm.network "public_network"** -> this command line is going to fetch an IP address from a wireless router
+**config.vm.network "public_network"** -> this command line is going to fetch an IP address from a wireless router. So it will be dynamic
 
+We can also change the RAM size. If you want to increase or decrease it, you can do it by uncommenting  vb.memory and relation sections:
 
+```
+config.vm.provider "virtualbox" do |vb| -> **uncommented**
+  #   # Display the VirtualBox GUI when booting the machine
+  #   vb.gui = true
+  #
+  #   # Customize the amount of memory on the VM:
+     vb.memory = "1600" -> **uncommented**
+     vb.cpus = 2 -> **uncommented**
+  end -> **uncommented**
+```
 
 # Create VM Automatically
 # Vagrant Commands

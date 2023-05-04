@@ -155,6 +155,27 @@ I can open one of these bash files using IDE, and start typing:
 ![image](https://user-images.githubusercontent.com/113550043/236295970-d4ea48ad-2dab-45c9-9c7d-c8494d4c593f.png)
 
 
+Let's execute the file:
+```
+vagrant@ubuntu-bionic:/vagrant$ /vagrant/devopsdir/devopsscripts1.sh
+Welcome to bash scripting.
+Hit:1 http://archive.ubuntu.com/ubuntu bionic InRelease
+Get:2 http://security.ubuntu.com/ubuntu bionic-security InRelease [88.7 kB]
+Get:3 http://archive.ubuntu.com/ubuntu bionic-updates InRelease [88.7 kB]
+Get:4 http://archive.ubuntu.com/ubuntu bionic-backports InRelease [83.3 kB]
+Fetched 261 kB in 1s (177 kB/s)
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+15 packages can be upgraded. Run 'apt list --upgradable' to see them.
+Completed succesfully.
+vagrant@ubuntu-bionic:/vagrant$
+```
+
+**Note** : if you are using graphical editor from Windows such as notepad and executing it in linux, you may get an error. In this case, you should change the format of the file from Windows to unix ( usually located in the righet down corner of the IDE.
+
+![image](https://user-images.githubusercontent.com/113550043/236297854-d346fc11-a2c1-4b36-8442-51e234ddd95b.png)
+
 # Create VM Automatically
 # Vagrant Commands
 # Vagrant Networking

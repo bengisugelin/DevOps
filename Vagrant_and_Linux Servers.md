@@ -133,6 +133,19 @@ vagrant@ubuntu-bionic:~$ cd /vagrant/
 vagrant@ubuntu-bionic:/vagrant$ ls
 Vagrantfile  devopsdir  testfile123.txt  ubuntu-bionic-18.04-cloudimg-console.log
 ```
+The beauty of it, you can reach this file from you computer. you dont need spesifically go to the vagrant and open it with vim for instance.
+
+If you want to wwrite some code using some IDE like visual studio or pycharm, you can open your file through one of these IDEs and write your code without connecting the VM. After writing the script, you can use it in the VM.
+
+So, i am creating files in the vagrant, inside the devopsdir directory:
+```
+vagrant@ubuntu-bionic:/vagrant$ cd devopsdir/
+vagrant@ubuntu-bionic:/vagrant/devopsdir$ ls
+vagrant@ubuntu-bionic:/vagrant/devopsdir$ touch devopsscripts{1..10}.sh
+```
+
+Now, i can see these files from my computer, C:\vagrant-vms\ubuntu18\devopsdir. I can open one of these bash files using IDE, and start typing:
+![image](https://user-images.githubusercontent.com/113550043/236295970-d4ea48ad-2dab-45c9-9c7d-c8494d4c593f.png)
 
 
 # Create VM Automatically

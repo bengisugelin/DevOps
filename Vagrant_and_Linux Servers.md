@@ -99,7 +99,7 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
 
 ```
-
+## Vagrant sync directory
 Let's see what files we have in ubuntu directory:
 ```
 /c/vagrant-vms/ubuntu18
@@ -193,7 +193,22 @@ Now, we need to change the path in our Vagrantfile:
 
 ![image](https://user-images.githubusercontent.com/113550043/236301583-337f9912-bcc7-4fd0-aa2f-2c545da382ff.png)
 
+When you're okay with the configurations, you can save the file, and go to the vagrant vm. to apply the changes:
+```
+$ vagrant reload
+```
+![image](https://user-images.githubusercontent.com/113550043/236304094-f71a658d-6282-4702-930e-400296d85850.png)
 
+If you read the output here, you cn see the vagrant is a default sync directory, and we can also see the directory we have created  below it.
+
+Let's log in to the VM and get in to our directory:
+```
+vagrant@ubuntu-bionic:~$ cd /opt/scripts/
+vagrant@ubuntu-bionic:/opt/scripts$ ls
+devopsscripts1.sh
+```
+
+Whatever directory or file I put in here will be preservse in my laptop. If the machine is deleted or it gets corrupted, I dont need to worry about losing my data and plus, I can use an IDE while coding.
 
 # Create VM Automatically
 # Vagrant Commands

@@ -56,7 +56,37 @@ config.vm.provider "virtualbox" do |vb| -> **uncommented**
 If you are good with all the settings, save it. You can go back to the git bash and verify the changes using cat command.
 
 ```
-bytes 4682 (4.6 KB)
+vagrant@ubuntu-bionic:~$ free -m
+              total        used        free      shared  buff/cache   available
+Mem:           1550          88         924           0         537        1316
+Swap:             0           0           0
+vagrant@ubuntu-bionic:~$ ifconfig
+enp0s3: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.0.2.15  netmask 255.255.255.0  broadcast 10.0.2.255
+        inet6 fe80::40:49ff:feac:f020  prefixlen 64  scopeid 0x20<link>
+        ether 02:40:49:ac:f0:20  txqueuelen 1000  (Ethernet)
+        RX packets 6646  bytes 8323994 (8.3 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 1105  bytes 143454 (143.4 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+enp0s8: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.25.12  netmask 255.255.255.0  broadcast 192.168.25.255
+        inet6 fe80::a00:27ff:fe84:a4dd  prefixlen 64  scopeid 0x20<link>
+        ether 08:00:27:84:a4:dd  txqueuelen 1000  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 13  bytes 1046 (1.0 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+enp0s9: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.1.70  netmask 255.255.255.0  broadcast 192.168.1.255
+        inet6 2001:569:7697:3100:a00:27ff:fe27:78e0  prefixlen 64  scopeid 0x0<global>
+        inet6 fe80::a00:27ff:fe27:78e0  prefixlen 64  scopeid 0x20<link>
+        ether 08:00:27:27:78:e0  txqueuelen 1000  (Ethernet)
+        RX packets 35  bytes 4440 (4.4 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 42  bytes 4682 (4.6 KB)
         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
 
 lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
@@ -67,6 +97,7 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
         RX errors 0  dropped 0  overruns 0  frame 0
         TX packets 12  bytes 1258 (1.2 KB)
         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
 ```
 # Create VM Automatically
 # Vagrant Commands

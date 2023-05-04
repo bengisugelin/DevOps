@@ -133,7 +133,7 @@ vagrant@ubuntu-bionic:~$ cd /vagrant/
 vagrant@ubuntu-bionic:/vagrant$ ls
 Vagrantfile  devopsdir  testfile123.txt  ubuntu-bionic-18.04-cloudimg-console.log
 ```
-The beauty of it, you can reach this file from you computer. you dont need spesifically go to the vagrant and open it with vim for instance.
+The beauty of it, you can reach this file from your computer. you dont need specifically go to the vagrant and open it with vim for instance.
 
 If you want to wwrite some code using some IDE like visual studio or pycharm, you can open your file through one of these IDEs and write your code without connecting the VM. After writing the script, you can use it in the VM.
 

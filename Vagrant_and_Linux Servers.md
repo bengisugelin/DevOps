@@ -144,7 +144,14 @@ vagrant@ubuntu-bionic:/vagrant/devopsdir$ ls
 vagrant@ubuntu-bionic:/vagrant/devopsdir$ touch devopsscripts{1..10}.sh
 ```
 
-Now, i can see these files from my computer, C:\vagrant-vms\ubuntu18\devopsdir. I can open one of these bash files using IDE, and start typing:
+Now, i can see these files from my computer, C:\vagrant-vms\ubuntu18\devopsdir.
+
+![image](https://user-images.githubusercontent.com/113550043/236296194-3ecaaee3-a832-437e-b834-e7e888c63ef2.png)
+
+
+I can open one of these bash files using IDE, and start typing:
+
+
 ![image](https://user-images.githubusercontent.com/113550043/236295970-d4ea48ad-2dab-45c9-9c7d-c8494d4c593f.png)
 
 

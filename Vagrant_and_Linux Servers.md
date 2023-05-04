@@ -191,7 +191,8 @@ and copy the files inside the devopsdir directory we have created. ( or whatever
 
 Now, we need to change the path in our Vagrantfile:
 
-![image](https://user-images.githubusercontent.com/113550043/236301023-5e7219b2-ac6d-4c49-8ede-286be9517fbc.png)
+![image](https://user-images.githubusercontent.com/113550043/236301583-337f9912-bcc7-4fd0-aa2f-2c545da382ff.png)
+
 
 
 # Create VM Automatically

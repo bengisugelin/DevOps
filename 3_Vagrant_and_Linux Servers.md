@@ -210,10 +210,19 @@ devopsscripts1.sh
 
 Whatever directory or file I put in here will be preservse in my laptop. If the machine is deleted or it gets corrupted, I dont need to worry about losing my data and plus, I can use an IDE while coding.
 
+# Provisioning
+Provisioning in vagrant means executing your commands or scripts ehen your VM comes up. In some other texhnologies, these things are also called as a bootstrapping. That means, when the operating system is booting, we execute some commands, some scripts. So if you're bringing up VM to configure something, so you bring the VM by making changes to vagrant file, you bring up your VM and then you log in, then execute your commands.
+
+Instead of that, you can put all those commands in this section, in the provisioning section
+
+![image](https://user-images.githubusercontent.com/113550043/236555267-7e0d5208-87e1-4736-835f-df398691fb6c.png)
+
+And Vagrant will execute for you
+
 # Create VM Automatically
 # Vagrant Commands
 # Vagrant Networking
-# Provisioning
+
 # RAM , CPU & DIis
 # Multi VM Vagrantfile
 # Documentation

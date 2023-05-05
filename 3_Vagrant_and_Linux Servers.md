@@ -258,10 +258,55 @@ Let's save this and go to the gitbash. Right now, VM is not created. I does not 
 
 VM will be created and commands provided between SHELL will be executed. Here, provision completed succesfully.
 
-So, this example was for when the VM does not exist. But what if VM has already been exist like ubuntu we have? Let's do some provisioning for that one as well.
-```
+So, this example was for when the VM does not exist. But what if VM has already been exist like ubuntu we have? Let's do some provisioning for that one as well. 
+- Open the vangrant file of ubuntu
+- uncomment the provisioning part of the file
+![image](https://user-images.githubusercontent.com/113550043/236571754-b7aed2ff-93a2-427b-a48f-000f39fb1c09.png)
+
+save the file and go back to gitbash
 
 ```
+bengi@LAPTOP MINGW64 /c/vagrant-vms/ubuntu18
+$ tail Vagrantfile
+  # information on available options.
+
+  # Enable provisioning with a shell script. Additional provisioners such as
+  # Ansible, Chef, Docker, Puppet and Salt are also available. Please see the
+  # documentation for more information about their specific syntax and use.
+   config.vm.provision "shell", inline: <<-SHELL
+     apt-get update
+     apt-get install -y apache2
+   SHELL
+end
+
+```
+When you want to apply the changes to an existing VM, run vagrant reload --provision command. If you dont give --provision, then it will not execute your provisioning part because mostly provisioning is for bootstrapping when it comes a first time. IF everytime you reboot and everytime it's executing your commands, then it can give you some weird issues
+```
+bengi@LAPTOP-P7IJPPN9 MINGW64 /c/vagrant-vms/ubuntu18
+$ vagrant reload --provision
+```
+After reload, we can log in by typing "vagrant ssh"
+
+```
+Last login: Thu May  4 19:07:45 2023 from 10.0.2.2
+vagrant@ubuntu-bionic:~$ sudo systemctl status apache2
+● apache2.service - The Apache HTTP Server
+   Loaded: loaded (/lib/systemd/system/apache2.service; enabled; vendor preset: enabled)
+  Drop-In: /lib/systemd/system/apache2.service.d
+           └─apache2-systemd.conf
+   Active: active (running) since Fri 2023-05-05 21:32:37 UTC; 1min 51s ago
+ Main PID: 2862 (apache2)
+    Tasks: 55 (limit: 1829)
+   CGroup: /system.slice/apache2.service
+           ├─2862 /usr/sbin/apache2 -k start
+           ├─2864 /usr/sbin/apache2 -k start
+           └─2865 /usr/sbin/apache2 -k start
+
+May 05 21:32:37 ubuntu-bionic systemd[1]: Starting The Apache HTTP Server...
+May 05 21:32:37 ubuntu-bionic apachectl[2837]: AH00558: apache2: Could not reliably determine the serve
+May 05 21:32:37 ubuntu-bionic systemd[1]: Started The Apache HTTP Server.
+```
+Here you can see that apache2 is running
 
 # Create VM Automatically
 # Vagrant Commands

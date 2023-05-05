@@ -253,6 +253,12 @@ apt-get commands are for ubuntu, we are working in CentOS now, so we need to cha
 
 
 Let's save this and go to the gitbash. Right now, VM is not created. I does not exist, and i just need to do "vagrant up"
+
+![image](https://user-images.githubusercontent.com/113550043/236568376-b323670a-2900-4cfa-bb27-fc8cb0095b7a.png)
+
+VM will be created and commands provided between SHELL will be executed. Here, provision completed succesfully.
+
+So, this example was for when the VM does not exist. But what if VM has already been exist like ubuntu we have? Let's do some provisioning for that one as well.
 ```
 
 ```

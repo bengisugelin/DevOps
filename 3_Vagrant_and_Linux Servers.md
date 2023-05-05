@@ -248,19 +248,13 @@ commands between SHELL will be executed. so, let's write some scripts there.
 
 apt-get commands are for ubuntu, we are working in CentOS now, so we need to change these commands.
 
-![image](https://user-images.githubusercontent.com/113550043/236562011-f62ecf86-76fe-4970-9ffd-da8667ff4076.png)
+
+![image](https://user-images.githubusercontent.com/113550043/236567956-fa76b2ec-5f91-4fa5-bd56-d17353a6913d.png)
 
 
-Let's save this.
+Let's save this and go to the gitbash. Right now, VM is not created. I does not exist, and i just need to do "vagrant up"
 ```
-config.vm.provision "shell", inline: <<-SHELL
-     yum install httpd wget unzip -y
-	 mkdir /pot/devopsdir
-	 free -m
-	 uptime
-     
-   SHELL
-end
+
 ```
 
 # Create VM Automatically

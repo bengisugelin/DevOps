@@ -219,6 +219,50 @@ Instead of that, you can put all those commands in this section, in the provisio
 
 And Vagrant will execute for you
 
+Let's try it with CentOS, you can do the same in Ubuntu VM as well:
+
+```
+
+bengi@LAPTOP MINGW64 /c/vagrant-vms/centos7
+$ vagrant destroy
+    default: Are you sure you want to destroy the 'default' VM? [y/N] y
+==> default: Destroying VM and associated drives...
+
+```
+We remoe the centOS VM as you can see 
+
+![image](https://user-images.githubusercontent.com/113550043/236560579-87e46505-d049-4256-977f-666a5801456b.png)
+
+Now, I am going to edit the vagrantfile for the CentOS7 VM, 
+```
+bengi@LAPTOP-P7IJPPN9 MINGW64 /c/vagrant-vms/centos7
+$ ls
+Vagrantfile
+```
+Let's ope the Vagrantfile in Notepad++,  uncomment provision part:
+
+![image](https://user-images.githubusercontent.com/113550043/236561192-6c753a17-9893-49af-9fa6-735120429122.png)
+
+Here after config.vm.provision, it sys shell. There are other different provisioners like puppet or chef (we will see them later)
+commands between SHELL will be executed. so, let's write some scripts there.
+
+apt-get commands are for ubuntu, we are working in CentOS now, so we need to change these commands.
+
+![image](https://user-images.githubusercontent.com/113550043/236562011-f62ecf86-76fe-4970-9ffd-da8667ff4076.png)
+
+
+Let's save this.
+```
+config.vm.provision "shell", inline: <<-SHELL
+     yum install httpd wget unzip -y
+	 mkdir /pot/devopsdir
+	 free -m
+	 uptime
+     
+   SHELL
+end
+```
+
 # Create VM Automatically
 # Vagrant Commands
 # Vagrant Networking

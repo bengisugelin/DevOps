@@ -390,7 +390,27 @@ This is the index.html file we created. not the default one. But we need the web
 - when you clicked the zip file, you can see the link on the right side. copy it.
 ![image](https://user-images.githubusercontent.com/113550043/236644782-62fd308f-eadb-42e7-b0e4-2447f7d7eb00.png)
 
+Now, we can download it:
+```
+[root@localhost html]# cd /tmp
+[root@localhost tmp]# wget https://www.tooplate.com/zip-templates/2121_wave_cafe.zip
+--2023-05-06 20:14:15--  https://www.tooplate.com/zip-templates/2121_wave_cafe.zip
+Resolving www.tooplate.com (www.tooplate.com)... 69.16.201.107
+Connecting to www.tooplate.com (www.tooplate.com)|69.16.201.107|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 11896390 (11M) [application/zip]
+Saving to: ‘2121_wave_cafe.zip’
 
+100%[======================================>] 11,896,390  9.88MB/s   in 1.1s
+
+2023-05-06 20:14:17 (9.88 MB/s) - ‘2121_wave_cafe.zip’ saved [11896390/11896390]
+
+[root@localhost tmp]# ls
+2121_wave_cafe.zip
+systemd-private-357225ec54464761a2f52c389d7773fa-chronyd.service-HEgRCH
+systemd-private-357225ec54464761a2f52c389d7773fa-httpd.service-AYvKh1
+systemd-private-ff862164549c4ff797a8dc5ad7c941b9-chronyd.service-oI55Sl
+```
 # Create VM Automatically. 
 # Vagrant Commands
 # Vagrant Networking

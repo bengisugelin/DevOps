@@ -500,8 +500,24 @@ $ vagrant up
  ![image](https://user-images.githubusercontent.com/113550043/236650168-4c906fcc-efec-4c23-85b2-d7cbad00e189.png)
  
  run these commands one by one as a root user.
+ - Install WordPress
+ ![image](https://user-images.githubusercontent.com/113550043/236650966-280d442a-5ea7-4f92-b2b8-2ae57b3416f8.png)
 
+As a third step, we aill create a directory, this is the place where we will be hosting the wesite data. Copy all the commands and run them in the bash.
+```
+root@ubuntu-bionic:~# sudo mkdir -p /srv/www
+curl https://wordpress.org/latest.tar.gz | sudo -u www-data tar zx -C /srv/wwwroot@ubuntu-bionic:~# sudo chown www-data: /srv/www
+root@ubuntu-bionic:~# curl https://wordpress.org/latest.tar.gz | sudo -u www-data tar zx -C /srv/www
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 21.9M  100 21.9M    0     0  10.7M      0  0:00:02  0:00:02 --:--:-- 10.7M
+```
+done. Le's check the /srv/www 
 
+```
+root@ubuntu-bionic:~# ls -ld /srv/www/
+drwxr-xr-x 3 www-data www-data 4096 May  6 23:57 /srv/www/
+```
  
 # Create VM Automatically. 
 # Vagrant Commands

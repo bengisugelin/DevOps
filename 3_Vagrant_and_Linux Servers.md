@@ -306,7 +306,13 @@ May 05 21:32:37 ubuntu-bionic systemd[1]: Starting The Apache HTTP Server...
 May 05 21:32:37 ubuntu-bionic apachectl[2837]: AH00558: apache2: Could not reliably determine the serve
 May 05 21:32:37 ubuntu-bionic systemd[1]: Started The Apache HTTP Server.
 ```
-Here you can see that apache2 is running
+Here you can see that apache2 is running, Apache2 is a web service, it will be serving web pages, we can access from the web browser. LEt's take the static IP or bridge IP ( whatever you want) then go to our browser.
+
+![image](https://user-images.githubusercontent.com/113550043/236595672-92af871b-da8a-453d-a50f-dd898cd0ea26.png)
+
+
+![image](https://user-images.githubusercontent.com/113550043/236595747-357eefc4-fba6-4e89-a0ee-71aa98ed7751.png)
+
 
 # Create VM Automatically
 # Vagrant Commands

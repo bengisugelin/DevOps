@@ -472,6 +472,21 @@ Yes, it is running. Let's test it in our browser. resfresh your browser and see 
 
 Yay! we are hosting a website!
 
+# Website Setup - Wordpress
+
+In previous section, we have set up a static website. In this section, we weill be setting up a word press, so it is going to interacrt with us.
+
+Create a new directory, create a Vagrant file, open it and change it:
+```
+bengi@LAPTOP MINGW64 /c/vagrant-vms
+$ mkdir wordpress
+$ cd wordpress/
+$ vagrant init ubuntu/bionic64
+$ vi Vagrantfile
+```
+
+![image](https://user-images.githubusercontent.com/113550043/236649967-b15da65e-e10d-4c37-8c11-8cb62f6a9202.png)
+ save it
 # Create VM Automatically. 
 # Vagrant Commands
 # Vagrant Networking

@@ -486,7 +486,22 @@ $ vi Vagrantfile
 ```
 
 ![image](https://user-images.githubusercontent.com/113550043/236649967-b15da65e-e10d-4c37-8c11-8cb62f6a9202.png)
- save it
+ 
+ save it, bring up the vagrant.
+ 
+ ```
+ bengi@LAPTOP MINGW64 /c/vagrant-vms/wordpress
+$ vagrant up
+ ```
+ 
+ Now, let's see WordPress set up documentation. We will just search on the internet [https://ubuntu.com/tutorials/install-and-configure-wordpress#1-overview]. In this website, there are total 9 steps. Forst, let's log in to the system and then apply the steps we need.
+ 
+ - Install dependencies:
+ ![image](https://user-images.githubusercontent.com/113550043/236650168-4c906fcc-efec-4c23-85b2-d7cbad00e189.png)
+ 
+ run these commands one by one as a root user.
+
+ 
 # Create VM Automatically. 
 # Vagrant Commands
 # Vagrant Networking

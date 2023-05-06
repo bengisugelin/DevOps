@@ -383,6 +383,14 @@ It is not mandatory for index.html to restart your service, but if you have so m
 
 ![image](https://user-images.githubusercontent.com/113550043/236644090-7e94c0fe-9d10-4f23-9d1c-ab34b980e032.png)
 
+This is the index.html file we created. not the default one. But we need the website from tooplate that we downloaded. It is in our local machine rigth now, but we need to download it in the Linux VM. so we will use wget command. first wee need a download link for this purpose. to find the link:
+- go to the Wave cafe template page
+- inspect the page ( make sure you are in the network tab)
+- this is how developers debug their website generally, clik download button. You dont really download the file, you can cancel it, Our purpose here is getting the link.
+- when you clicked the zip file, you can see the link on the right side. copy it.
+![image](https://user-images.githubusercontent.com/113550043/236644782-62fd308f-eadb-42e7-b0e4-2447f7d7eb00.png)
+
+
 # Create VM Automatically. 
 # Vagrant Commands
 # Vagrant Networking

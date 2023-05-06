@@ -313,8 +313,42 @@ Here you can see that apache2 is running, Apache2 is a web service, it will be s
 
 ![image](https://user-images.githubusercontent.com/113550043/236595747-357eefc4-fba6-4e89-a0ee-71aa98ed7751.png)
 
+# Website Setup
+first, setting up a website on CentOS7, we will take a ready-made website available from tooplate.com, tehre are so many oother sites that you can get a template. [https://www.tooplate.com/]
 
-# Create VM Automatically
+I am going to downlaod this template: https://www.tooplate.com/view/2121-wave-cafe . But you can downlaod any of those templates by clicking download button. After downloading the template, let's go to the shell. and create a new directory.
+```
+bengi@LAPTOP-P7IJPPN9 MINGW64 /c/vagrant-vms
+$ mkdir wavecafe/
+
+bengi@LAPTOP-P7IJPPN9 MINGW64 /c/vagrant-vms
+$ cd wavecafe/
+```
+
+now, got to the vagrant cloud website [https://app.vagrantup.com/boxes/search?utf8=%E2%9C%93&sort=downloads&provider=&q=centos+7] and search for centos7
+![image](https://user-images.githubusercontent.com/113550043/236596634-521a328e-6276-40e0-a01d-e2d5f1bf8454.png)
+
+choose geerlingguy and copy the highlighted part: 
+![image](https://user-images.githubusercontent.com/113550043/236596678-e4bfc675-9904-4b2f-b362-7fea1239f7e8.png)
+
+noe, go back to the git bash and enter "vagrant init geerlingguy/centos7" command:
+```
+bengi@LAPTOP MINGW64 /c/vagrant-vms/wavecafe
+$ vagrant init geerlingguy/centos7
+A `Vagrantfile` has been placed in this directory. You are now
+ready to `vagrant up` your first virtual environment! Please read
+the comments in the Vagrantfile as well as documentation on
+`vagrantup.com` for more information on using Vagrant.
+```
+This will create a vagrant file and we will edit it through vim editor.
+```
+vim Vagrantfile
+```
+firstly, we need an IP address to access our website, so uncomment these parts:
+![image](https://user-images.githubusercontent.com/113550043/236597098-4e285a20-760b-4dd8-b032-2e2132984987.png)
+
+
+# Create VM Automatically. 
 # Vagrant Commands
 # Vagrant Networking
 

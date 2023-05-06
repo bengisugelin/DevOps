@@ -470,6 +470,8 @@ Yes, it is running. Let's test it in our browser. resfresh your browser and see 
 
 ![image](https://user-images.githubusercontent.com/113550043/236645218-4f74e473-4600-420d-a41f-245d87a6cea6.png)
 
+Yay! we are hosting a website!
+
 # Create VM Automatically. 
 # Vagrant Commands
 # Vagrant Networking

@@ -411,6 +411,65 @@ systemd-private-357225ec54464761a2f52c389d7773fa-chronyd.service-HEgRCH
 systemd-private-357225ec54464761a2f52c389d7773fa-httpd.service-AYvKh1
 systemd-private-ff862164549c4ff797a8dc5ad7c941b9-chronyd.service-oI55Sl
 ```
+
+unzip it:
+```
+[root@localhost tmp]# unzip 2121_wave_cafe.zip
+[root@localhost tmp]# ls
+2121_wave_cafe
+2121_wave_cafe.zip
+systemd-private-357225ec54464761a2f52c389d7773fa-chronyd.service-HEgRCH
+systemd-private-357225ec54464761a2f52c389d7773fa-httpd.service-AYvKh1
+systemd-private-ff862164549c4ff797a8dc5ad7c941b9-chronyd.service-oI55Sl
+[root@localhost tmp]# cd 2121_wave_cafe
+[root@localhost 2121_wave_cafe]# ls
+css  fontawesome  img  index.html  js  video
+```
+after unzipping the file, we can now see the website data, including index.html file.
+
+now, copy all this content to the /var/www/html directory
+
+```
+[root@localhost 2121_wave_cafe]# cp -r * /var/www/html
+cp: overwrite ‘/var/www/html/index.html’? y
+```
+It's time to restart our service:
+```
+[root@localhost 2121_wave_cafe]# systemctl restart httpd
+[root@localhost 2121_wave_cafe]# ls /var/www/html
+css  fontawesome  img  index.html  js  video
+```
+
+check if the service is running or not:
+```
+[root@localhost 2121_wave_cafe]# systemctl status httpd
+● httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; enabled; vendor preset: disabled)
+   Active: active (running) since Sat 2023-05-06 20:19:41 UTC; 1min 37s ago
+     Docs: man:httpd(8)
+           man:apachectl(8)
+  Process: 3157 ExecStop=/bin/kill -WINCH ${MAINPID} (code=exited, status=0/SUCCESS)
+ Main PID: 3162 (httpd)
+   Status: "Total requests: 0; Current requests/sec: 0; Current traffic:   0 B/sec"
+   CGroup: /system.slice/httpd.service
+           ├─3162 /usr/sbin/httpd -DFOREGROUND
+           ├─3163 /usr/sbin/httpd -DFOREGROUND
+           ├─3164 /usr/sbin/httpd -DFOREGROUND
+           ├─3165 /usr/sbin/httpd -DFOREGROUND
+           ├─3166 /usr/sbin/httpd -DFOREGROUND
+           └─3167 /usr/sbin/httpd -DFOREGROUND
+
+May 06 20:19:41 localhost.localdomain systemd[1]: Stopped The Apache HTTP Server.
+May 06 20:19:41 localhost.localdomain systemd[1]: Starting The Apache HTTP Server...
+May 06 20:19:41 localhost.localdomain httpd[3162]: AH00558: httpd: Could not reliably determine the server's full...sage
+May 06 20:19:41 localhost.localdomain systemd[1]: Started The Apache HTTP Server.
+Hint: Some lines were ellipsized, use -l to show in full.
+```
+
+Yes, it is running. Let's test it in our browser. resfresh your browser and see the result.
+
+![image](https://user-images.githubusercontent.com/113550043/236645218-4f74e473-4600-420d-a41f-245d87a6cea6.png)
+
 # Create VM Automatically. 
 # Vagrant Commands
 # Vagrant Networking

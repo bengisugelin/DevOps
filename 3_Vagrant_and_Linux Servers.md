@@ -347,6 +347,41 @@ vim Vagrantfile
 firstly, we need an IP address to access our website, so uncomment these parts:
 ![image](https://user-images.githubusercontent.com/113550043/236597098-4e285a20-760b-4dd8-b032-2e2132984987.png)
 
+Let's bring up our VM, log in to it and become a root user:
+```
+bengi@LAPTOP MINGW64 /c/vagrant-vms/wavecafe
+$ vagrant up
+$ vagrant ssh
+[vagrant@localhost ~]$ sudo -i
+[root@localhost ~]#
+```
+install the httpd:
+```
+[root@localhost ~]# yum install httpd wget unzip -y
+```
+After installation, start our service and also enable it so that it can be activated in the boot time
+```
+[root@localhost ~]# systemctl start httpd
+[root@localhost ~]# systemctl enable httpd
+Created symlink from /etc/systemd/system/multi-user.target.wants/httpd.service to /usr/lib/systemd/system/httpd.service.
+```
+
+Now using your static IP or IP that you got from your wifi router, you can go to the browser and you can see the default apache page like in ubuntu
+
+![image](https://user-images.githubusercontent.com/113550043/236643597-37e6db86-fb6d-4877-a48e-42a19edc4abb.png)
+
+Let's go back to the git bash.
+
+Server data is located in /var directory -> /var/www/html -> this is the directory where you can put your html templates, your html files and it is going to serve those html pages when you access from the browser. the first file by default is index.html for apache httpd service.
+```
+[root@localhost ~]# cd /var/www/html
+[root@localhost html]# vi index.html  ( you can write whatever you want eg. this is a sample website.)
+[root@localhost html]# systemctl restart httpd
+
+```
+It is not mandatory for index.html to restart your service, but if you have so manty linked file, then you need to restart. in any case, when we make configuration changes to the server, we need to restart or reload the changes. Now, lets go back to the browser and refresh the page
+
+![image](https://user-images.githubusercontent.com/113550043/236644090-7e94c0fe-9d10-4f23-9d1c-ab34b980e032.png)
 
 # Create VM Automatically. 
 # Vagrant Commands

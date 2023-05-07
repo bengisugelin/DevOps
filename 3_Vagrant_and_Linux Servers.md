@@ -601,6 +601,7 @@ root@ubuntu-bionic:~# sudo service apache2 reload
 We are not done yet, let's go to the next step:
 
 - Configure Database
+
  So, WordPress needs database and we have installed mysql server, we will configure the database.
  1. Log in mysql server as a root
 ```
@@ -613,6 +614,36 @@ mysql> quit
 Bye
 
 ```
+Database is ready. Let's see the next step.
+
+- Configure WordPress to connect to the database
+
+```
+root@ubuntu-bionic:~# sudo -u www-data cp /srv/www/wordpress/wp-config-sample.php /srv/www/wordpress/wp-config.php
+root@ubuntu-bionic:~# sudo -u www-data sed -i 's/database_name_here/wordpress/' /srv/www/wordpress/wp-config.php
+root@ubuntu-bionic:~# sudo -u www-data sed -i 's/username_here/wordpress/' /srv/www/wordpress/wp-config.php
+root@ubuntu-bionic:~# sudo -u www-data sed -i 's/password_here/admin123/' /srv/www/wordpress/wp-config.php
+```
+
+![image](https://user-images.githubusercontent.com/113550043/236652593-34c28697-a6da-4bbd-8246-d5bd158d1fc3.png)
+
+- Configure WordPress
+
+go to the web browser and search your IP address, 
+
+
+![image](https://user-images.githubusercontent.com/113550043/236652725-62e91590-efd0-4230-bd81-54d80c229630.png)
+
+![image](https://user-images.githubusercontent.com/113550043/236652738-0a14379d-9115-45fe-bb1a-6d0e28096225.png)
+
+Let's login:
+
+![image](https://user-images.githubusercontent.com/113550043/236652748-5a444d8d-6834-4d72-96a9-6bf3b73e4812.png)
+
+![image](https://user-images.githubusercontent.com/113550043/236652778-47e65988-854d-40ca-b755-9421e06135da.png)
+
+Ready! you can manage your web site now. It is connected to the database, you can create posts , comments etc. and all those things will be saved. 
+
 
 # Create VM Automatically. 
 # Vagrant Commands

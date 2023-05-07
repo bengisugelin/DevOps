@@ -573,8 +573,47 @@ lrwxrwxrwx 1 root root 35 May  6 23:54 000-default.conf -> ../sites-available/00
 lrwxrwxrwx 1 root root 33 May  7 00:15 wordpress.conf -> ../sites-available/wordpress.conf
 ```
 
-here, wordpress.conf points our configuration file which is in sites-available. The first one is the default configuration file. If you want to try to access the website, you will see a default apache2 page, but we don't want that
- 
+here, wordpress.conf points our configuration file which is in sites-available. The first one is the default configuration file. If you want to try to access the website, you will see a default apache2 page, but we don't want that. We will disable that. So we have few other commands:
+```
+root@ubuntu-bionic:~# sudo a2enmod rewrite
+Enabling module rewrite.
+To activate the new configuration, you need to run:
+  systemctl restart apache2
+  
+ root@ubuntu-bionic:~# sudo a2dissite 000-default
+Site 000-default disabled.
+To activate the new configuration, you need to run:
+  systemctl reload apache2
+``` 
+
+now check the link again:
+```
+root@ubuntu-bionic:~# ls -l /etc/apache2/sites-enabled/
+total 0
+lrwxrwxrwx 1 root root 33 May  7 00:15 wordpress.conf -> ../sites-available/wordpress.conf
+```
+As you can see, we only have one link now. hte previous default one has been disabled.
+
+Let's continue with the next command, reload or restart the apache2:
+```
+root@ubuntu-bionic:~# sudo service apache2 reload
+```
+We are not done yet, let's go to the next step:
+
+- Configure Database
+ So, WordPress needs database and we have installed mysql server, we will configure the database.
+ 1. Log in mysql server as a root
+```
+root@ubuntu-bionic:~# mysql -u root
+mysql> CREATE DATABASE wordpress;
+mysql> CREATE USER wordpress@localhost IDENTIFIED BY 'admin123';
+mysql> GRANT SELECT,INSERT,UPDATE,DELETE,CREATE,DROP,ALTER  ON wordpress.* TO wordpress@localhost; 
+mysql> FLUSH PRIVILEGES;
+mysql> quit
+Bye
+
+```
+
 # Create VM Automatically. 
 # Vagrant Commands
 # Vagrant Networking

@@ -517,7 +517,40 @@ done. Le's check the /srv/www
 ```
 root@ubuntu-bionic:~# ls -ld /srv/www/
 drwxr-xr-x 3 www-data www-data 4096 May  6 23:57 /srv/www/
+root@ubuntu-bionic:~# ls -l /srv/www/wordpress/
+total 228
+-rw-r--r--  1 www-data www-data   405 Feb  6  2020 index.php
+-rw-r--r--  1 www-data www-data 19915 Jan  1 00:06 license.txt
+-rw-r--r--  1 www-data www-data  7402 Mar  5 00:52 readme.html
+-rw-r--r--  1 www-data www-data  7205 Sep 16  2022 wp-activate.php
+drwxr-xr-x  9 www-data www-data  4096 Mar 29 17:48 wp-admin
+-rw-r--r--  1 www-data www-data   351 Feb  6  2020 wp-blog-header.php
+-rw-r--r--  1 www-data www-data  2338 Nov  9  2021 wp-comments-post.php
+-rw-r--r--  1 www-data www-data  3013 Feb 23 10:38 wp-config-sample.php
+drwxr-xr-x  4 www-data www-data  4096 Mar 29 17:48 wp-content
+-rw-r--r--  1 www-data www-data  5536 Nov 23 15:43 wp-cron.php
+drwxr-xr-x 28 www-data www-data 12288 Mar 29 17:48 wp-includes
+-rw-r--r--  1 www-data www-data  2502 Nov 26 21:01 wp-links-opml.php
+-rw-r--r--  1 www-data www-data  3792 Feb 23 10:38 wp-load.php
+-rw-r--r--  1 www-data www-data 49330 Feb 23 10:38 wp-login.php
+-rw-r--r--  1 www-data www-data  8541 Feb  3 13:35 wp-mail.php
+-rw-r--r--  1 www-data www-data 24993 Mar  1 15:05 wp-settings.php
+-rw-r--r--  1 www-data www-data 34350 Sep 17  2022 wp-signup.php
+-rw-r--r--  1 www-data www-data  4889 Nov 23 15:43 wp-trackback.php
+-rw-r--r--  1 www-data www-data  3238 Nov 29 15:51 xmlrpc.php
 ```
+That's the all data from WordPress. At the top, we have index.php, in the previous setup, we had html. So we will configure the php file this time.
+Let's check the next step.
+- Configure Apache for WordPress
+![image](https://user-images.githubusercontent.com/113550043/236651288-7140e5d7-11b5-430c-9b1f-608b347c0372.png)
+
+copy and paste the command inside the configuration file.
+![image](https://user-images.githubusercontent.com/113550043/236651327-8301e81c-660a-409c-8e80-86f286cf2274.png)
+
+This configuration basically says if anybody is accessing this machine on port 80, then it is going to serve the web pages from this directory and this is the index.php file that will be served. So, this is the virtual host settings in Apache2. Save it and quit from the file using :wq command
+
+
+
  
 # Create VM Automatically. 
 # Vagrant Commands

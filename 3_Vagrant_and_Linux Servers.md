@@ -497,10 +497,12 @@ $ vagrant up
  Now, let's see WordPress set up documentation. We will just search on the internet [https://ubuntu.com/tutorials/install-and-configure-wordpress#1-overview]. In this website, there are total 9 steps. Forst, let's log in to the system and then apply the steps we need.
  
  - Install dependencies:
+ 
  ![image](https://user-images.githubusercontent.com/113550043/236650168-4c906fcc-efec-4c23-85b2-d7cbad00e189.png)
  
  run these commands one by one as a root user.
  - Install WordPress
+ 
  ![image](https://user-images.githubusercontent.com/113550043/236650966-280d442a-5ea7-4f92-b2b8-2ae57b3416f8.png)
 
 As a third step, we aill create a directory, this is the place where we will be hosting the wesite data. Copy all the commands and run them in the bash.
@@ -544,7 +546,7 @@ Let's check the next step.
 
 
 - Configure Apache for WordPress
-- 
+
 ![image](https://user-images.githubusercontent.com/113550043/236651288-7140e5d7-11b5-430c-9b1f-608b347c0372.png)
 
 copy and paste the command inside the configuration file.
@@ -553,8 +555,25 @@ copy and paste the command inside the configuration file.
 
 This configuration basically says if anybody is accessing this machine on port 80, then it is going to serve the web pages from this directory and this is the index.php file that will be served. So, this is the virtual host settings in Apache2. Save it and quit from the file using :wq command
 
+next command:
+```
+root@ubuntu-bionic:~# sudo a2ensite wordpress
+Enabling site wordpress.
+To activate the new configuration, you need to run:
+  systemctl reload apache2
 
+```
 
+This command creates a soft link.
+
+```
+root@ubuntu-bionic:~# ls -l /etc/apache2/sites-enabled/
+total 0
+lrwxrwxrwx 1 root root 35 May  6 23:54 000-default.conf -> ../sites-available/000-default.conf
+lrwxrwxrwx 1 root root 33 May  7 00:15 wordpress.conf -> ../sites-available/wordpress.conf
+```
+
+here, wordpress.conf points our configuration file which is in sites-available. The first one is the default configuration file. If you want to try to access the website, you will see a default apache2 page, but we don't want that
  
 # Create VM Automatically. 
 # Vagrant Commands

@@ -541,10 +541,14 @@ drwxr-xr-x 28 www-data www-data 12288 Mar 29 17:48 wp-includes
 ```
 That's the all data from WordPress. At the top, we have index.php, in the previous setup, we had html. So we will configure the php file this time.
 Let's check the next step.
+
+
 - Configure Apache for WordPress
+- 
 ![image](https://user-images.githubusercontent.com/113550043/236651288-7140e5d7-11b5-430c-9b1f-608b347c0372.png)
 
 copy and paste the command inside the configuration file.
+
 ![image](https://user-images.githubusercontent.com/113550043/236651327-8301e81c-660a-409c-8e80-86f286cf2274.png)
 
 This configuration basically says if anybody is accessing this machine on port 80, then it is going to serve the web pages from this directory and this is the index.php file that will be served. So, this is the virtual host settings in Apache2. Save it and quit from the file using :wq command

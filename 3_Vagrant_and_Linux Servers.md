@@ -644,11 +644,36 @@ Let's login:
 
 Ready! you can manage your web site now. It is connected to the database, you can create posts , comments etc. and all those things will be saved. 
 
+# Automate Website Setup
 
-# Create VM Automatically. 
-# Vagrant Commands
-# Vagrant Networking
+Untill now, we have set up a static website on CentOS7, and a WordPress blog on Ubuntu 18. But both of them was manually. Now we are going to automate all that by using vagrant provisioning. So we have already known the steps for setting up a website. now, we are going to put those command to the vagrant provisioning section. That will be called as **infrastructure as a code (IAAC)** . So, the entrire infrastructure, our virtual machine or operating system, provisioning, everything is in the code, the vagrant file, we say vgrant up and everything is provisioned.
 
-# RAM , CPU & DIis
-# Multi VM Vagrantfile
-# Documentation
+Let's write our Vaagrantfile, which will provision as website and  WebPress
+
+```
+$ cd /c/vagrant-vms/
+```
+Let's create a directory named IAAC
+```
+$ mkdir IAAC
+```
+
+Inside this directory, let's create two other directories, website and wordpress:
+
+```
+$ cd IAAC/
+$ mkdir website
+$ mkdir wordpress
+$ cd website/
+```
+
+First, set up the website froom tooplate, vagran init
+```
+bengi@LAPTOP MINGW64 /c/vagrant-vms/IAAC/website
+$ vagrant init geerlingguy/centos7
+A `Vagrantfile` has been placed in this directory. You are now
+ready to `vagrant up` your first virtual environment! Please read
+the comments in the Vagrantfile as well as documentation on
+`vagrantup.com` for more information on using Vagrant.
+
+```

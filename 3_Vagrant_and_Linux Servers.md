@@ -685,3 +685,4 @@ these command are all you need. If you wish to set any other website, you can do
 
 
 # Automate WordPress Setup
+For this section, we will set up WordPress on Ubuntu 20 by usng vagrant. So we will not need to login and execute commands to set up wordpress, vagrant will do it for us. First, let's create ubuntu 20 VM with vagrant.

@@ -679,6 +679,9 @@ the comments in the Vagrantfile as well as documentation on
 ```
 Set up the vagrant file:
 
-![image](https://user-images.githubusercontent.com/113550043/236924084-b76dde2c-c902-477a-b9ce-2e9a11dbf49a.png)
+![image](https://user-images.githubusercontent.com/113550043/236928281-238f66ca-eff9-45c5-8522-6591ecd0ed68.png)
 
-these command are all you need. If you wish to set any other website, you can do it by giving the correct download path and change the code accordingly. Save the file, and our infrastructure as a code (IAAC) is ready
+these command are all you need. If you wish to set any other website, you can do it by giving the correct download path and change the code accordingly. Save the file, and our infrastructure as a code (IAAC) is ready. Using your Ip adress, you can reach you website.
+
+
+# Automate WordPress Setup

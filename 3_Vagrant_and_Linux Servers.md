@@ -677,3 +677,8 @@ the comments in the Vagrantfile as well as documentation on
 `vagrantup.com` for more information on using Vagrant.
 
 ```
+Set up the vagrant file:
+
+![image](https://user-images.githubusercontent.com/113550043/236924084-b76dde2c-c902-477a-b9ce-2e9a11dbf49a.png)
+
+these command are all you need. If you wish to set any other website, you can do it by giving the correct download path and change the code accordingly. Save the file, and our infrastructure as a code (IAAC) is ready

@@ -686,3 +686,30 @@ these command are all you need. If you wish to set any other website, you can do
 
 # Automate WordPress Setup
 For this section, we will set up WordPress on Ubuntu 20 by usng vagrant. So we will not need to login and execute commands to set up wordpress, vagrant will do it for us. First, let's create ubuntu 20 VM with vagrant.
+open gitbash and go to the wordpress directory:
+
+```
+bengi@LAPTOP-P7IJPPN9 MINGW64 ~
+$ cd /c/vagrant-vms/IAAC/wordpress/
+$ vagrant init geerlingguy/ubuntu2004
+A `Vagrantfile` has been placed in this directory. You are now
+ready to `vagrant up` your first virtual environment! Please read
+the comments in the Vagrantfile as well as documentation on
+`vagrantup.com` for more information on using Vagrant.
+```
+Let's open the Vagrantfile to change it ( oopen it from file explorer with notepad++ or anaother editor)
+
+![image](https://user-images.githubusercontent.com/113550043/236952884-bb6a1356-ecb4-4462-8886-a7f2d94e25a0.png)
+
+
+Now, we will add all the command into the provision part. Let's follow the steps in this website one more time: https://ubuntu.com/tutorials/install-and-configure-wordpress#1-overview
+
+
+![image](https://user-images.githubusercontent.com/113550043/236953353-d21d08ea-95f2-48df-a9f8-107894105987.png)
+
+
+Before step 4, everything goes smoothly. But Step 4 is not that easy. We have to open the configuration file and put some commands in it, but vagrant cannot do that. So we will create our own file with step 4 content. We will keep it in our host machine and then will issue a command which will copy this file ti the VM.
+
+
+![image](https://user-images.githubusercontent.com/113550043/236953662-b5c6dbb4-1b18-440f-bba2-fe01cb444b0f.png)
+

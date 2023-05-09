@@ -33,3 +33,21 @@ The purpose of this project:
 - VM Automation locally
 - baseline for upcoming projects
 - real world project setup locally (for R & D)
+
+## Architectural Design
+Architecture of project services
+- NGINX
+- TOMCAT
+- RABBITMQ
+- MEMCACHE
+
+Architecture of automated setuo
+- vagrant
+- virtualbox
+- gitbash
+
+We are going to set up a website, a web application, and this app is a social networking site written bt developers in Java language.
+
+The word stack is used for collection of services working together to create an experience, in this case, a web app. So we need to set up all these services in our virtual machines and configure together so users get that experience of a web application.
+
+So, user opens the browser or the app. in the browser, user will enter the URL, but in this project, we dont have a URL, we have an IP address. (in the next project we will set up a URL). This is the IP adress of a Load balancer and we are going to use NGINX service to create the load balancing experience.

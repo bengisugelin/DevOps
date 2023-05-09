@@ -713,3 +713,34 @@ Before step 4, everything goes smoothly. But Step 4 is not that easy. We have to
 
 ![image](https://user-images.githubusercontent.com/113550043/236953662-b5c6dbb4-1b18-440f-bba2-fe01cb444b0f.png)
 
+![image](https://user-images.githubusercontent.com/113550043/236953935-a5dfce26-dcd3-4c57-bb88-e2114348f93b.png)
+
+In the notepadd, create a new file and copy the step4 commands to this file. then save it to the same location that your Vagrantfile placed. save as type is all, and the file name is wordpress.conf
+
+Now, We need to put a command that will copy this file inside the VM.
+
+![image](https://user-images.githubusercontent.com/113550043/236954493-a4b1284a-4615-47fc-bbe4-12a4925249ff.png)
+
+![image](https://user-images.githubusercontent.com/113550043/236955228-ac161802-1406-4bed-b48d-f81996439bd5.png)
+
+
+Check if there is any error in your code and then save it. Now, back to the gitbash
+
+```
+bengi@LAPTOP-P7IJPPN9 MINGW64 /c/vagrant-vms/IAAC/wordpress
+$ vagrant up
+```
+
+Set up is done after a few minutes. ITs time to verify that we really dont need to log in to the VM. using cat command, get the ip addres from vagrant file and go to the website.
+
+![image](https://user-images.githubusercontent.com/113550043/236957055-b578e521-a983-4ec0-95ac-7fde98dc3cd0.png)
+
+
+There we are, it is asking for a wordpress setup.
+
+![image](https://user-images.githubusercontent.com/113550043/236957197-f79c8a19-3476-4c88-8eae-623cd26fbabe.png)
+
+![image](https://user-images.githubusercontent.com/113550043/236957290-cf6816fb-91a7-4e78-91a4-49f8e78c8883.png)
+
+
+You are in!

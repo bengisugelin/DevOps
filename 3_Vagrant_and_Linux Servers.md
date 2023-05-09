@@ -765,7 +765,7 @@ use your existing Vagrantfile to set the configurations.
 
 
 Right now, if I say vagrant up from gitbash, it will create two different VM, one of them is ubuntu and the other one is centos. Or you can add other setting like below:
-![image](https://user-images.githubusercontent.com/113550043/236982441-cc908c80-2dc3-4e8c-99e7-0481bb564ea8.png)
+![image](https://user-images.githubusercontent.com/113550043/236983663-72d5865a-95d2-486a-b734-13758d8bde22.png)
 
 
 Now let's test it.

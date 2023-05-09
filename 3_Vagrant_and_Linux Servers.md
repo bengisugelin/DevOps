@@ -744,3 +744,5 @@ There we are, it is asking for a wordpress setup.
 
 
 You are in!
+
+So again, this is called Infrastructure as a code (IAAC), we create a virtual machine and it also provisioned it with the service and everything is in the code. With this, we can avoid human errors, we can save a lot of time, we can version control our infrastructure

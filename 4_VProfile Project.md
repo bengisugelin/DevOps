@@ -59,3 +59,21 @@ Apache Tomcat is a Java Web application service. So if you have a web applicatio
 Here, there is also one more service called RabbitMQ connected to Tomcat. it is not functional for this project. the reaseon we have it is having a more coplex structure so that we can practice. RabbitMQ is a message broker or also called queuing agent to connect to applications together, you can stream the data from this.
 
 Going back to our app, othe user will get a web page, will log in, the login details will be stored in MySQL database service. Our application will run an SQL query to access the user information stored in MySQL database. But before it goes to the MySQL database, the request will go to memcache service. Memcache is a database caching, it will be connected with the mySQL server. mySQL server will store the user information when the first time the request comes to the database MySQL, it will be sent from the MYSQL server to the Tomcat and then it will be cache to the Memcache service. So next time a request comes, it will be accessing the data which is cached in cache service just like you have browser cache, we also have database cache
+
+Another desing we have is for automation stack. We will be using vagrant to automation. So vagrant will going to communicate with oracle CM, then we will be using some bach scripts to set up our services
+
+Finally. let's understand the flow of execution.
+1. set up all the tools 
+2. clone the source code
+3. cd into the vagrant directoru
+4. bring up VMs
+5. validate
+6. setting us all the services
+    - MySQL
+    - Memcache
+    - RabbitMQ
+    - Tomcat
+    - Nginx
+    - app build & deploy
+7. Verify from browser
+ 

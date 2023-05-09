@@ -746,3 +746,37 @@ There we are, it is asking for a wordpress setup.
 You are in!
 
 So again, this is called Infrastructure as a code (IAAC), we create a virtual machine and it also provisioned it with the service and everything is in the code. With this, we can avoid human errors, we can save a lot of time, we can version control our infrastructure
+
+# Multi VM Vagrant File
+
+How we can set up multiple VMs from one single Vagrant file?
+
+https://developer.hashicorp.com/vagrant/docs/multi-machine
+
+![image](https://user-images.githubusercontent.com/113550043/236971039-7f6555fe-74f6-423e-8d32-228a83f3951a.png)
+
+Let's copy the command above, go to the notepad, create a new file, paste the command and save the file
+
+![image](https://user-images.githubusercontent.com/113550043/236971688-ba51b79e-d074-45ba-b020-083efb3f42f3.png)
+
+use your existing Vagrantfile to set the configurations.
+
+![image](https://user-images.githubusercontent.com/113550043/236971999-cbd15f43-a062-44fd-9508-d815e85a4fcd.png)
+
+
+Right now, if I say vagrant up from gitbash, it will create two different VM, one of them is ubuntu and the other one is centos. Or you can add other setting like below:
+![image](https://user-images.githubusercontent.com/113550043/236982441-cc908c80-2dc3-4e8c-99e7-0481bb564ea8.png)
+
+
+Now let's test it.
+
+```
+bengi@LAPTOP-P7IJPPN9 MINGW64 /c/vagrant-vms/multivm
+$ vagrant up
+```
+
+as we have two VM in this case, you should mention the name of the vm while doing ssh.
+
+```
+$ vagrant ssh web01
+```

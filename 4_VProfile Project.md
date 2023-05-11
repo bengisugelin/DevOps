@@ -337,3 +337,51 @@ Now,you can resart mariadb if you'd like to. not necessary though.
 ```
 systemctl restart mariadb
 ```
+Logout from db01
+
+**NExt, Memcache setup:**
+
+Login to mc01: 
+```
+bengi@LAPTOP MINGW64 /c/vprofile-project/vagrant/Manual_provisioning (local-setup)
+$ vagrant ssh mc01
+```
+
+switch to root user
+```
+[vagrant@mc01 ~]$ sudo -i
+[root@mc01 ~]# yum update -y
+[root@mc01 ~]# yum install epel-release -y
+[root@mc01 ~]# yum install memcached -y
+[root@mc01 ~]# systemctl start memcached
+[root@mc01 ~]# systemctl enable memcached
+Created symlink from /etc/systemd/system/multi-user.target.wants/memcached.service to /usr/lib/systemd/system/memcached.service.
+
+
+[root@mc01 ~]# systemctl status memcached
+● memcached.service - Memcached
+   Loaded: loaded (/usr/lib/systemd/system/memcached.service; enabled; vendor preset: disabled)
+   Active: active (running) since Thu 2023-05-11 20:42:05 UTC; 25s ago
+ Main PID: 23271 (memcached)
+   CGroup: /system.slice/memcached.service
+           └─23271 /usr/bin/memcached -u memcached -p 11211 -m 64 -c 1024
+
+May 11 20:42:05 mc01 systemd[1]: Started Memcached.
+```
+
+We need to run one more command for memcache so it can listen on TCP port (11211) and UDP port(11111)
+```
+[root@mc01 ~]# memcached -p 11211 -U 11111 -u memcached -d
+```
+
+We can validate if it is running on the right port:
+
+```
+[root@mc01 ~]# ss -tunlp | grep 11211
+udp    UNCONN     0      0         *:11211                 *:*                   users:(("memcached",pid=23271,fd=28))
+udp    UNCONN     0      0      [::]:11211              [::]:*                   users:(("memcached",pid=23271,fd=29))
+tcp    LISTEN     0      128       *:11211                 *:*                   users:(("memcached",pid=23271,fd=26))
+tcp    LISTEN     0      128    [::]:11211              [::]:*                   users:(("memcached",pid=23271,fd=27))
+```
+
+Memcahce is set up, let'ss log out from here and go to the next serrvice, which is the rabbitmq.

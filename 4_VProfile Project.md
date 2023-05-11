@@ -77,3 +77,50 @@ Finally. let's understand the flow of execution.
     - app build & deploy
 7. Verify from browser
  
+# VM Setup
+
+We will be using this repo:
+
+https://github.com/devopshydclub/vprofile-project/tree/local-setup  
+
+open the gitbash
+```
+bengi@LAPTOP MINGW64 ~
+$ cd /c/
+
+bengi@LAPTOP- MINGW64 /c
+$ git clone https://github.com/devopshydclub/vprofile-project.git
+Cloning into 'vprofile-project'...
+remote: Enumerating objects: 2680, done.
+remote: Counting objects: 100% (35/35), done.
+remote: Compressing objects: 100% (26/26), done.
+remote: Total 2680 (delta 13), reused 26 (delta 9), pack-reused 2645
+Receiving objects: 100% (2680/2680), 75.72 MiB | 4.95 MiB/s, done.
+Resolving deltas: 100% (977/977), done.
+```
+
+Now, I should see VProfile-project directory, that's my repository. cd into that.
+
+```
+bengi@LAPTOP MINGW64 /c
+$ cd vprofile-project/
+
+bengi@LAPTOP MINGW64 /c/vprofile-project (vp-rem)
+$ git checkout local-setup
+Switched to a new branch 'local-setup'
+branch 'local-setup' set up to track 'origin/local-setup'.
+$ ls
+Jenkinsfile  README.md  ansible/  pom.xml  src/  vagrant/
+$ cd vagrant/
+$ ls
+Automated_provisioning/  Automated_provisioning_MacOSM1/  Manual_provisioning/  Manual_provisioning_MacOSM1/
+$ cd Manual_provisioning
+$ ls
+Vagrantfile  VprofileProjectSetup.pdf
+
+```
+
+This is the Vagrantfile we have here:
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/9f4ef613-4d20-4eaa-94b3-7d82b1d6cefd)
+

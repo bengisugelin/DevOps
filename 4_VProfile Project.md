@@ -124,3 +124,39 @@ This is the Vagrantfile we have here:
 
 ![image](https://github.com/bengisugelin/DevOps/assets/113550043/9f4ef613-4d20-4eaa-94b3-7d82b1d6cefd)
 
+```
+bengi@LAPTOP MINGW64 /c/vprofile-project (local-setup)
+$ cd vagrant/Manual_provisioning
+
+bengi@LAPTOP MINGW64 /c/vprofile-project/vagrant/Manual_provisioning (local-setup)
+$ vagrant up
+$ vagrant ssh web01
+vagrant@web01:~$  cat /etc/hosts
+127.0.0.1       localhost
+
+# The following lines are desirable for IPv6 capable hosts
+::1     ip6-localhost   ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+ff02::3 ip6-allhosts
+127.0.1.1       ubuntu-bionic   ubuntu-bionic
+
+127.0.2.1 web01 web01
+
+## vagrant-hostmanager-start
+192.168.56.12   app01
+
+192.168.56.15   db01
+
+192.168.56.14   mc01
+
+192.168.56.16   rmq01
+
+192.168.56.11   web01
+
+## vagrant-hostmanager-end
+vagrant@web01:~$ logout
+
+```

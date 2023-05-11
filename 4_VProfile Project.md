@@ -257,3 +257,83 @@ installation should now be secure.
 
 Thanks for using MariaDB!
 ```
+MAriadb service is secure now. We will log into the mariadb service or MySQL service by using MySQL client
+```
+[root@db01 ~]# mysql -u root -padmin123
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 10
+Server version: 5.5.68-MariaDB MariaDB Server
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]>
+```
+
+We are in. Linux command wont work here. only SQL commands will work.
+
+```
+MariaDB [(none)]> create database account;
+Query OK, 1 row affected (0.00 sec)
+
+MariaDB [(none)]> grant all privileges on accounts.* TO 'adin'@'%' identified by 'admin123' ;
+Query OK, 0 rows affected (0.00 sec)
+
+MariaDB [(none)]> FLUSH PRIVILEGES ;
+Query OK, 0 rows affected (0.00 sec)
+
+MariaDB [(none)]> exit;
+Bye
+```
+
+We have created our db but now, wee need to feed it with some data. Let's clone the source code.
+
+```
+git clone -b local-setup https://github.com/devopshydclub/vprofile-project.git
+```
+if you do ls, you can see the vprofile-project cloned
+```
+[root@db01 ~]# ls
+anaconda-ks.cfg  original-ks.cfg  vprofile-project
+```
+cd to it.
+```
+[root@db01 ~]# cd vprofile-project/
+[root@db01 vprofile-project]# ls
+ansible  Jenkinsfile  pom.xml  README.md  src  vagrant
+[root@db01 vprofile-project]# ls src/main/resources/db_backup.sql
+src/main/resources/db_backup.sql
+[root@db01 vprofile-project]# mysql -u root -padmin123 account < src/main/resources/db_backup.sql
+
+```
+Now, let's login to the database
+```
+[root@db01 vprofile-project]# mysql -u root -padmin123 account
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 14
+Server version: 5.5.68-MariaDB MariaDB Server
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [account]> show tables;
++-------------------+
+| Tables_in_account |
++-------------------+
+| role              |
+| user              |
+| user_role         |
++-------------------+
+3 rows in set (0.00 sec)
+
+```
+Now,you can resart mariadb if you'd like to. not necessary though.
+
+```
+systemctl restart mariadb
+```

@@ -161,3 +161,31 @@ vagrant@web01:~$ logout
 
 ```
 # DB, Cache & Queue Setup
+Now its time to provisioning all these services:
+1. Nginx (Web service)
+2. Tomcat (Application service)
+3. RabbitMQ (Broker/Queuing Agent)
+4. Memcache (DB caching)
+5. ElasticSearch ( Indexing/ Search service)
+6. MySQL (SQL Database)
+
+But we are going to provision them in this order: **MySQL -> Memcache -> RabbitMQ -> Tomcat -> Nginx**
+
+First we will do it manually, then will automate the entire setup by using bash scripting. 
+
+LEt's open the gitbash and login to db01
+```
+bengi@LAPTOP MINGW64 /c/vprofile-project/vagrant/Manual_provisioning (local-setup)
+$ vagrant ssh db01
+[vagrant@db01 ~]$ sudo -i
+[root@db01 ~]# yum update -y
+```
+now we will run yum install epel-release, this will enable epel repositories, so we can install many more softwares.
+```
+[root@db01 ~]# yum install epel-release -y
+```
+
+Next, we will install git and mariadb
+```
+[root@db01 ~]# yum install git mariadb-server -y
+```

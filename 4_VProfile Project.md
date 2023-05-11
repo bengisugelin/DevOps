@@ -160,3 +160,4 @@ ff02::3 ip6-allhosts
 vagrant@web01:~$ logout
 
 ```
+# DB, Cache & Queue Setup

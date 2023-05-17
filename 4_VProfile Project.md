@@ -577,7 +577,6 @@ Created symlink from /etc/systemd/system/multi-user.target.wants/tomcat.service 
 ```
 Let's check the status now:
 ```
-```
 [root@app01 tmp]# systemctl status tomcat
 ● tomcat.service - Tomcat
    Loaded: loaded (/etc/systemd/system/tomcat.service; enabled; vendor preset: disabled)
@@ -597,5 +596,6 @@ May 17 05:21:36 app01 tomcat-[19332]: 17-May-2023 05:21:36.109 INFO [main] org.a
 May 17 05:21:36 app01 tomcat-[19332]: 17-May-2023 05:21:36.117 INFO [main] org.a..."]
 May 17 05:21:36 app01 tomcat-[19332]: 17-May-2023 05:21:36.119 INFO [main] org.a...ms
 Hint: Some lines were ellipsized, use -l to show in full.
+
 
 ```

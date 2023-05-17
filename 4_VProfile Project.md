@@ -479,3 +479,23 @@ May 17 01:31:52 rmq01 rabbitmq-server[17901]: Config file(s): /etc/rabbitmq/rabb
 May 17 01:31:52 rmq01 systemd[1]: Started RabbitMQ broker.
 May 17 01:31:52 rmq01 rabbitmq-server[17901]: Starting broker... completed with 0 plugins.
 ```
+
+# App Setup
+
+DB, memcache, rabbitmq is done. Now, we will log in to app01, where we are going to set up a tomcat service
+
+```
+bengi@LAPTOP MINGW64 /c/vprofile-project/vagrant/Manual_provisioning (local-setup)
+$ vagrant ssh app01
+Last login: Thu May 11 05:39:42 2023 from 10.0.2.2
+[vagrant@app01 ~]$ sudo -i
+[root@app01 ~]# yum update -y
+[root@app01 ~]# yum install epel-release -y
+```
+Done. Now, dependency for tomcat-> jdk 1.8
+
+```
+[root@app01 ~]# yum install java-1.8.0-openjdk -y
+[root@app01 ~]# yum install git maven wget -y
+```
+These tools are now instalaled, next, we will download Tomcat, so let's go to the /tmp directory.

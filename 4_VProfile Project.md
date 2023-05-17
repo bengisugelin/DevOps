@@ -482,6 +482,7 @@ May 17 01:31:52 rmq01 rabbitmq-server[17901]: Starting broker... completed with 
 
 # App Setup
 
+## Tomcat setup
 DB, memcache, rabbitmq is done. Now, we will log in to app01, where we are going to set up a tomcat service
 
 ```
@@ -596,6 +597,84 @@ May 17 05:21:36 app01 tomcat-[19332]: 17-May-2023 05:21:36.109 INFO [main] org.a
 May 17 05:21:36 app01 tomcat-[19332]: 17-May-2023 05:21:36.117 INFO [main] org.a..."]
 May 17 05:21:36 app01 tomcat-[19332]: 17-May-2023 05:21:36.119 INFO [main] org.a...ms
 Hint: Some lines were ellipsized, use -l to show in full.
+```
+## code build & Deploy
 
+- Download the source code:
+```
+git clone -b local-setup https://github.com/devopshydclub/vprofile-project.git
+
+[root@app01 tmp]# ls
+apache-tomcat-8.5.37         systemd-private-237668044c7a4aab9b597e05f6b28641-chronyd.service-u0tkF1
+apache-tomcat-8.5.37.tar.gz  systemd-private-71f50f30e1954988be94d882abe51f8e-chronyd.service-2EzRO6
+hsperfdata_root              vprofile-project
+hsperfdata_tomcat
+[root@app01 tmp]# cd vprofile-project/
+[root@app01 vprofile-project]# git status
+# On branch local-setup
+nothing to commit, working directory clean
+```
+
+- Update Configuration
+```
+# cd vprofile-project
+# vim src/main/resources/application.properties
+```
+
+Update file with backend server details
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/12788f58-204a-49f7-bea7-d5d8bfe6c6d3)
+
+HEre, we dont really make any changes, everything seems fine. But this is a very important file, understand this file very well. 
+
+- Build Code
+
+Run below command inside the repository (vprofile-project)
+```
+[root@app01 vprofile-project]# mvn install
+
+[root@app01 vprofile-project]# cd target
+[root@app01 target]# ls
+classes            jacoco.exec     site      surefire-reports  vprofile-v2
+generated-sources  maven-archiver  surefire  test-classes      vprofile-v2.war
+[root@app01 target]# systemctl stop tomcat
+[root@app01 target]# systemctl status tomcat
+● tomcat.service - Tomcat
+   Loaded: loaded (/etc/systemd/system/tomcat.service; enabled; vendor preset: disabled)
+   Active: failed (Result: exit-code) since Wed 2023-05-17 06:12:24 UTC; 7s ago
+  Process: 19977 ExecStop=/usr/local/tomcat8/bin/shutdown.sh (code=exited, status=0/SUCCESS)
+  Process: 19332 ExecStart=/usr/local/tomcat8/bin/catalina.sh run (code=exited, status=143)
+ Main PID: 19332 (code=exited, status=143)
+
+May 17 05:21:36 app01 tomcat-[19332]: 17-May-2023 05:21:36.109 INFO [main] org.apache.coyote.AbstractProtocol...080"]
+May 17 05:21:36 app01 tomcat-[19332]: 17-May-2023 05:21:36.117 INFO [main] org.apache.coyote.AbstractProtocol...009"]
+May 17 05:21:36 app01 tomcat-[19332]: 17-May-2023 05:21:36.119 INFO [main] org.apache.catalina.startup.Catali...80 ms
+May 17 06:12:23 app01 systemd[1]: Stopping Tomcat...
+May 17 06:12:23 app01 tomcat-[19332]: 17-May-2023 06:12:23.563 INFO [main] org.apache.catalina.core.StandardS...ance.
+May 17 06:12:23 app01 tomcat-[19332]: 17-May-2023 06:12:23.564 INFO [main] org.apache.coyote.AbstractProtocol...080"]
+May 17 06:12:24 app01 systemd[1]: tomcat.service: main process exited, code=exited, status=143/n/a
+May 17 06:12:24 app01 systemd[1]: Stopped Tomcat.
+May 17 06:12:24 app01 systemd[1]: Unit tomcat.service entered failed state.
+May 17 06:12:24 app01 systemd[1]: tomcat.service failed.
+Hint: Some lines were ellipsized, use -l to show in full.
+```
+ 
+Now, we will remove the default application, /usr/local/tomcat8/webapps/ROOT
 
 ```
+[root@app01 target]# rm -rf /usr/local/tomcat8/webapps/ROOT
+[root@app01 target]# ls
+classes            jacoco.exec     site      surefire-reports  vprofile-v2
+generated-sources  maven-archiver  surefire  test-classes      vprofile-v2.war
+[root@app01 target]# cd ..
+[root@app01 vprofile-project]# ls
+ansible  Jenkinsfile  pom.xml  README.md  src  target  vagrant
+[root@app01 vprofile-project]# cp target/vprofile-v2.war /usr/local/tomcat8/webapps/ROOT.war
+[root@app01 vprofile-project]# ls /usr/local/tomcat8/webapps/
+docs  examples  host-manager  manager  ROOT.war
+[root@app01 vprofile-project]# systemctl start tomcat
+[root@app01 vprofile-project]# ls /usr/local/tomcat8/webapps/
+docs  examples  host-manager  manager  ROOT  ROOT.war
+```
+
+After these steps, our application becomes the default application for Tomcat.

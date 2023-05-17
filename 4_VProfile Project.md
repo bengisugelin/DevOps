@@ -385,3 +385,57 @@ tcp    LISTEN     0      128    [::]:11211              [::]:*                  
 ```
 
 Memcahce is set up, let'ss log out from here and go to the next serrvice, which is the rabbitmq.
+
+```
+bengi@LAPTOP MINGW64 /c/vprofile-project/vagrant/Manual_provisioning (local-setup)
+$ vagrant ssh rmq01
+[vagrant@rmq01 ~]$ sudo -i
+
+[root@rmq01 ~]# yum update -y
+```
+All the package updates completed. Now, let's see the installation steps.
+first, we need to install some dependencies. One of them is erlang and socat:
+```
+#sudo yum install wget -y
+#cd /tmp/
+#wget http://packages.erlang-solutions.com/erlang-solutions-2.0-1.noarch.rpm
+#sudo rpm -Uvh erlang-solutions-2.0-1.noarch.rpm
+#sudo yum -y install erlang socat
+```
+Now, let's install rabbitmq server:
+```
+#curl -s https://packagecloud.io/install/repositories/rabbitmq/rabbitmq-server/script.rpm.sh | sudo bash
+#sudo yum install rabbitmq-server -y
+```
+
+It is installed! let's start and enable the service:
+```
+#sudo systemctl start rabbitmq-server
+#sudo systemctl enable rabbitmq-server
+```
+
+let's check the status:
+```
+[root@rmq01 tmp]# sudo systemctl status rabbitmq-server
+● rabbitmq-server.service - RabbitMQ broker
+   Loaded: loaded (/usr/lib/systemd/system/rabbitmq-server.service; enabled; vendor preset: disabled)
+   Active: active (running) since Wed 2023-05-17 01:28:07 UTC; 28s ago
+ Main PID: 17531 (beam.smp)
+   CGroup: /system.slice/rabbitmq-server.service
+           ├─17531 /usr/lib64/erlang/erts-12.3.2.1/bin/beam.smp -W w -MBas ageffcbf -MHas ageffcbf -MBlmbcs 512 -MHlmbcs 512 -MM...
+           ├─17546 erl_child_setup 32768
+           ├─17571 /usr/lib64/erlang/erts-12.3.2.1/bin/epmd -daemon
+           ├─17594 inet_gethost 4
+           └─17595 inet_gethost 4
+
+May 17 01:28:06 rmq01 rabbitmq-server[17531]: Doc guides:  https://rabbitmq.com/documentation.html
+May 17 01:28:06 rmq01 rabbitmq-server[17531]: Support:     https://rabbitmq.com/contact.html
+May 17 01:28:06 rmq01 rabbitmq-server[17531]: Tutorials:   https://rabbitmq.com/getstarted.html
+May 17 01:28:06 rmq01 rabbitmq-server[17531]: Monitoring:  https://rabbitmq.com/monitoring.html
+May 17 01:28:06 rmq01 rabbitmq-server[17531]: Logs: /var/log/rabbitmq/rabbit@rmq01.log
+May 17 01:28:06 rmq01 rabbitmq-server[17531]: /var/log/rabbitmq/rabbit@rmq01_upgrade.log
+May 17 01:28:06 rmq01 rabbitmq-server[17531]: <stdout>
+May 17 01:28:06 rmq01 rabbitmq-server[17531]: Config file(s): (none)
+May 17 01:28:07 rmq01 rabbitmq-server[17531]: Starting broker... completed with 0 plugins.
+May 17 01:28:07 rmq01 systemd[1]: Started RabbitMQ broker.
+```

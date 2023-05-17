@@ -547,3 +547,55 @@ drwxr-x---. 7 tomcat tomcat    81 May 17 05:07 webapps
 drwxr-x---. 2 tomcat tomcat     6 May 17 05:07 work
 ```
 
+Update file with following content.
+
+vim /etc/systemd/system/tomcat.service
+```
+[Unit]
+Description=Tomcat
+After=network.target
+[Service]
+User=tomcat
+WorkingDirectory=/usr/local/tomcat8
+Environment=JRE_HOME=/usr/lib/jvm/jre
+Environment=JAVA_HOME=/usr/lib/jvm/jre
+Environment=CATALINA_HOME=/usr/local/tomcat8
+Environment=CATALINE_BASE=/usr/local/tomcat8
+ExecStart=/usr/local/tomcat8/bin/catalina.sh run
+ExecStop=/usr/local/tomcat8/bin/shutdown.sh
+SyslogIdentifier=tomcat-%i
+[Install]
+WantedBy=multi-user.target
+```
+
+Once you make any changes to tomcat.service file, you have to say systemctl
+```
+[root@app01 tmp]# systemctl daemon-reload
+[root@app01 tmp]# systemctl enable tomcat
+Created symlink from /etc/systemd/system/multi-user.target.wants/tomcat.service to /etc/systemd/system/tomcat.service.
+[root@app01 tmp]# systemctl enable tomcat
+```
+Let's check the status now:
+```
+```
+[root@app01 tmp]# systemctl status tomcat
+● tomcat.service - Tomcat
+   Loaded: loaded (/etc/systemd/system/tomcat.service; enabled; vendor preset: disabled)
+   Active: active (running) since Wed 2023-05-17 05:21:35 UTC; 15s ago
+ Main PID: 19332 (java)
+   CGroup: /system.slice/tomcat.service
+           └─19332 /usr/lib/jvm/jre/bin/java -Djava.util.logging.config.file=/usr/...
+
+May 17 05:21:35 app01 tomcat-[19332]: 17-May-2023 05:21:35.959 INFO [localhost-s...ms
+May 17 05:21:35 app01 tomcat-[19332]: 17-May-2023 05:21:35.959 INFO [localhost-s...s]
+May 17 05:21:36 app01 tomcat-[19332]: 17-May-2023 05:21:36.080 INFO [localhost-s...ms
+May 17 05:21:36 app01 tomcat-[19332]: 17-May-2023 05:21:36.080 INFO [localhost-s...r]
+May 17 05:21:36 app01 tomcat-[19332]: 17-May-2023 05:21:36.095 INFO [localhost-s...ms
+May 17 05:21:36 app01 tomcat-[19332]: 17-May-2023 05:21:36.095 INFO [localhost-s...r]
+May 17 05:21:36 app01 tomcat-[19332]: 17-May-2023 05:21:36.104 INFO [localhost-s...ms
+May 17 05:21:36 app01 tomcat-[19332]: 17-May-2023 05:21:36.109 INFO [main] org.a..."]
+May 17 05:21:36 app01 tomcat-[19332]: 17-May-2023 05:21:36.117 INFO [main] org.a..."]
+May 17 05:21:36 app01 tomcat-[19332]: 17-May-2023 05:21:36.119 INFO [main] org.a...ms
+Hint: Some lines were ellipsized, use -l to show in full.
+
+```

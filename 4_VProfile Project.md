@@ -498,4 +498,26 @@ Done. Now, dependency for tomcat-> jdk 1.8
 [root@app01 ~]# yum install java-1.8.0-openjdk -y
 [root@app01 ~]# yum install git maven wget -y
 ```
-These tools are now instalaled, next, we will download Tomcat, so let's go to the /tmp directory.
+These tools are now installed, next, we will download Tomcat, so let's go to the /tmp directory.
+
+```
+[root@app01 ~]# cd /tmp
+[root@app01 ~]# wget https://archive.apache.org/dist/tomcat/tomcat-8/v8.5.37/bin/apache-tomcat-8.5.37.tar.gz
+--2023-05-17 03:48:47--  https://archive.apache.org/dist/tomcat/tomcat-8/v8.5.37/bin/apache-tomcat-8.5.37.tar.gz
+Resolving archive.apache.org (archive.apache.org)... 138.201.131.134, 2a01:4f8:172:2ec5::2
+Connecting to archive.apache.org (archive.apache.org)|138.201.131.134|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 9653382 (9.2M) [application/x-gzip]
+Saving to: ‘apache-tomcat-8.5.37.tar.gz’
+
+100%[=========================================================================================>] 9,653,382    100KB/s   in 94s
+
+2023-05-17 03:50:22 (99.8 KB/s) - ‘apache-tomcat-8.5.37.tar.gz’ saved [9653382/9653382]
+
+[root@app01 ~]# ls
+anaconda-ks.cfg  apache-tomcat-8.5.37.tar.gz  original-ks.cfg
+
+[root@app01 ~]# tar xzvf apache-tomcat-8.5.37.tar.gz
+
+```
+

@@ -502,22 +502,48 @@ These tools are now installed, next, we will download Tomcat, so let's go to the
 
 ```
 [root@app01 ~]# cd /tmp
-[root@app01 ~]# wget https://archive.apache.org/dist/tomcat/tomcat-8/v8.5.37/bin/apache-tomcat-8.5.37.tar.gz
---2023-05-17 03:48:47--  https://archive.apache.org/dist/tomcat/tomcat-8/v8.5.37/bin/apache-tomcat-8.5.37.tar.gz
+
+[root@app01 tmp]# wget https://archive.apache.org/dist/tomcat/tomcat-8/v8.5.37/bin/apache-tomcat-8.5.37.tar.gz
+--2023-05-17 04:11:31--  https://archive.apache.org/dist/tomcat/tomcat-8/v8.5.37/bin/apache-tomcat-8.5.37.tar.gz
 Resolving archive.apache.org (archive.apache.org)... 138.201.131.134, 2a01:4f8:172:2ec5::2
 Connecting to archive.apache.org (archive.apache.org)|138.201.131.134|:443... connected.
 HTTP request sent, awaiting response... 200 OK
 Length: 9653382 (9.2M) [application/x-gzip]
-Saving to: ‘apache-tomcat-8.5.37.tar.gz’
+Saving to: ‘apache-tomcat-8.5.37.tar.gz.1’
 
-100%[=========================================================================================>] 9,653,382    100KB/s   in 94s
+100%[=========================================================================================>] 9,653,382   99.7KB/s   in 94s
 
-2023-05-17 03:50:22 (99.8 KB/s) - ‘apache-tomcat-8.5.37.tar.gz’ saved [9653382/9653382]
+2023-05-17 04:13:06 (99.9 KB/s) - ‘apache-tomcat-8.5.37.tar.gz.1’ saved [9653382/9653382]
 
-[root@app01 ~]# ls
-anaconda-ks.cfg  apache-tomcat-8.5.37.tar.gz  original-ks.cfg
+[root@app01 tmp]# tar xzvf apache-tomcat-8.5.37.tar.gz
 
-[root@app01 ~]# tar xzvf apache-tomcat-8.5.37.tar.gz
+[root@app01 tmp]# useradd --home-dir /usr/local/tomcat8 --shell /sbin/nologin tomcat
 
+[root@app01 tmp]# id tomcat
+uid=1001(tomcat) gid=1001(tomcat) groups=1001(tomcat)
+[root@app01 tmp]# ls /usr/local/tomcat8/
+[root@app01 tmp]# cp -r apache-tomcat-8.5.37/* /usr/local/tomcat8/
+[root@app01 tmp]# ls /usr/local/tomcat8/
+bin  BUILDING.txt  conf  CONTRIBUTING.md  lib  LICENSE  logs  NOTICE  README.md  RELEASE-NOTES  RUNNING.txt  temp  webapps  work
+[root@app01 tmp]#
+
+
+[root@app01 tmp]# chown tomcat.tomcat /usr/local/tomcat8/ -R
+[root@app01 tmp]# ls -l /usr/local/tomcat8/
+total 124
+drwxr-x---. 2 tomcat tomcat  4096 May 17 05:07 bin
+-rw-r-----. 1 tomcat tomcat 19539 May 17 05:07 BUILDING.txt
+drwx------. 2 tomcat tomcat   238 May 17 05:07 conf
+-rw-r-----. 1 tomcat tomcat  6090 May 17 05:07 CONTRIBUTING.md
+drwxr-x---. 2 tomcat tomcat  4096 May 17 05:07 lib
+-rw-r-----. 1 tomcat tomcat 57092 May 17 05:07 LICENSE
+drwxr-x---. 2 tomcat tomcat     6 May 17 05:07 logs
+-rw-r-----. 1 tomcat tomcat  1726 May 17 05:07 NOTICE
+-rw-r-----. 1 tomcat tomcat  3255 May 17 05:07 README.md
+-rw-r-----. 1 tomcat tomcat  7142 May 17 05:07 RELEASE-NOTES
+-rw-r-----. 1 tomcat tomcat 16262 May 17 05:07 RUNNING.txt
+drwxr-x---. 2 tomcat tomcat    30 May 17 05:07 temp
+drwxr-x---. 7 tomcat tomcat    81 May 17 05:07 webapps
+drwxr-x---. 2 tomcat tomcat     6 May 17 05:07 work
 ```
 

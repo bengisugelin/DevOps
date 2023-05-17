@@ -439,3 +439,43 @@ May 17 01:28:06 rmq01 rabbitmq-server[17531]: Config file(s): (none)
 May 17 01:28:07 rmq01 rabbitmq-server[17531]: Starting broker... completed with 0 plugins.
 May 17 01:28:07 rmq01 systemd[1]: Started RabbitMQ broker.
 ```
+
+we have some congifuration changes in rabbitmq:
+```
+#sudo sh -c 'echo "[{rabbit, [{loopback_users, []}]}]." > /etc/rabbitmq/rabbitmq.config'
+#sudo rabbitmqctl add_user test test
+#sudo rabbitmqctl set_user_tags test administrator
+```
+
+After making these configuration changes, we can restart the server.
+```
+systemctl restart rabbitmq-server
+```
+
+if everything is good, when we restart, status will be active. If not, we will se some error.
+
+```
+[root@rmq01 tmp]# sudo systemctl status rabbitmq-server
+● rabbitmq-server.service - RabbitMQ broker
+   Loaded: loaded (/usr/lib/systemd/system/rabbitmq-server.service; enabled; vendor preset: disabled)
+   Active: active (running) since Wed 2023-05-17 01:31:52 UTC; 1min 7s ago
+  Process: 17858 ExecStop=/usr/sbin/rabbitmqctl shutdown (code=exited, status=0/SUCCESS)
+ Main PID: 17901 (beam.smp)
+   CGroup: /system.slice/rabbitmq-server.service
+           ├─17901 /usr/lib64/erlang/erts-12.3.2.1/bin/beam.smp -W w -MBas ageffcbf -MHas ageffcbf -MBlmbcs 512 -MHlmbcs 512 -MM...
+           ├─17916 erl_child_setup 32768
+           ├─17941 /usr/lib64/erlang/erts-12.3.2.1/bin/epmd -daemon
+           ├─17964 inet_gethost 4
+           └─17965 inet_gethost 4
+
+May 17 01:31:52 rmq01 rabbitmq-server[17901]: Doc guides:  https://rabbitmq.com/documentation.html
+May 17 01:31:52 rmq01 rabbitmq-server[17901]: Support:     https://rabbitmq.com/contact.html
+May 17 01:31:52 rmq01 rabbitmq-server[17901]: Tutorials:   https://rabbitmq.com/getstarted.html
+May 17 01:31:52 rmq01 rabbitmq-server[17901]: Monitoring:  https://rabbitmq.com/monitoring.html
+May 17 01:31:52 rmq01 rabbitmq-server[17901]: Logs: /var/log/rabbitmq/rabbit@rmq01.log
+May 17 01:31:52 rmq01 rabbitmq-server[17901]: /var/log/rabbitmq/rabbit@rmq01_upgrade.log
+May 17 01:31:52 rmq01 rabbitmq-server[17901]: <stdout>
+May 17 01:31:52 rmq01 rabbitmq-server[17901]: Config file(s): /etc/rabbitmq/rabbitmq.config
+May 17 01:31:52 rmq01 systemd[1]: Started RabbitMQ broker.
+May 17 01:31:52 rmq01 rabbitmq-server[17901]: Starting broker... completed with 0 plugins.
+```

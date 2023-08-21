@@ -714,8 +714,16 @@ root@web01:~# ip addr show
 ![image](https://github.com/bengisugelin/DevOps/assets/113550043/1acb6c69-dbf9-42b3-8c51-daac7064a6bb)
 when we browse the ip, we will get this page. that was the ip from Nginx, and this page is coming from Tomcat. This means that Nginx is succesfully routing it to the Tomcat.
 
-Let's login to it with the user name admin_vp and same for the password
+Let's login to it with the user name admin_vp and same for the password.
 
+
+So, That was all about manuaalt setting up the environment. next we will see how automatically set up through the vagrang file by using provisioning. 
+
+We can destroy those VMs we created
+
+```
+$ vagrant destroy --force
+```
 
 
 

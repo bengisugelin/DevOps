@@ -678,3 +678,52 @@ docs  examples  host-manager  manager  ROOT  ROOT.war
 ```
 
 After these steps, our application becomes the default application for Tomcat.
+
+## NGINX
+Let's log int to the web01 ans swith to the root user:
+inside  /c/vprofile-project/vagrant/Manual_provisioning (local-setup)
+```
+$ vagrant up
+$ vagrant ssh web01
+vagrant@web01:~$ sudo -i
+
+apt update && apt upgrade -y
+root@web01:~# apt install nginx -y
+```
+
+Create Nginx conf file with below content
+```
+root@web01:~# vi /etc/nginx/sites-available/vproapp
+```
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/0cb8838d-6c50-460c-819a-b67699904b08)
+
+```
+root@web01:~# rm -rf /etc/nginx/sites-enabled/default
+root@web01:~# ln -s /etc/nginx/sites-available/vproapp  /etc/nginx/sites-enabled/vproapp
+root@web01:~# systemctl restart nginx
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

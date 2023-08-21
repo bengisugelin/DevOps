@@ -725,7 +725,19 @@ We can destroy those VMs we created
 $ vagrant destroy --force
 ```
 
+## Automated execution
 
+open git bash and get into the source code. and the only thing we need to say is vagrant up.
+
+```
+bengi@LAPTOP-P7IJPPN9 MINGW64 /c/vprofile-project/vagrant/Automated_provisioning (local-setup)
+$ vagrant up
+```
+before vagrant up, we did not have any vm
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/bb9f959c-ca6c-444d-b442-8827edb15d1e)
+
+after saying vagrant up, it will automatically be created acording to the code we automated.
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/47751d09-dfe2-4352-98a2-80fe9263dff2)
 
 
 

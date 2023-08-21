@@ -704,6 +704,18 @@ root@web01:~# systemctl restart nginx
 
 ```
 
+## Validate
+Now, its time to verify our website from the browser. We need the ip address:
+```
+root@web01:~# ip addr show
+```
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/dbbb8b46-f7eb-4090-a4de-6b92b6a6323a)
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/1acb6c69-dbf9-42b3-8c51-daac7064a6bb)
+when we browse the ip, we will get this page. that was the ip from Nginx, and this page is coming from Tomcat. This means that Nginx is succesfully routing it to the Tomcat.
+
+Let's login to it with the user name admin_vp and same for the password
+
 
 
 

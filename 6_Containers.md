@@ -32,6 +32,29 @@ bengi@LAPTOP-P7IJPPN9 MINGW64 /c/containerIntro
 $ vagrant up
 ```
 
-Now, VM is up, lets log into it:
+Now, VM is up, lets log into it and be the root user:
 ```
+$ vagrant ssh
+vagrant@ubuntu-focal:~$ sudo -i
+root@ubuntu-focal:~#
+
 ```
+
+lets check the server:
+```
+root@ubuntu-focal:~# systemctl status docker
+
+```
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/c16e0c5d-a935-4fa3-b4fa-315963aebd45)
+
+
+As you see, docker engine is running. Let'sverify that Docker engine is installed correctly by running the hello-world image.
+
+```
+root@ubuntu-focal:~# docker run hello-world
+
+```
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/d77612f2-a125-4347-a03c-9b06c4f99e3d)
+
+

@@ -107,7 +107,7 @@ It is in HTML format, but terminal cannot read it, just prints it. so, if you co
 
 Let's look at the IP address of this VM.
 
-
+..
 
 
 

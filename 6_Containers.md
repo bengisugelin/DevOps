@@ -12,4 +12,12 @@ Here we see docker client, client can be on the same machine or it can be in a d
 We will create a virtual machine, will install Docker engine in that VM and we will have a clients as well. with docker build command, we can build our own images. From the official images, we can pull image.
 
 
-LEt's dive into the hands-on practice:
+Let's dive into the hands-on practice:
+
+as always, open gitbash and create a directory.
+
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/e6e3f59e-801d-4f8f-8988-6845141c4bfe)
+
+
+in that directory, place Vagrantfile.

@@ -20,4 +20,18 @@ as always, open gitbash and create a directory.
 ![image](https://github.com/bengisugelin/DevOps/assets/113550043/e6e3f59e-801d-4f8f-8988-6845141c4bfe)
 
 
-in that directory, place Vagrantfile.
+in that directory, place Vagrantfile. Inside this vagrant file, we have some commands which will create or install docker engine.
+All these commands are in the Docker Documentation.
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/3ae093d6-3e67-48ba-a4eb-0749a1d4422e)
+
+now, we will just bring this VM and install Docker engine.
+
+```
+bengi@LAPTOP-P7IJPPN9 MINGW64 /c/containerIntro
+$ vagrant up
+```
+
+Now, VM is up, lets log into it:
+```
+```

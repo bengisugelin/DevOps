@@ -52,9 +52,33 @@ As you see, docker engine is running. Let'sverify that Docker engine is installe
 
 ```
 root@ubuntu-focal:~# docker run hello-world
-
 ```
 
 ![image](https://github.com/bengisugelin/DevOps/assets/113550043/d77612f2-a125-4347-a03c-9b06c4f99e3d)
+
+This one was only for test purposes. Let's discover more commands:
+
+```
+root@ubuntu-focal:~# docker images
+```
+
+This command will show you available images on your system.
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/fa813094-e617-415c-b5d4-ae6f9db01451)
+
+```
+root@ubuntu-focal:~# docker ps
+```
+docker ps will show you the running container. and docker ps -a will show you all the containers.
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/35089905-cb63-49f0-ad6a-7618b30dedb1)
+
+
+
+
+
+
+
+
+
 
 

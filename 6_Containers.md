@@ -100,11 +100,12 @@ root@ubuntu-focal:~# curl http://172.17.0.2:80
 ![image](https://github.com/bengisugelin/DevOps/assets/113550043/313aecea-185c-4607-b229-6b2187491194)
 
 
+It is in HTML format, but terminal cannot read it, just prints it. so, if you copy and check it from the browser, we can see a proper original page.
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/9afd738a-1ab0-4277-9a30-83c7219c38eb)
 
 
-
-
-
+Let's look at the IP address of this VM.
 
 
 

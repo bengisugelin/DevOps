@@ -73,6 +73,34 @@ docker ps will show you the running container. and docker ps -a will show you al
 ![image](https://github.com/bengisugelin/DevOps/assets/113550043/35089905-cb63-49f0-ad6a-7618b30dedb1)
 
 
+```
+root@ubuntu-focal:~# docker run --name web01 -d  -p 9080:80 nginx
+```
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/758f9484-7760-4e9c-a9ec-20ff113a9845)
+
+```
+root@ubuntu-focal:~# docker ps
+```
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/c70fa220-4983-469b-ad74-e2f1417d5af8)
+
+
+Now, i can access this container locally. for that, i need to know its IP address. 
+
+```
+root@ubuntu-focal:~# docker inspect web01
+```
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/9463e993-83ae-4eee-81b7-130ee7a06010)
+
+now we know that the IP address of the container 172.17.0.2
+
+```
+root@ubuntu-focal:~# curl http://172.17.0.2:80
+```
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/313aecea-185c-4607-b229-6b2187491194)
+
+
+
 
 
 

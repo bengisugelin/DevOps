@@ -253,4 +253,32 @@ We are getting this login page from the Tomcat container and we can log in by us
 ![image](https://github.com/bengisugelin/DevOps/assets/113550043/063a0b21-b591-4734-8861-6b04ae5fc8c5)
 
 
+Now 
+```
+root@ubuntu-focal:~/compose# docker compose down
+```
+This is going to stop the container and remove the container.
 
+```
+root@ubuntu-focal:~/compose# docker system prune -a
+WARNING! This will remove:
+  - all stopped containers
+  - all networks not used by at least one container
+  - all images without at least one container associated to them
+  - all build cache
+Are you sure you want to continue? [y/N] y
+```
+
+now you can log out
+```
+root@ubuntu-focal:~/compose# exit
+logout
+vagrant@ubuntu-focal:~$ exit
+logout
+```
+
+and power off the VM
+```
+bengi@LAPTOP-P7IJPPN9 MINGW64 /c/containerIntro
+$ vagrant halt
+```

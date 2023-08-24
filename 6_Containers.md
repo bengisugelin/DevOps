@@ -213,4 +213,18 @@ Everything is clean now, no images, no containers.
 
 # Vfile project on containers:
 
-first we will create a folder in our system and copy our vagrant file t
+Since we deleted everything we done so far, first we will create a folder in our system and copy our vagrant file.
+```
+$ mkdir /c/containerIntro
+$ cp ~/Downloads/vagrantfiles_dock/vagrantfiles_dock/windowsAndMacIntel/Vagrantfile  /c/containerIntro/
+
+```
+bring up the vm
+
+```
+vagrant up
+```
+This going to need some time since it will going to install Docker engine and all others. After vagrant is up, log in to it
+```
+vagrant ssh
+```

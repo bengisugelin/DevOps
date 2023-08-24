@@ -228,3 +228,29 @@ This going to need some time since it will going to install Docker engine and al
 ```
 vagrant ssh
 ```
+
+Now, if we want to run multiple containers together, there is a concept of Docker compose in Docker.
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/5c3231aa-4f22-4802-b8ec-9e22b433dd81)
+
+```
+root@ubuntu-focal:~/compose# docker compose up -d
+root@ubuntu-focal:~/compose# docker compose ps
+
+```
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/a8ea651a-b268-4b6d-bbf4-981222be4f8a)
+
+now we have 5 images:
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/5ac597d9-1667-4020-932e-0fbd4fbc2310)
+
+Let's access it from the browser 
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/33f993f1-5e19-4ba2-a6bc-d5c62ed76c0a)
+
+We are getting this login page from the Tomcat container and we can log in by using the credentials (admin_vp)
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/063a0b21-b591-4734-8861-6b04ae5fc8c5)
+
+
+

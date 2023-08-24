@@ -172,3 +172,40 @@ Lets access it from the browser:
 ![image](https://github.com/bengisugelin/DevOps/assets/113550043/47cfb423-1bb5-4d2c-87c8-ba13fd24889e)
 
 Now we are hosting this website in a container.
+
+
+
+Let's do some clean up:
+```
+root@ubuntu-focal:~# docker ps
+```
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/106b8144-c289-4b4f-8d55-7bf78d80a481)
+
+```
+root@ubuntu-focal:~# docker stop web01 frosty_mclaren
+```
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/4fd9e4a1-a86b-4e74-a568-52a6425e0555)
+
+```
+root@ubuntu-focal:~# docker ps -a
+```
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/ae7d5aad-636b-42f5-a0e8-03baab8de6ff)
+
+```
+root@ubuntu-focal:~# docker rm frosty_mclaren web01 exciting_faraday
+```
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/22eab5db-6a6d-40d8-977d-2a1e8fcf3d57)
+
+```
+root@ubuntu-focal:~# docker images
+```
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/640660ce-7045-4628-854b-ac5aefa87187)
+
+```
+root@ubuntu-focal:~# docker rmi 940e27aec548 eea7b3dcba7e 9c7a54a9a43c
+```
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/30707a14-3edc-45a7-83c1-7fb7e256879a)
+
+
+Everything is clean now, no images, no containers.

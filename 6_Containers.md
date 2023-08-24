@@ -149,3 +149,26 @@ let's just save this and run a command called a docker build -t
 root@ubuntu-focal:~/images# docker build -t tesimg .
 ```
 this might take a bit long time.
+
+to see all the images
+```
+docker images
+```
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/4a9ef5dc-b1b8-4c8b-875b-40b36e234dba)
+
+this is basically a web application that we have downloaded from tooplate.com
+
+now, lets run it:
+
+```
+root@ubuntu-focal:~/images# docker run -d -P tesimg
+```
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/8b3765f2-d120-4ba0-92d7-87f6fd989d3d)
+
+Lets access it from the browser:
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/47cfb423-1bb5-4d2c-87c8-ba13fd24889e)
+
+Now we are hosting this website in a container.

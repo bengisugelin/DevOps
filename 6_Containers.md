@@ -129,4 +129,23 @@ This is coming straight from the container. So from the outside, the access is f
 Now, a quick overview of how to create our own image.
 
 
+Let's create a directory called images
 
+```
+root@ubuntu-focal:~# mkdir images
+```
+inside it we will create a file called Dockerfile
+```
+root@ubuntu-focal:~/images# vim Dockerfile
+```
+
+and we are going to write some content here
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/354d8ea4-fa56-480f-baf5-cba708910e90)
+
+let's just save this and run a command called a docker build -t
+
+```
+root@ubuntu-focal:~/images# docker build -t tesimg .
+```
+this might take a bit long time.

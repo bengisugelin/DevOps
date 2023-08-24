@@ -209,3 +209,8 @@ root@ubuntu-focal:~# docker rmi 940e27aec548 eea7b3dcba7e 9c7a54a9a43c
 
 
 Everything is clean now, no images, no containers.
+
+
+# Vfile project on containers:
+
+first we will create a folder in our system and copy our vagrant file t

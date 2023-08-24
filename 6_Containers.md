@@ -102,12 +102,31 @@ root@ubuntu-focal:~# curl http://172.17.0.2:80
 
 It is in HTML format, but terminal cannot read it, just prints it. so, if you copy and check it from the browser, we can see a proper original page.
 
-![image](https://github.com/bengisugelin/DevOps/assets/113550043/9afd738a-1ab0-4277-9a30-83c7219c38eb)
-
-
 Let's look at the IP address of this VM.
 
-..
+```
+ip addr show
+```
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/f8cdfbc9-d3fe-45e3-a4df-ffb40dfacdb5)
+
+our host port is 9080: 
+
+```
+docker ps
+```
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/e304cd2e-a8b1-4381-b24d-2f79d93da744)
+
+
+Let's take this ip and port number and go to the browser
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/8c7fe0cf-c3fc-4abc-be87-73d932045928)
+
+This is coming straight from the container. So from the outside, the access is from the host port or the node port. and that routes to the container and gets us our data
+
+
+Now, a quick overview of how to create our own image.
 
 
 

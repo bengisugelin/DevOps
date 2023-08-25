@@ -33,13 +33,13 @@ now, we will write our first script and we will place it in a directory..
 ```
 
 were going to install vim first.
+
 ```
 [root@scriptbox scripts]# yum install vim -y
-
 ```
 then, create an sh file for bash scripting.
-
 ```
+
 [root@scriptbox scripts]# vim firstscript.sh
 ```
 ![image](https://github.com/bengisugelin/DevOps/assets/113550043/6c87b2a9-0fed-493b-96f6-5e87b09a266e)
@@ -57,5 +57,8 @@ now if we run it, it should work.
 
 ![image](https://github.com/bengisugelin/DevOps/assets/113550043/6c7f1991-ca11-4090-976c-16cb7faf3b05)
 
+but. let's make the output more readable.
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/1300ec8f-a8e7-4851-ba4e-69f17a410a6f)
 
 

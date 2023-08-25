@@ -24,6 +24,7 @@ be a root user and set a hostname
 
 ![image](https://github.com/bengisugelin/DevOps/assets/113550043/4456b24a-2654-46d6-ac7a-1f2800f6e15c)
 
+## first script
 now, we will write our first script and we will place it in a directory..
 
 ```
@@ -62,3 +63,35 @@ but. let's make the output more readable.
 ![image](https://github.com/bengisugelin/DevOps/assets/113550043/1300ec8f-a8e7-4851-ba4e-69f17a410a6f)
 
 
+## Sample script
+
+now, we will take a sample use case, we have some ccommand which they will set up a website for us. So instead of doing that manually, running all the commands, we will write a script to do that.
+
+create the file
+```
+[root@scriptbox scripts]#  vim /opt/scripts/websetup.sh
+```
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/661038cc-548f-41da-8136-4c70a0553c40)
+
+give the execute permission
+```
+[root@scriptbox scripts]# chmod +x /opt/scripts/websetup.sh
+```
+
+lets execute it now,
+
+```
+[root@scriptbox scripts]# /opt/scripts/websetup.sh
+```
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/20a29c95-d18b-4897-866a-559c3a6bfea7)
+
+now its time to test it. get the ip address:
+```
+[root@scriptbox scripts]# ifconfig
+```
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/bc07fb9b-2d07-4fbb-a6ec-4f1544a6a882)
+
+open that in the browser
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/0949f223-5868-4c18-9c73-5dd83d5e4738)
+and set up is complete!

@@ -95,3 +95,5 @@ now its time to test it. get the ip address:
 open that in the browser
 ![image](https://github.com/bengisugelin/DevOps/assets/113550043/0949f223-5868-4c18-9c73-5dd83d5e4738)
 and set up is complete!
+
+

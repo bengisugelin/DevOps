@@ -43,3 +43,32 @@ let's check the browser:
 ![image](https://github.com/bengisugelin/DevOps/assets/113550043/5f55828f-655b-413e-8625-337e07c31976)
 
 It works completely fine! YAY!
+
+
+# Command line arguments
+
+so if we dont want to specify the variable, but enter in the command line here how we can do it:
+
+first lets create a copy of latest websetup.sh file
+
+```
+```
+and then open it and make the modification.
+```
+```
+
+Comment URL and ART_NAME. now we dont have those variables. so we are not going to use that variable, but we weill use numbers(0,1,2...) instead.
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/c07a1eed-0a32-458a-91ed-3e9580f1090b)
+
+```
+[root@scriptbox scripts]# ./5_args_websetup.sh https://www.tooplate.com/zip-templates/2137_barista_cafe.zip 2137_barista_cafe
+```
+
+now this is a resusable code, i can use it any different website by giving the address of the website.
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/df24cc11-71a3-4420-853b-7e12b7977d78)
+
+so, let's get the ip and see it on the browser.
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/c83a0d23-cddc-4dd8-8b0a-8f6236c393d8)

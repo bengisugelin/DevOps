@@ -137,6 +137,11 @@ if we want to assign a variable for a known command, we should use back ticks.
 
 otherwise, it will only store the word, not the command.
 
+another example:
 
+```
+[vagrant@scriptbox scripts]$ FREE_RAM=`free -m | grep Mem \ awk '{print $4}'`
+```
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/f9cd3569-fab1-4373-8116-6e9b683159b1)
 
 

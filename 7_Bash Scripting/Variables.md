@@ -84,3 +84,7 @@ If you want to make a variable permanent, you can do it by placing it in the .ba
 
 ![image](https://github.com/bengisugelin/DevOps/assets/113550043/fe86fbbf-81e9-4354-b8fb-133558c552fc)
 
+
+if you want to make it available globally for every user, then you can use the file /etc/profile
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/76e412c4-06cc-4712-8474-466655bb68d5)

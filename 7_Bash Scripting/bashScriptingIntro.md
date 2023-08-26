@@ -144,4 +144,16 @@ another example:
 ```
 ![image](https://github.com/bengisugelin/DevOps/assets/113550043/f9cd3569-fab1-4373-8116-6e9b683159b1)
 
+Let's create a simple script that will print system info or healht of thhe system.
+```
+[root@scriptbox scripts]# vim 6_command_subs.sh
+```
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/780ccb8b-5d69-4837-933c-98fcff01e626)
+
+```
+[root@scriptbox scripts]# chmod +x 6_command_subs.sh
+[root@scriptbox scripts]# ./6_command_subs.sh
+```
+
 

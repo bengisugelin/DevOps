@@ -88,3 +88,18 @@ If you want to make a variable permanent, you can do it by placing it in the .ba
 if you want to make it available globally for every user, then you can use the file /etc/profile
 
 ![image](https://github.com/bengisugelin/DevOps/assets/113550043/76e412c4-06cc-4712-8474-466655bb68d5)
+
+
+
+##  user input
+
+ let's create a new sh file.
+
+```
+[root@scriptbox scripts]# vim 7_userInput.sh
+```
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/68f5cb28-827f-4b2c-9ee7-740a235ae951)
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/9dfd2573-6ce8-4a16-97e2-c8c75f650d80)
+
+ 

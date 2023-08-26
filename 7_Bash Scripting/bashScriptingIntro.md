@@ -127,9 +127,15 @@ do the same thing with single quote:
 it didnt work at all.. so single quotes removes the meaning of a special character.
 
 
+## Command substitution:
 
+if we want to assign a variable for a known command, we should use back ticks.
+```
+[vagrant@scriptbox scripts]$ UP=`uptime`
+```
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/3d2dcf97-9265-44f9-aa6a-90941c494543)
 
-
+otherwise, it will only store the word, not the command.
 
 
 

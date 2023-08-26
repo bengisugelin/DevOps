@@ -72,3 +72,15 @@ now this is a resusable code, i can use it any different website by giving the a
 so, let's get the ip and see it on the browser.
 
 ![image](https://github.com/bengisugelin/DevOps/assets/113550043/c83a0d23-cddc-4dd8-8b0a-8f6236c393d8)
+
+
+## Exporting variables.
+
+If you want to make a variable permanent, you can do it by placing it in the .bashrc file
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/19a623a8-47ab-4c60-b92b-d254acc7af0a)
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/e8b88a8f-9a5a-4e1e-8e42-3fc757e01006)
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/fe86fbbf-81e9-4354-b8fb-133558c552fc)
+

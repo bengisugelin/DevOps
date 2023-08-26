@@ -96,4 +96,41 @@ open that in the browser
 ![image](https://github.com/bengisugelin/DevOps/assets/113550043/0949f223-5868-4c18-9c73-5dd83d5e4738)
 and set up is complete!
 
+## Quotes
+
+there are two different quotes: "" and ''
+
+let's say we have var'able SKILL
+
+```
+[vagrant@scriptbox scripts]$ SKILL="DevOps"
+```
+
+is I print that:
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/20dc99f0-e2c8-45d0-a5f4-4b45c887b3fe)
+
+What if we used '' instead of "" ?
+
+there will not be any difference in printing it
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/2bf8db22-5d16-4c8a-87b1-d88f6c115ddd)
+
+but. let's try to print it in double quote as a sentence that we need this variable
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/35cd98ca-790d-442a-8a0d-aeadbb83b0a1)
+
+do the same thing with single quote:
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/ad7c9632-76b0-43b0-a63e-c345a4a6c6b1)
+
+it didnt work at all.. so single quotes removes the meaning of a special character.
+
+
+
+
+
+
+
+
 

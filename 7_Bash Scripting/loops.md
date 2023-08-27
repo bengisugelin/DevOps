@@ -24,3 +24,10 @@ make it executable and run:
 ```
 
 ![image](https://github.com/bengisugelin/DevOps/assets/113550043/ff8e749d-c2fb-4304-bd24-3d12fa093d74)
+
+
+let's do another one:
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/d8b277ce-64d6-40b4-a73f-80f5b3e54045)
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/e47427d0-3e97-4486-82cd-91c1b355fcb3)

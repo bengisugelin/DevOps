@@ -9,4 +9,12 @@ this is the Vagrant file we have. In order to set up these VMs, we just need to 
 ```
 $ vagrant up
 ```
+let's get the ip address of the machines. We are going to add name to IP mapping in the script box. So script box can refer to all the achines with the names and not the IP addresses. But first we have to save those same IP addresses in the /etc/host file
 
+lets log in to scriptbox and open that file.
+
+```
+$ vagrant ssh scriptbox
+[vagrant@scriptbox ~]$ sudo -i
+[root@scriptbox ~]# vim /etc/hosts
+```

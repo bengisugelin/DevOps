@@ -50,6 +50,3 @@ done
 
 echo "Out of the loop"
 ```
-
-![image](https://github.com/bengisugelin/DevOps/assets/113550043/95151dac-62fd-4149-bcdd-4d636f31ac95)
-

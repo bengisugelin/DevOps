@@ -31,3 +31,25 @@ let's do another one:
 ![image](https://github.com/bengisugelin/DevOps/assets/113550043/d8b277ce-64d6-40b4-a73f-80f5b3e54045)
 
 ![image](https://github.com/bengisugelin/DevOps/assets/113550043/e47427d0-3e97-4486-82cd-91c1b355fcb3)
+
+
+## while loops
+
+```
+#!/bin/bash
+
+counter=0
+
+while [ $counter -lt 5]
+do
+  echo "Looping...."
+  echo "Value of counter is $counter."
+  counter=$(( $counter + 1 ))
+  sleep 1
+done
+
+echo "Out of the loop"
+```
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/95151dac-62fd-4149-bcdd-4d636f31ac95)
+

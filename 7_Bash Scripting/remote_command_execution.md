@@ -97,3 +97,5 @@ now log in to scriptbox and continue.
 ![image](https://github.com/bengisugelin/DevOps/assets/113550043/030d0ca8-5a13-410a-bd72-c6448e6be9e1)
 
 
+let's go back to scriptbox
+

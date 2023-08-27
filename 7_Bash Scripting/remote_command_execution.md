@@ -71,4 +71,29 @@ next, edit the visudo file
 ADD DEVOPS USER.
 
 
-Now, we will do the same thongs to web02 and web03
+Now, we will do the same thongs to web02.
+
+But web03 is an ubuntu OS and it you cannot connect it with password.if try, it will say permision denied public. it will ask a key.
+
+Lets logout from scriptbox and login to web03
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/9e9a5a64-8f7c-4553-9fe7-06e92128ba65)
+
+open /etc/ssh/sshd_config file.
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/f64e9299-5c72-42ec-a218-38b2eaf1b6c9)
+
+as it can be seen here, password authentication is not allowed. that why we cannot logged in as we did in web01 and web02.
+change it to yes to give the permission.
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/fee8579a-e9b4-4f96-80ea-195b85e6bb1e)
+
+restart the ssh service.
+```
+root@web03:~# systemctl restart ssh
+```
+now log in to scriptbox and continue.
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/030d0ca8-5a13-410a-bd72-c6448e6be9e1)
+
+

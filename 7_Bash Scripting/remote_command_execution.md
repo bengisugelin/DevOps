@@ -40,4 +40,35 @@ Last login: Sun Aug 27 23:14:14 2023 from 10.0.2.2
 [vagrant@web01 ~]$
 ```
 
+now, we are conntected to web01 machine.
+```
+[vagrant@web01 ~]$ hostname
+web01
+```
 
+we can log out now,
+```
+Connection to web01 closed.
+[root@scriptbox ~]#
+```
+
+So, lets not use the vagrant user. We will create another user, devops, for every VM.
+
+log in to web01 again from scriptbox
+```
+[root@scriptbox ~]# ssh vagrant@web01
+```
+create a new user named devops, set password  as devops
+```
+[vagrant@web01 ~]$ sudo -i
+[root@web01 ~]# useradd devops
+[root@web01 ~]# passwd devops
+```
+next, edit the visudo file
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/d6a706be-c206-4aed-b369-5027c1915621)
+
+ADD DEVOPS USER.
+
+
+Now, we will do the same thongs to web02 and web03

@@ -28,7 +28,7 @@ you can do the same thing for web02 and web03.
 
 lets do some tests
 
-``
+```
 [root@scriptbox ~]# ssh vagrant@web01
 The authenticity of host 'web01 (192.168.10.13)' can't be established.
 ECDSA key fingerprint is SHA256:mc0p/z9/+4s4SjrnLCx/tV2t8ziWNB049IHGz1V0a8U.

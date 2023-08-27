@@ -17,3 +17,4 @@ make it executable and run it:
 ```
 
 ![image](https://github.com/bengisugelin/DevOps/assets/113550043/1ed8870a-391b-4f37-a4a1-31bcc393cdc2)
+

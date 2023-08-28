@@ -38,4 +38,12 @@ ssh-copy-id devops@web01
 
 now, do the apply the same steps to the web02 and web03.
 
+let's test it. 
+
+this time, when i tried to login to web01, i will not ask password as it eill use the key.
+
+```
+[root@scriptbox ~]# ssh devops@web01 uptime
+```
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/45af677a-f35d-493c-a695-172b306ff923)
 

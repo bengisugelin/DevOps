@@ -21,3 +21,6 @@ so if we want to ssee the uptime command:
 ```
 
 ![image](https://github.com/bengisugelin/DevOps/assets/113550043/13194e3c-2bb2-445f-96c0-64e8f000610c)
+
+
+so if you want to install a software for instance, you dont have to do it one by one manually. we only need we line of code to do it.

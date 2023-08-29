@@ -24,3 +24,19 @@ so if we want to ssee the uptime command:
 
 
 so if you want to install a software for instance, you dont have to do it one by one manually. we only need we line of code to do it.
+
+we have 2 CentOS and 1 linux vm right now, and installation commands are different. for CentOS we shoul yum. but for linux it is apt. so, we need to do some modifications in websetup file.
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/715cf5a9-45b2-48bd-aeb0-3b72ef17e0fd)
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/3b3139da-668e-4045-9c29-5f185083a1f5)
+
+(All content of the file can be find in 7_Bash Scripting directory.)
+
+let's test the script locally:
+
+```
+ ./multios_websetup.sh
+```
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/235bc1d3-0e95-4964-9bde-730ed84e8e7a)

@@ -40,3 +40,30 @@ let's test the script locally:
 ```
 
 ![image](https://github.com/bengisugelin/DevOps/assets/113550043/235bc1d3-0e95-4964-9bde-730ed84e8e7a)
+
+now, we will push the script to all remote machines, web01, web02 and web03 and then execute it. for this, we need to write another script.
+
+create a test.txt file. let's push it to another machine.
+
+```
+[root@scriptbox remote_websetup]# scp testfile.txt devops@web01:/tmp/
+```
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/f53b2f7d-ff5c-45be-a7a4-1a9552ebe57c)
+
+```
+[root@scriptbox remote_websetup]# scp -i ~/.ssh/id_rsa testfile.txt devops@web01:/home/devops
+```
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/b9813c6b-4f5f-4346-959b-241ec9445fc1)
+
+create a new sh file(webdeploy.sh)
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/6940cee9-90b8-403a-928b-087ecde7a4ef)
+
+make the file executable and run it.
+```
+[root@scriptbox remote_websetup]# chmod +x webdeploy.sh
+[root@scriptbox remote_websetup]# ./webdeploy.sh
+```
+
+

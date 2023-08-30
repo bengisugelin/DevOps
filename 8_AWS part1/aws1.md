@@ -104,3 +104,69 @@ So, How do i connect ?  There is a connect button, clcik on that. We will be usi
 ![image](https://github.com/bengisugelin/DevOps/assets/113550043/78539516-37d7-4bee-9f9a-a11a7cf87b0f)
 
 
+
+
+Now, we will open our gitbash and paste the command. But before doing it you need to make sure that you specifyt the complete path of identitiy file (web-dev-key.pem). 
+
+So I am in the directory where this file is located right now. You can either run that command inside the directory that the file located, or you can give the path of the file inside the command. 
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/83d3a0d6-b85b-4063-b410-24b54e5a4fbe)
+
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/48ef5558-bf9f-4b92-8bd3-8e50ffb5d2cb)
+
+ ![image](https://github.com/bengisugelin/DevOps/assets/113550043/791fae87-7762-47f4-a77c-98567191fe1b)
+
+let's switch to the root user
+
+```
+[ec2-user@ip-172-31-43-61 ~]$ sudo -i
+```
+
+check the server systemctl status httpd. We used provisioning and it should be running right now.
+```
+[root@ip-172-31-43-61 ~]# systemctl status httpd
+```
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/c07f24ca-1235-48c8-badc-c01410502456)
+
+
+and. it is active and running.
+
+We can also check all the open tcp ports and find the port 80
+```
+[root@ip-172-31-43-61 ~]# ss -tunlp | grep 80
+```
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/5c7175b6-8d8d-47ca-9f4a-7d161874256d)
+
+and locally, we should be able to access local host. 
+```
+[root@ip-172-31-43-61 ~]# curl http://localhost
+```
+it will give us an html page which bash shell cannot really understand it and just prints all the html scripts.
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/5278ff26-a6bc-4a55-85da-409df96cb06c)
+
+now we will access this from the browser. Let's go to the AWS console, copy the public IP.
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/3c0ada8d-1ce8-4a37-a308-a45da51bbdd6)
+
+it will not respond because we are accessing it on port 80, and firewall (security group) is allowing access only on port 22.
+
+go to the instance, Security tab.click security group-> edit inbound rules
+
+right now, port 22 is the onlt one allowed.
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/74ddde7b-b1eb-4ad3-a761-8147234f542a)
+
+
+so we will ads new rule:
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/c9062735-54ad-4c6b-a5d6-cac834348946)
+
+
+let's go to the browser and refresh
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/296c635d-e376-450f-8a1a-f112b250514d)
+
+
+this is the end if this lecture. terminate the instance. ( choose the terminae instance option)
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/e278812f-f56c-4b45-b3e0-6c6d1e280478)

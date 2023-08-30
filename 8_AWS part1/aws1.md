@@ -87,4 +87,13 @@ Now, click on advanced details. go to the end of it, where you will see user dat
 ![image](https://github.com/bengisugelin/DevOps/assets/113550043/902f3ed9-85fa-49c0-b43c-6d111de21aa7)
 
 
+And that is all. Click lauch instance
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/b40ab58a-d7b3-4101-8aac-397f1e8ae254)
+
+click view all instances to see all.
+
+it will take some time to see the instance.
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/fc094f3c-2119-41ac-bcb5-c5b9dd2de076)
 

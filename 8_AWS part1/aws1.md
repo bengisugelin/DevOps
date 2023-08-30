@@ -71,6 +71,20 @@ Click create new keypair
 
 ![image](https://github.com/bengisugelin/DevOps/assets/113550043/ac8b8e91-282d-43fb-841d-8122f87fc19a)
 
-Create your key pair:
 
 ![image](https://github.com/bengisugelin/DevOps/assets/113550043/81ba6272-a4c6-41ea-9620-56793d65565b)
+
+
+
+Now, let's create a firewall rule on that. Every EC2 instance will have a mandatory firewall that is called as security group
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/533582e9-0faf-4791-ab94-b36fced2b58c)
+
+we will add more rules later.
+
+Now, click on advanced details. go to the end of it, where you will see user data. This section is like vagrant provisioning. We will mention the commands and when the instance comes up, it will execute those commands.
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/902f3ed9-85fa-49c0-b43c-6d111de21aa7)
+
+
+

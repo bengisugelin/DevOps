@@ -170,3 +170,5 @@ let's go to the browser and refresh
 this is the end if this lecture. terminate the instance. ( choose the terminae instance option)
 
 ![image](https://github.com/bengisugelin/DevOps/assets/113550043/e278812f-f56c-4b45-b3e0-6c6d1e280478)
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/ed914437-8d43-46c5-afce-99ce3fd9e5f8)

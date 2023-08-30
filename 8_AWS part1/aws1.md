@@ -21,3 +21,13 @@ Let's talk about the components in th EC2 instance / service:
 
 
 ![image](https://github.com/bengisugelin/DevOps/assets/113550043/b56672dc-f8d7-44ae-ba6c-adf58adc2fe9)
+
+
+Now, let's see how to launch an EC2 instance:
+
+EC2 instance basically means a virtual machine, first we logged in our AWS console an select a region.
+ We will select North Virgina region 
+ 
+ ![image](https://github.com/bengisugelin/DevOps/assets/113550043/ac69f128-8607-4f49-a9a9-a41617f39389)
+
+every region has code. For North Virginia, the code is "us-east-1"

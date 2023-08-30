@@ -30,4 +30,26 @@ EC2 instance basically means a virtual machine, first we logged in our AWS conso
  
  ![image](https://github.com/bengisugelin/DevOps/assets/113550043/ac69f128-8607-4f49-a9a9-a41617f39389)
 
-every region has code. For North Virginia, the code is "us-east-1"
+every region has code. For North Virginia, the code is "us-east-1".
+
+LEt's write EC@ to search bar and find the EC2. Now, we are at the EC2 dashboard.
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/e6d8d16f-3479-4de4-959e-272730b1a478)
+
+Here you can see how many instances is running at the moment, how mant instances you have in total etc. 
+
+Let's click on Instances located on the left bar:
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/a39a3291-78c6-4970-a632-a3eda0a91cf9)
+
+and click Launch instances.
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/3b57a3ac-f3b5-4c84-a710-e794955f7ef9)
+
+Give a name to the instance as web01. We will also add name tags ( Project alpha)
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/2fdad01e-379c-44e7-8477-6df204a89471)
+
+
+now we will select AMI ( Amazon MAchine Image)
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/9e806ef5-061a-49d3-8ece-669721465cb0)

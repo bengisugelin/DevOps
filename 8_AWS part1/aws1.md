@@ -97,3 +97,10 @@ it will take some time to see the instance.
 
 ![image](https://github.com/bengisugelin/DevOps/assets/113550043/fc094f3c-2119-41ac-bcb5-c5b9dd2de076)
 
+The instance has a public ID which we can use to acess it from the internet, and it has a private IP which is for internal communication.
+
+So, How do i connect ?  There is a connect button, clcik on that. We will be using ssh client. It will tell you how to connect.
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/78539516-37d7-4bee-9f9a-a11a7cf87b0f)
+
+

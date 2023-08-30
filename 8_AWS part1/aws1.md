@@ -18,3 +18,6 @@ Let's talk about the components in th EC2 instance / service:
 - we will have tah to every resource in AWS.
 - We will have security group on every EC2 instance. This is basically a firewall for inbound and outbound traffic.
 - To log in to an EC2 instance, we will need a key pair.
+
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/b56672dc-f8d7-44ae-ba6c-adf58adc2fe9)

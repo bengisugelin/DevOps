@@ -53,3 +53,24 @@ Give a name to the instance as web01. We will also add name tags ( Project alpha
 
 now we will select AMI ( Amazon MAchine Image)
 ![image](https://github.com/bengisugelin/DevOps/assets/113550043/9e806ef5-061a-49d3-8ece-669721465cb0)
+
+search for centos and select CetOs Stream 9 (x86_64)
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/1d320128-30e3-46fc-9963-e8dc09e84403)
+
+In Default,  instance tyoe is t3.small. (it is nor free), We will change it to t2.micro, which freely available.
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/cfac8aa8-2e3a-4815-bd00-b925fe476bf7)
+
+For every specific purpose, wwe can select different instance type. For instance, if youre looking for Compute optimized, then C series would be better, if youre looking for memory optimized then R series recommended etc.
+
+So based on what application you are going to host in your EC2 instance, you need to select the right instance. 
+
+
+Click create new keypair
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/ac8b8e91-282d-43fb-841d-8122f87fc19a)
+
+Create your key pair:
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/81ba6272-a4c6-41ea-9620-56793d65565b)

@@ -107,3 +107,30 @@ Now we are ready. copy the public oip addres and paste to the web browser. HEre 
 
 ![image](https://github.com/bengisugelin/DevOps/assets/113550043/e170d6fc-16be-4184-8688-1d11aab6117e)
 
+Let's do more..
+
+Right now, the public IP off our website is 18.232.156.200. But if we power off the instance and power on again, the public IP will change.
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/b04657c3-2a5b-43fa-9ac4-c9e0827b86a3)
+
+If you say that you want a STATIC public IP, you dont want your public IP change even if you power off the instance, then you need to use elastic IP address.
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/ef4b345c-f87d-4529-88ee-1cd2e83624fb)
+
+Aclick Allocate Elastic IP Adress and click allocate.
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/d130819b-6ae4-40c0-ae3f-886510b9eb96)
+
+So now we have a static IP address for us. 
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/f85c2b37-0d56-484d-8a6f-2c236f9b0153)
+
+Now we are going to associate this static IP to our instance.
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/2d808deb-4a57-4dbe-bccb-40291f5a9e9d)
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/712363bb-1715-49f1-b668-3c45bcd2389e)
+
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/00ae53ea-245b-40f4-b9e4-893b460e28af)
+
+

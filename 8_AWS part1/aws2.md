@@ -47,7 +47,7 @@ we will choose ubuntu this time.
 
 ![image](https://github.com/bengisugelin/DevOps/assets/113550043/338bc843-624f-410c-aa93-7d9d83b5f3e7)
 
-We have a;ready created a key pair, and we will be just selecting it.
+We have already created a key pair, and we will be just selecting it.
 
 ![image](https://github.com/bengisugelin/DevOps/assets/113550043/e994d366-a2c2-416e-96bf-c74075856d64)
 
@@ -69,3 +69,25 @@ Now, Lets click launch instance!
 
 
 ![image](https://github.com/bengisugelin/DevOps/assets/113550043/afa627c8-8923-4690-8519-8c6ba6103b61)
+
+Lets connect to it: We already knew how to so it: click connect button and get the info. give the path of the keypair, and voila!
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/37cbfd32-ac11-4ec2-9368-63923be88564)
+
+Lets open gitbash
+
+```
+$ ssh -i kalg-prod-nvir.pem ubuntu@18.232.156.200
+```
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/d0e6dbab-ec99-4a88-80de-a434000b43ac)
+
+Logged in! Let's set up the website.
+
+be the root user and run the command one by one.
+
+```
+ubuntu@ip-172-31-46-127:~$ sudo -i
+root@ip-172-31-46-127:~# sudo apt install apache2 wget unzip -y
+wget 
+```

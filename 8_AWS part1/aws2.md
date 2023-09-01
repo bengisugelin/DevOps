@@ -133,4 +133,8 @@ Now we are going to associate this static IP to our instance.
 
 ![image](https://github.com/bengisugelin/DevOps/assets/113550043/00ae53ea-245b-40f4-b9e4-893b460e28af)
 
+now IP address will not change after we turn off the instance.
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/451749a8-8f3d-4898-9e2b-d64701b40283)
+
 

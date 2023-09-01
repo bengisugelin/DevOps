@@ -137,4 +137,19 @@ now IP address will not change after we turn off the instance.
 
 ![image](https://github.com/bengisugelin/DevOps/assets/113550043/451749a8-8f3d-4898-9e2b-d64701b40283)
 
+That's all for this one. Let;s terminate this instance.
 
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/3040ea08-3c5f-4eb7-951e-c83771c24ae4)
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/ea42092b-30fd-4ad0-926f-fc7c71367012)
+
+after terminatin it , we should also remove the elastic ID in order to not charged for it.
+
+release elastic IP:
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/cd156aa9-b2b5-448b-8e56-bb685664acce)
+
+
+Go back to EC2 dashboard and check f you have any elastic IPs or running instances. You should not have any.
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/3a2f4399-8662-41ba-adc8-1b84019ddd08)

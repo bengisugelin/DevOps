@@ -89,5 +89,21 @@ be the root user and run the command one by one.
 ```
 ubuntu@ip-172-31-46-127:~$ sudo -i
 root@ip-172-31-46-127:~# sudo apt install apache2 wget unzip -y
-wget 
+root@ip-172-31-46-127:~# wget https://www.tooplate.com/zip-templates/2137_barista_cafe.zip
+root@ip-172-31-46-127:~# unzip 2137_barista_cafe.zip
+root@ip-172-31-46-127:~# cp -r 2137_barista_cafe/* /var/www/html/
+root@ip-172-31-46-127:~# systemctl restart apache2
 ```
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/5e6ac3b3-5d8a-49b3-b7cf-536c739e8e11)
+
+
+now, we know this service or this process, we will be accessing the website on port 80. So once again, lets copy the public IPv4 address of the instance. Since we did not set the security group, it will not work right now. We should go to the security group and make the changes so that it will allow prot 80.
+
+so go to edit inbound rules add add port 80.
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/a0aff1ab-c3d2-4435-8f2c-3e212823fb52)
+
+Now we are ready. copy the public oip addres and paste to the web browser. HEre is our website:
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/e170d6fc-16be-4184-8688-1d11aab6117e)
+

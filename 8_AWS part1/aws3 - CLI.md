@@ -84,6 +84,10 @@ so if you dont have the keys, you cannot get it back. You can create a new key.
 If sth happend and your keys are comprimised, you can either deactivate or delete the key, rather than deleting the user.
 
 
+All the commands we can use in AWS CLI can be found via this link:
+
+https://awscli.amazonaws.com/v2/documentation/api/latest/index.html
+
 
 
 

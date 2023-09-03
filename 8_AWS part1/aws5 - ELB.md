@@ -130,3 +130,14 @@ else
    ls /var/www/html/
 fi 
 ```
+
+
+that is all, lets launch the instance.
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/5f39d820-a595-4f6b-af40-c6f228ad2213)
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/4d8d3d2f-9d48-41c2-934e-08fd55c41323)
+
+now, copy the public id and paste to the browser to see the website:
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/4a2895bb-6173-4bc5-a759-9fe50374edd3)

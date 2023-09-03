@@ -141,3 +141,52 @@ that is all, lets launch the instance.
 now, copy the public id and paste to the browser to see the website:
 
 ![image](https://github.com/bengisugelin/DevOps/assets/113550043/4a2895bb-6173-4bc5-a759-9fe50374edd3)
+
+
+once that is done, we will do two more things before we go and create load balancer.
+
+First thing is: **Create an AMI from this instance.**
+
+To create AMI, select your instance and go to Actions -> Image and templates -> create image
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/a17b880f-35d8-4be6-a1fd-de9a695695fe)
+
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/acfc2865-f50b-444a-8d26-c42678f11466)
+
+you can see the AMI inside the Images section.
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/26df0a93-254c-4196-86af-e000ecb3b580)
+
+now it is pending, after 3-5 minutes, it will be available.
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/742e0643-fb2d-49d7-8ea0-293e772dab58)
+
+Let's come to load balancer section:
+
+We will go to target groups first. -> create target group
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/c5ad82b9-00ec-480d-b5cf-3d9787f589b1)
+
+clcik include as pending below
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/2123a836-5a2b-4145-84a2-6391b5b6478a)
+
+and create taarget group.
+
+Now, go to the load balancer->create load balancer
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/f1b31997-ecb7-4ffa-9bdd-25e9ba1ab6f9)
+
+we will go with application load balancer
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/44c2888b-32a8-4f8c-bc21-ffa7c7505c17)
+
+
+select all the zones:
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/9573fdfa-08ec-4948-88a6-6f46e84f3760)
+
+
+
+

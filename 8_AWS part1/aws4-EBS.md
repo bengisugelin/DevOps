@@ -16,3 +16,7 @@ EBS basically provides two things: EBS volume, the virtual hards disk and the sn
 - Cold HDD
 
   File Servers
+
+- Magnetic
+
+  Backups & Archives

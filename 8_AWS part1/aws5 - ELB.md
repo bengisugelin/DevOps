@@ -188,5 +188,32 @@ select all the zones:
 ![image](https://github.com/bengisugelin/DevOps/assets/113550043/9573fdfa-08ec-4948-88a6-6f46e84f3760)
 
 
+next:security groups. we will create security group
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/0cbf8298-ed45-47d3-ab51-4153aa41be84)
 
 
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/bc9b9083-f10e-4686-8cb0-c82903012b85)
+
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/fa3d9d9f-78f4-45d0-bd2d-6b1579e2d49d)
+
+
+
+wait fow a fet minutes for load balancer's state switched ti active
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/f24e98e7-e48a-4667-8585-1c068a300939)
+
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/f329332b-756f-4278-8584-9043fc3bf335)
+
+
+we also need to add another inbound rulw to the security group so that we will be able to connect the website.
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/66e63a01-1ccf-4617-82ba-22bd93ed8704)
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/f96973b6-c981-4660-96d2-0867a6a2b8dd)
+
+now copy the DNS and paste to the browser to reach the website
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/2ca408a7-1a9e-40a7-91cc-669c5fd3d781)

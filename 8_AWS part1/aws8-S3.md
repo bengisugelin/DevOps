@@ -14,3 +14,5 @@ S3 Atorage Classes:
 2. **S3 IA-Infrequent Access** : Long-lived, but less frequently accessed data. Slow accsess, object replication in multi AZ
 3. **S3 One Zone - IA** : is for data that is accessed less frequently, but requires rapid access when needed. Slow access, no object replication.
 4. **S3 Intelligent Tiering** : Automatically moves data to most cost effective tier.
+5. **S3 Galcier** : low cost storage class for data archiving.
+6. **S3 Glacier Deep Archive** : Lowest cost storage, retrieval time of 12 hours.

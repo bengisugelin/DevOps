@@ -6,3 +6,11 @@ Let's see what is S3..So S3 is a storage service and you can access it over the 
 the data that you store is object and the storage is called bucket. The bucket name has to be unique. it is a logical unit of storage on AWS. 
 
 Amazon S3->Bucket -> Folder ->Object -> public access
+
+
+S3 Atorage Classes:
+
+1. **S3 Standard** : General purpose storage of frequently accessed data. Fast access & object replication in multi AZ.
+2. **S3 IA-Infrequent Access** : Long-lived, but less frequently accessed data. Slow accsess, object replication in multi AZ
+3. **S3 One Zone - IA** : is for data that is accessed less frequently, but requires rapid access when needed. Slow access, no object replication.
+4. **S3 Intelligent Tiering** : Automatically moves data to most cost effective tier.

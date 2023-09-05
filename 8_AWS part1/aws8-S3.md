@@ -19,3 +19,17 @@ S3 Storage Classes:
 
 
 Lifecycle policies: storage can be changes according to the age. for instance, if the data is only for 30 days it will be S3standard, after 30 days, will be S3 IA-infrequent Access and after 90 days, will be S3 glacier.
+
+
+lets go to the S3:
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/07581864-1394-468e-b8e8-1dcfaed11663)
+
+
+click create bucket. the bucket name should be unique.
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/58fdbe94-79af-466c-a564-044f56cba71a)
+
+and create your bucket.
+
+After creating it, you can see objects, properties, permissions, meti=rics, management and access points.

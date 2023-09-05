@@ -8,7 +8,7 @@ the data that you store is object and the storage is called bucket. The bucket n
 Amazon S3->Bucket -> Folder ->Object -> public access
 
 
-S3 Atorage Classes:
+S3 Storage Classes:
 
 1. **S3 Standard** : General purpose storage of frequently accessed data. Fast access & object replication in multi AZ.
 2. **S3 IA-Infrequent Access** : Long-lived, but less frequently accessed data. Slow accsess, object replication in multi AZ
@@ -16,3 +16,6 @@ S3 Atorage Classes:
 4. **S3 Intelligent Tiering** : Automatically moves data to most cost effective tier.
 5. **S3 Galcier** : low cost storage class for data archiving.
 6. **S3 Glacier Deep Archive** : Lowest cost storage, retrieval time of 12 hours.
+
+
+Lifecycle policies: storage can be changes according to the age. for instance, if the data is only for 30 days it will be S3standard, after 30 days, will be S3 IA-infrequent Access and after 90 days, will be S3 glacier.

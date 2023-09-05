@@ -33,3 +33,7 @@ click create bucket. the bucket name should be unique.
 and create your bucket.
 
 After creating it, you can see objects, properties, permissions, meti=rics, management and access points.
+
+go to object, click on upload, click dd files, then we can browse our destop and choose the file we want, choose them and click add file.
+
+By default, the storage class will be standar, but you can choose anything you want.

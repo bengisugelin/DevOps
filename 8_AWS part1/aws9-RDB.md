@@ -41,3 +41,5 @@ choose all the log exports
 
 
 and create the db
+
+in order to reach this db, we need to create an EC2 instance in the same region.

@@ -37,3 +37,8 @@ After creating it, you can see objects, properties, permissions, meti=rics, mana
 go to object, click on upload, click dd files, then we can browse our destop and choose the file we want, choose them and click add file.
 
 By default, the storage class will be standar, but you can choose anything you want.
+
+
+
+
+

@@ -36,9 +36,17 @@ After creating it, you can see objects, properties, permissions, meti=rics, mana
 
 go to object, click on upload, click dd files, then we can browse our destop and choose the file we want, choose them and click add file.
 
-By default, the storage class will be standar, but you can choose anything you want.
+By default, the storage class will be standard, but you can choose anything you want.
 
 
+Here, like we hosted website on EC@ instance, we will put all that data into S3 bucket and host the website from the S3 bucket.
 
+Choose one of the templates in tooplate.com. download it
 
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/c8f2aa4d-582b-4f06-91da-9007a2789a87)
 
+extrat the zip file, and then copy all the files and data inside this folder and upload to the s2 bucket.
+
+after uploading the files to the S3 bucket, go to the permisison and remove all the checks (uncheck all of them). You shouldnt block the public access. Next, we're going the make all this data public, so select all data we have in the bucket-> Action-> make public.
+
+in the properties, scroll down to the end, there is a section names static website hosting. click edit and enable static website hosting.

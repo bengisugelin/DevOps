@@ -29,3 +29,15 @@ create database, we will chose standard create and MySQL for this time.
 for this one, dev/test will be selected.
 
 ![image](https://github.com/bengisugelin/DevOps/assets/113550043/39565edc-e28e-4a21-b6a2-61a87a702298)
+
+in ordedr to use the free tier, we will use burstable classes:
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/bf64bb65-9701-4815-ba0f-14586958c4ae)
+
+
+choose all the log exports
+
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/13c3f5a2-212e-4fd4-97bf-e26708def448)
+
+
+and create the db

@@ -49,4 +49,4 @@ extrat the zip file, and then copy all the files and data inside this folder and
 
 after uploading the files to the S3 bucket, go to the permisison and remove all the checks (uncheck all of them). You shouldnt block the public access. Next, we're going the make all this data public, so select all data we have in the bucket-> Action-> make public.
 
-in the properties, scroll down to the end, there is a section names static website hosting. click edit and enable static website hosting.
+in the properties, scroll down to the end, there is a section names static website hosting. click edit and enable static website hosting. Specifiy index document and error.html file. but remember, we can only host static websites in S3 bucket.

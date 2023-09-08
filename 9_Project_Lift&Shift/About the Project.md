@@ -14,4 +14,19 @@ In previous project, we have a multi-tier Web application Stack[Vprofile] by usi
 
 ### Solution
 
-  
+solution to all these problems is to have a cloud computing setup, so instead of running our workload in our data center, if we run it on a cloud computing platform that we dont pay for the upfront cost for procuring the resource. We pay as we go. Consuming Infrastructure As Service (IAAS)
+
+In this structure, we can do automation and automate each and every step and process to avoid human errors, as well as save time and cost.
+
+### AWS Services used
+  - EC2 instances will be our VMs for Tomcat, rabbitmq, memcache and mysql servers.
+  - ELB (Elastic load balancer) a a replacement of our engine service
+  - Autoscaling service which will automatically scale out and scale in our EC2 instances.
+  - S3 / EFS Storage
+  - Route 53 for a private DNS service
+
+### Objective
+  - Flexible infrastructure
+  - no upfront cost
+  - modernize effectively
+  - IAAC ( Infrastructure as a code)

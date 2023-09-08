@@ -30,3 +30,17 @@ In this structure, we can do automation and automate each and every step and pro
   - no upfront cost
   - modernize effectively
   - IAAC ( Infrastructure as a code)
+
+### Flow of execution
+1. Login to AWS account
+2. Create Key pairs
+3. Create security groups
+4. Launch Instances with user data [Bash Scripts]
+5. Update IP to name mapping in route 53
+6. Build Applicatio from source code
+7. Upload to S3 bucket
+8. Download artifact to Tomcat EC2 Instance
+9. Setup ELB with HTTPS [Cert from Amazon Certificate Manager]
+10. Map ELB Endpoint to website name in GoDaddy DNS
+11. Verify
+12. Build Autoscaling Group for Tomcat instances

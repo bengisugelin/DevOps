@@ -40,7 +40,11 @@ save rules.
 In any case, if you make any mistake in adding the rule, we can always come back and make the changes.
 
 
-Now, we will create login key pair. which we will use to log in to our EC2 instances. So go to key pairs  
+Now, we will create login key pair. which we will use to log in to our EC2 instances. So go to key pairs, and click create key pairs.  
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/0888a7b0-f196-4a4b-b49a-def1a2cdda3c)  
+We are going to use bash to log in, so will choose pem format. 
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/8cc6699f-b5ce-4e72-a989-c75fda9893e2)
+
 
 
 

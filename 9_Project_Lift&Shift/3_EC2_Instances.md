@@ -69,6 +69,10 @@ sudo apt install tomcat9 tomcat9-admin tomcat9-docs tomcat9-common git -y
  
 
 
+Now  after all instances are done, we can check them.
+
+Slect the instance(vprofile-db01) and click connect. We need to find out the username for login. so, go to the SSH client tab and find it. (ec2-user)
+
 
 
 

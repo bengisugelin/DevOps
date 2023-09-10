@@ -50,6 +50,22 @@ sudo rabbitmqctl set_user_tags test administrator
 sudo systemctl restart rabbitmq-server
  ```
 
+The last instance: app01 - this one will be Ubuntu OS. click launch instance again.
+
+name: vprofile-app01  
+Os: ubuntu server 22.04  
+instance type: t2.micro  
+key pair: vprofile-prod-key  
+security group : app-sg  
+advance details:
+```
+#!/bin/bash
+sudo apt update
+sudo apt upgrade -y
+sudo apt install openjdk-11-jdk -y
+sudo apt install tomcat9 tomcat9-admin tomcat9-docs tomcat9-common git -y
+```
+
 
  
 

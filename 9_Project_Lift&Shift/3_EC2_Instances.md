@@ -30,8 +30,8 @@ then click launch instances
 Now same thins for rabbit mq. 
 - AMI: Centos 9
 - advance details  
-   ```
-   #!/bin/bash
+```
+#!/bin/bash
 sudo yum install epel-release -y
 sudo yum update -y
 sudo yum install wget -y
@@ -48,7 +48,7 @@ sudo sh -c 'echo "[{rabbit, [{loopback_users, []}]}]." > /etc/rabbitmq/rabbitmq.
 sudo rabbitmqctl add_user test test
 sudo rabbitmqctl set_user_tags test administrator
 sudo systemctl restart rabbitmq-server
-   ```
+ ```
 
 
  

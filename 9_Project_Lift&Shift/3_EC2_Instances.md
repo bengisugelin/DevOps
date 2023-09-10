@@ -77,6 +77,18 @@ now, choose the instance(vprofile-db01) and copy the public IPv4 address. open y
 ```
 ssh -i vprofile-prod-key.pem ec2-user@3.88.173.147
 ```
+after the log in
+```
+sudo -i
+systemctl status mariadb ( it should be active&running)
+```
 
+check the mysql:
 
+```
+mysql -u admin -padmin123 accounts
+```
+you should be able to see 3 tables(role, user,user_role) in accounts db.
+LEt's logout and log in to the other instnace
 
+select vprofile-mc01, copy its public Ipv4, then go to gitbash and repeat the same steps.

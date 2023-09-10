@@ -14,9 +14,9 @@ we are going to use CentOs 9 for this one.
 ![image](https://github.com/bengisugelin/DevOps/assets/113550043/5efbe52d-01bf-4f44-b2f5-ea3ad9444d82)  
 
 we can launch this instance now.  
-![image](https://github.com/bengisugelin/DevOps/assets/113550043/4c6c26cd-d332-4f83-a9da-4228b40d6213)
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/4c6c26cd-d332-4f83-a9da-4228b40d6213)  
 
-While this one is launching, we can create other instances we need. Let's click launch instances again. This time we will launch memcache, vprofile-mc01
+While this one is launching, we can create other instances we need. Let's click launch instances again. This time we will launch memcache, vprofile-mc01  
 ![image](https://github.com/bengisugelin/DevOps/assets/113550043/07e9fd21-3080-4a38-88f9-0eb4142aa829)  
 ![image](https://github.com/bengisugelin/DevOps/assets/113550043/7252290e-72af-40cf-a081-6a03c617719c)  
 
@@ -65,8 +65,7 @@ sudo apt upgrade -y
 sudo apt install openjdk-11-jdk -y
 sudo apt install tomcat9 tomcat9-admin tomcat9-docs tomcat9-common git -y
 ```
-
-
+-> launch instance
  
 
 

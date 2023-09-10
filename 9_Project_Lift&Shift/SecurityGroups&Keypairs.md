@@ -8,5 +8,12 @@ I have a goDaddy domain and cname validation.
 The first thing we will do is creating security groups.  
 ![image](https://github.com/bengisugelin/DevOps/assets/113550043/4bd561dd-9e23-4074-9c30-cc438c2b1bd7)  
 ![image](https://github.com/bengisugelin/DevOps/assets/113550043/c72f28d7-8fe5-4d88-b77b-6367801dc2a2)  
-Now lets create inbound rules
+Now lets create inbound rules  
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/54fbd36e-6190-4f21-9326-39ccd699fee3)  
+now we can click create  
+![image](https://github.com/bengisugelin/DevOps/assets/113550043/275befa3-8c1f-43dd-8dc1-11e35a298cc0)  
+
+Next, we will create security group for our Tomcat instance.
+
+
 

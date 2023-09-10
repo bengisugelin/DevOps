@@ -73,7 +73,10 @@ Now  after all instances are done, we can check them.
 
 Slect the instance(vprofile-db01) and click connect. We need to find out the username for login. so, go to the SSH client tab and find it. (ec2-user)
 
-
+now, choose the instance(vprofile-db01) and copy the public IPv4 address. open your gitbash. go to the file you have your _vprofile-prod-key.pem_ file.
+```
+ssh -i vprofile-prod-key.pem ec2-user@3.88.173.147
+```
 
 
 

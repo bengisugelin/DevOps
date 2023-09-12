@@ -52,12 +52,12 @@ sudo systemctl restart rabbitmq-server
 
 The last instance: app01 - this one will be Ubuntu OS. click launch instance again.
 
-name: vprofile-app01  
-Os: ubuntu server 22.04  
-instance type: t2.micro  
-key pair: vprofile-prod-key  
-security group : app-sg  
-advance details:
+**name:** vprofile-app01  
+**Os:** ubuntu server 22.04  
+**instance type:** t2.micro  
+**key pair:** vprofile-prod-key  
+**security group :** app-sg  
+**advance details:**
 ```
 #!/bin/bash
 sudo apt update

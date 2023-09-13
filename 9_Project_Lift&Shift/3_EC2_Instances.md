@@ -2,10 +2,12 @@ Now we will going to launch EC2 instances for all services.
 
 we are going to start with mysql server  
 ![image](https://github.com/bengisugelin/DevOps/assets/113550043/962a87c3-3dbc-4364-b9da-20f9a3f51bc6)  
-
+  
 Now, go to instances and say launch instance  
 ![image](https://github.com/bengisugelin/DevOps/assets/113550043/c67074fc-620a-4c66-b95e-f8b665ac7fb4)  
+
 we are going to use CentOs 9 for this one.  
+  
 ![image](https://github.com/bengisugelin/DevOps/assets/113550043/9f7e4290-4451-444f-b282-e08999b9f93d)  
 ![image](https://github.com/bengisugelin/DevOps/assets/113550043/ddfc8822-ca30-4f89-89b9-6b24ce9f871e)  
 ![image](https://github.com/bengisugelin/DevOps/assets/113550043/09bc950e-0cd6-42bf-8bfd-542461e2445e)  

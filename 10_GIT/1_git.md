@@ -112,3 +112,9 @@ On branch master
 nothing to commit, working tree clean
 
 ```
+
+Local to Remote integration:
+
+- cd to local repo
+- git remote add origin -> ssh://git@github.com/[username]/[repo-name].git
+- git push
